@@ -3,16 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>Mentoring Programs</title>
+
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+    <style>
+        .hero-programs {
+            background: linear-gradient(135deg, #4E73DF, #1CC88A);
+            padding: 3em 2em;
+            color: white;
+            text-align: center;
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+        }
+        .hero-programs h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.3em;
+        }
+        .program-card {
+            background: #eef4ff;
+            padding: 1.5em;
+            border-radius: 12px;
+            margin-bottom: 1.8em;
+            border-left: 6px solid #4E73DF;
+            transition: 0.3s ease;
+        }
+        .program-card:hover {
+            background: #dce8ff;
+            transform: translateY(-4px);
+        }
+        .program-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 0.6em;
+            color: #4E73DF;
+            display: flex;
+            align-items: center;
+        }
+        .program-title i {
+            margin-right: 0.5em;
+            color: #1CC88A;
+        }
+        .goal-box {
+            background: #fff8e6;
+            border-left: 6px solid #f6c23e;
+            padding: 1.5em;
+            border-radius: 12px;
+            margin-bottom: 2em;
+        }
+        .goal-box i {
+            color: #f6c23e;
+            margin-right: 0.4em;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+<div class="hero-programs">
     <h1>Mentoring Programs</h1>
-    <p>Choose the right pathway for your goals.</p>
-</header>
+    <p>Find the pathway that fits your goals, interests, and experience level.</p>
+</div>
 
 <nav>
     <a href="index.html">Home</a>
@@ -23,39 +75,95 @@
 </nav>
 
 <section>
-    <h2>Available Tracks</h2>
+    <h2><i class="fas fa-bullseye"></i> Our Mission</h2>
 
-    <div class="highlight-box">
-        <p><strong>Starter (5–6 hours)</strong></p>
+    <div class="goal-box">
+        <p>
+            <i class="fas fa-trophy"></i>
+            The primary goal of our program is to help <strong>high school students design, complete, and publish</strong>
+            real AI research projects. These projects can be submitted to <strong>student research journals</strong> and to
+            major <strong>U.S. STEM competitions</strong> such as:
+        </p>
         <ul>
-            <li>AI foundations</li>
-            <li>Mini research project</li>
+            <li>Regeneron STS</li>
+            <li>ISEF (International Science & Engineering Fair)</li>
+            <li>JSHS (Junior Science & Humanities Symposium)</li>
+            <li>Local & national academic showcases</li>
+        </ul>
+        <p>
+            Completing a strong research project significantly strengthens university applications and demonstrates
+            authentic interest in STEM.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2><i class="fas fa-user"></i> 1–1 Personalized Research Mentoring (8–12 Hours)</h2>
+
+    <div class="program-card">
+        <p class="program-title"><i class="fas fa-star"></i>1–1 Standard Research Track (8 Hours)</p>
+        <ul>
+            <li>Personalized AI mentorship tailored to the student</li>
+            <li>Learn ML + Python fundamentals</li>
+            <li>Start a research-grade project with guidance</li>
+            <li>Weekly 1–1 live sessions</li>
+            <li>Perfect for students new to AI or research</li>
         </ul>
     </div>
 
-    <div class="highlight-box">
-        <p><strong>Standard (10 hours)</strong></p>
+    <div class="program-card">
+        <p class="program-title"><i class="fas fa-rocket"></i>1–1 Advanced Research Track (12 Hours)</p>
         <ul>
-            <li>Full project design</li>
-            <li>Experimentation & analysis</li>
+            <li>Full end-to-end research project</li>
+            <li>Model selection, training, experimentation & evaluation</li>
+            <li>Manuscript writing & research paper structure</li>
+            <li>Preparation for publication or competitions</li>
+            <li>Ideal for ambitious or experienced students</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2><i class="fas fa-users"></i> Small-Group Mentoring (3-Student Cohorts)</h2>
+
+    <div class="program-card">
+        <p class="program-title"><i class="fas fa-people-group"></i>AI Foundations Group Program (3 Students)</p>
+        <ul>
+            <li>Groups formed by similar level/experience</li>
+            <li>Interactive lessons & guided live coding</li>
+            <li>Collaborative mini research project</li>
+            <li>Total 8 hours of group mentoring</li>
         </ul>
     </div>
 
-    <div class="highlight-box">
-        <p><strong>Premium (20 hours)</strong></p>
+    <div class="program-card">
+        <p class="program-title"><i class="fas fa-flask"></i>Group Research Lab (3 Students)</p>
         <ul>
-            <li>Complete research pipeline</li>
-            <li>Publication preparation</li>
+            <li>Team-based research environment</li>
+            <li>Learn advanced AI/ML topics together</li>
+            <li>Shared experimentation & model analysis</li>
+            <li>Perfect for students who enjoy teamwork</li>
         </ul>
     </div>
+</section>
 
+<section>
+    <h2><i class="fas fa-question-circle"></i> Which Program Is Right for You?</h2>
+
+    <div class="program-card">
+        <ul>
+            <li><strong>New to coding or AI?</strong> → Group Foundations or 1–1 Standard Track</li>
+            <li><strong>Some experience with Python?</strong> → 1–1 Standard Track</li>
+            <li><strong>Want to publish or compete?</strong> → Advanced Research Track</li>
+            <li><strong>Prefer teamwork?</strong> → Group Research Lab</li>
+        </ul>
+        <a href="contact.html" class="cta"><i class="fas fa-calendar-check"></i> Book a Free Consultation</a>
+    </div>
 </section>
 
 <footer>
-    © 2025 AI Mentoring Program
+    © 2025 AI Mentoring Program — All Rights Reserved.
 </footer>
 
 </body>
-
 </html>
-
