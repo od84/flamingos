@@ -12,15 +12,91 @@
 
     <!-- Shared Stylesheet -->
     <link rel="stylesheet" href="assets/style.css">
+
+    <style>
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(rgba(30, 55, 153, 0.6), rgba(22, 185, 132, 0.6)),
+                        url("assets/student_header.jpg") center/cover no-repeat;
+            padding: 5em 2em;
+            color: white;
+            text-align: center;
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+            animation: fadeIn 1.3s ease;
+        }
+
+        .hero h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            max-width: 750px;
+            margin: auto;
+            opacity: 0.9;
+        }
+
+        /* FEATURE GRID */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5em;
+            margin-top: 1.5em;
+        }
+
+        .feature-card {
+            background: #eef4ff;
+            border-radius: 12px;
+            padding: 1.5em;
+            border-left: 6px solid #4E73DF;
+            transition: 0.3s;
+            animation: fadeUp 1s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: #e0ebff;
+        }
+
+        .feature-card i {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            color: #4E73DF;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            margin-top: 3em;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
+<!-- HERO BANNER -->
+<div class="hero">
     <h1>AI Research Mentoring</h1>
-    <p>One-on-one guidance from experienced AI researchers and graduate mentors.</p>
-</header>
+    <p>Elite one-on-one guidance from AI researchers and graduate mentors to help students publish research, build impressive portfolios, and gain admission to top universities.</p>
 
+    <a href="programs.html" class="cta" style="margin-top:1.5em;">
+        <i class="fas fa-arrow-right"></i> Explore Programs
+    </a>
+</div>
+
+<!-- NAVIGATION -->
 <nav>
     <a href="index.html"><i class="fas fa-home"></i> Home</a>
     <a href="about.html"><i class="fas fa-user-graduate"></i> About</a>
@@ -29,55 +105,67 @@
     <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
 </nav>
 
-<section id="intro">
-    <h2>Welcome</h2>
-    <div class="highlight-box">
-        <p>Our AI research mentoring program helps motivated students build real research experience, develop university-level projects, and prepare competitive portfolios for top university applications.</p>
 
-        <p>Students receive individualized support across machine learning, deep learning, computer vision, NLP, and data science — guided by experienced researchers and graduate students from leading universities.</p>
-
-        <a href="programs.html" class="cta"><i class="fas fa-arrow-right"></i> Explore Programs</a>
-    </div>
-</section>
-
+<!-- WHY CHOOSE US -->
 <section id="why-us">
-    <h2>Why Choose This Program?</h2>
+    <h2>Why Students Choose Our Program</h2>
 
-    <div class="highlight-box">
-        <ul>
-            <li><i class="fas fa-check-circle"></i> Personalized one-on-one mentorship</li>
-            <li><i class="fas fa-check-circle"></i> Students guided by Ivy League & top EU university researchers</li>
-            <li><i class="fas fa-check-circle"></i> Hands-on research projects with real-world value</li>
-            <li><i class="fas fa-check-circle"></i> Opportunities for student publications</li>
-            <li><i class="fas fa-check-circle"></i> Strong support for competitive university applications</li>
-        </ul>
+    <div class="features-grid">
+        <div class="feature-card">
+            <i class="fas fa-user-tie"></i>
+            <h3>Personalized Mentorship</h3>
+            <p>Every student works directly with an experienced AI researcher through custom 1:1 sessions.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fas fa-university"></i>
+            <h3>Ivy League Graduate Mentors</h3>
+            <p>Students learn from researchers affiliated with top US & EU universities.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fas fa-flask"></i>
+            <h3>Hands-On Research</h3>
+            <p>Students dive into real machine learning, NLP, and deep learning projects—not simple tutorials.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fas fa-newspaper"></i>
+            <h3>Publication Support</h3>
+            <p>Strong guidance toward student journal publications and major US science competitions.</p>
+        </div>
     </div>
 </section>
 
+
+<!-- SAMPLE PROJECTS -->
 <section id="samples">
-    <h2>Sample Student Research Topics</h2>
+    <h2>Real Student Research Examples</h2>
 
     <div class="highlight-box">
         <ul>
-            <li><i class="fas fa-book"></i> NLP model for cyberbullying detection</li>
-            <li><i class="fas fa-chart-line"></i> Stock prediction using deep learning</li>
-            <li><i class="fas fa-microscope"></i> Generative models for medical imaging</li>
-            <li><i class="fas fa-atom"></i> Physics-inspired neural networks for materials science</li>
+            <li><i class="fas fa-brain"></i> Cyberbullying detection using transformer-based NLP models</li>
+            <li><i class="fas fa-chart-line"></i> LSTM-based stock forecasting with sentiment integration</li>
+            <li><i class="fas fa-microscope"></i> MRI tumor classification using CNNs & Explainable AI</li>
+            <li><i class="fas fa-dna"></i> Biological sequence modeling with deep neural networks</li>
         </ul>
-        <p>Many students have presented their work, published in student journals, or used their projects to strengthen Ivy League, Oxbridge, and top EU university applications.</p>
+        <p>Many students use their research to support applications to Harvard, MIT, Stanford, Oxford, Cambridge, EPFL, ETH Zürich, and more.</p>
 
         <a href="students.html" class="cta"><i class="fas fa-graduation-cap"></i> View Student Success</a>
     </div>
 </section>
 
-<section id="booking">
-    <h2>Get Started</h2>
-    <div class="highlight-box">
-        <p>If you’re interested in project-based mentoring, academic research, or preparing a portfolio for top university applications, book a free consultation session.</p>
 
-        <a href="contact.html" class="cta"><i class="fas fa-calendar-check"></i> Book a Free Session</a>
+<!-- GET STARTED -->
+<section id="booking">
+    <h2>Start Your AI Research Journey</h2>
+    <div class="highlight-box">
+        <p>Whether you're aiming to build a strong university portfolio, publish a paper, or compete in US science fairs, our mentors can guide you from zero knowledge to real research.</p>
+
+        <a href="contact.html" class="cta"><i class="fas fa-calendar-check"></i> Book a Free Consultation</a>
     </div>
 </section>
+
 
 <footer>
     © 2025 AI Mentoring Program — All Rights Reserved.
