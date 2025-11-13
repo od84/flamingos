@@ -26,6 +26,13 @@
             animation: fadeIn 1.3s ease;
         }
 
+        .hero-logo {
+            width: 160px;
+            margin-bottom: 1.4em;
+            animation: fadeIn 1.4s ease;
+            filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.25));
+        }
+
         .hero h1 {
             font-size: 2.8em;
             font-weight: 700;
@@ -36,7 +43,7 @@
             font-size: 1.3em;
             max-width: 750px;
             margin: auto;
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
         /* FEATURE GRID */
@@ -53,7 +60,7 @@
             padding: 1.5em;
             border-left: 6px solid #4E73DF;
             transition: 0.3s;
-            animation: fadeUp 1s ease;
+            animation: fadeUp 1.1s ease;
         }
 
         .feature-card:hover {
@@ -67,7 +74,7 @@
             color: #4E73DF;
         }
 
-        /* ANIMATIONS */
+        /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to   { opacity: 1; transform: translateY(0); }
@@ -88,6 +95,9 @@
 
 <!-- HERO BANNER -->
 <div class="hero">
+    <!-- LOGO -->
+    <img src="assets/images/paper_mentor_ai.png" alt="Paper Mentor AI Logo" class="hero-logo">
+
     <h1>AI Research Mentoring</h1>
     <p>Elite one-on-one guidance from AI researchers and graduate mentors to help students publish research, build impressive portfolios, and gain admission to top universities.</p>
 
@@ -126,13 +136,13 @@
         <div class="feature-card">
             <i class="fas fa-flask"></i>
             <h3>Hands-On Research</h3>
-            <p>Students dive into real machine learning, NLP, and deep learning projects—not simple tutorials.</p>
+            <p>Students build real ML, NLP, and deep learning projects — not just simple tutorials.</p>
         </div>
 
         <div class="feature-card">
             <i class="fas fa-newspaper"></i>
             <h3>Publication Support</h3>
-            <p>Strong guidance toward student journal publications and major US science competitions.</p>
+            <p>Guided help for student journal publications and major US science competitions.</p>
         </div>
     </div>
 </section>
@@ -144,12 +154,12 @@
 
     <div class="highlight-box">
         <ul>
-            <li><i class="fas fa-brain"></i> Cyberbullying detection using transformer-based NLP models</li>
-            <li><i class="fas fa-chart-line"></i> LSTM-based stock forecasting with sentiment integration</li>
-            <li><i class="fas fa-microscope"></i> MRI tumor classification using CNNs & Explainable AI</li>
-            <li><i class="fas fa-dna"></i> Biological sequence modeling with deep neural networks</li>
+            <li><i class="fas fa-brain"></i> Cyberbullying detection using transformer-based NLP</li>
+            <li><i class="fas fa-chart-line"></i> Stock forecasting using LSTMs and sentiment analysis</li>
+            <li><i class="fas fa-microscope"></i> MRI tumor classification with CNNs & Explainable AI</li>
+            <li><i class="fas fa-dna"></i> Sequence modeling for biological systems</li>
         </ul>
-        <p>Many students use their research to support applications to Harvard, MIT, Stanford, Oxford, Cambridge, EPFL, ETH Zürich, and more.</p>
+        <p>Many students use these projects to strengthen applications to Harvard, MIT, Stanford, Oxford, Cambridge, EPFL, ETH Zürich, and more.</p>
 
         <a href="students.html" class="cta"><i class="fas fa-graduation-cap"></i> View Student Success</a>
     </div>
@@ -160,7 +170,7 @@
 <section id="booking">
     <h2>Start Your AI Research Journey</h2>
     <div class="highlight-box">
-        <p>Whether you're aiming to build a strong university portfolio, publish a paper, or compete in US science fairs, our mentors can guide you from zero knowledge to real research.</p>
+        <p>Whether you're aiming to publish a research paper or boost your university applications, our mentors can guide you from zero knowledge to advanced research work.</p>
 
         <a href="contact.html" class="cta"><i class="fas fa-calendar-check"></i> Book a Free Consultation</a>
     </div>
