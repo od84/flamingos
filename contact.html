@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+    <style>
+        .contact-section {
+            max-width: 800px;
+            margin: auto;
+            padding: 2.5em 1.5em;
+        }
+        .contact-card {
+            background: #eef4ff;
+            padding: 2em;
+            border-radius: 12px;
+            border-left: 6px solid #4E73DF;
+            margin-bottom: 2em;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 0.8em;
+            margin-top: 0.6em;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            font-family: inherit;
+        }
+        form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        .submit-btn {
+            margin-top: 1em;
+            background: #1CC88A;
+            color: white;
+            padding: 0.8em 1.5em;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .submit-btn:hover {
+            background: #17a673;
+        }
+        .hero-contact {
+            background: linear-gradient(135deg, #4E73DF, #1CC88A);
+            padding: 3em 2em;
+            text-align: center;
+            color: white;
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="hero-contact">
+    <h1>Contact Us</h1>
+    <p>Reach out for questions, consultations, or program details.</p>
+</div>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="students.html">Students</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<section class="contact-section">
+
+    <h2><i class="fas fa-envelope"></i> Send Us a Message</h2>
+
+    <div class="contact-card">
+        <form action="YOUR_FORMSPREE_LINK_HERE" method="POST">
+            <label>Your Name</label>
+            <input type="text" name="name" required>
+
+            <label>Your Email</label>
+            <input type="email" name="email" required>
+
+            <label>Your Message</label>
+            <textarea name="message" required></textarea>
+
+            <button class="submit-btn" type="submit">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+        </form>
+    </div>
+
+    <h2><i class="fas fa-info-circle"></i> Direct Contact</h2>
+    <div class="contact-card">
+        <p><i class="fas fa-envelope"></i> Email:
+            <a href="mailto:papermentorai@gmail.com">papermentorai@gmail.com</a>
+        </p>
+    </div>
+
+</section>
+
+<footer>
+    © 2025 AI Mentoring Program — All Rights Reserved.
+</footer>
+
+</body>
+</html>
