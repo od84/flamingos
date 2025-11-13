@@ -18,7 +18,7 @@
         .hero {
             background: linear-gradient(rgba(30, 55, 153, 0.6), rgba(22, 185, 132, 0.6)),
                         url("assets/student_header.jpg") center/cover no-repeat;
-            padding: 5em 2em;
+            padding: 10em 2em;  /* larger hero section */
             color: white;
             text-align: center;
             border-bottom-left-radius: 35px;
@@ -27,23 +27,23 @@
         }
 
         .hero-logo {
-            width: 160px;
-            margin-bottom: 1.4em;
+            width: 240px; /* bigger logo */
+            margin-bottom: 1.6em;
             animation: fadeIn 1.4s ease;
             filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.25));
         }
 
         .hero h1 {
-            font-size: 2.8em;
+            font-size: 3em;
             font-weight: 700;
-            margin-bottom: 0.5em;
+            margin-bottom: 0.6em;
         }
 
         .hero p {
             font-size: 1.3em;
-            max-width: 750px;
+            max-width: 780px;
             margin: auto;
-            opacity: 0.95;
+            opacity: 0.97;
         }
 
         /* FEATURE GRID */
@@ -74,7 +74,7 @@
             color: #4E73DF;
         }
 
-        /* Animations */
+        /* ANIMATIONS */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to   { opacity: 1; transform: translateY(0); }
@@ -115,7 +115,6 @@
     <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
 </nav>
 
-
 <!-- WHY CHOOSE US -->
 <section id="why-us">
     <h2>Why Students Choose Our Program</h2>
@@ -136,17 +135,16 @@
         <div class="feature-card">
             <i class="fas fa-flask"></i>
             <h3>Hands-On Research</h3>
-            <p>Students build real ML, NLP, and deep learning projects — not just simple tutorials.</p>
+            <p>Students build real ML, NLP, and deep learning projects — not simple tutorials.</p>
         </div>
 
         <div class="feature-card">
             <i class="fas fa-newspaper"></i>
             <h3>Publication Support</h3>
-            <p>Guided help for student journal publications and major US science competitions.</p>
+            <p>Guidance for publishing in student journals and participating in major US competitions.</p>
         </div>
     </div>
 </section>
-
 
 <!-- SAMPLE PROJECTS -->
 <section id="samples">
@@ -154,28 +152,40 @@
 
     <div class="highlight-box">
         <ul>
-            <li><i class="fas fa-brain"></i> Cyberbullying detection using transformer-based NLP</li>
-            <li><i class="fas fa-chart-line"></i> Stock forecasting using LSTMs and sentiment analysis</li>
-            <li><i class="fas fa-microscope"></i> MRI tumor classification with CNNs & Explainable AI</li>
-            <li><i class="fas fa-dna"></i> Sequence modeling for biological systems</li>
+            <li><i class="fas fa-brain"></i> Cyberbullying detection using transformer-based NLP models</li>
+            <li><i class="fas fa-chart-line"></i> Stock forecasting with LSTMs, news sentiment analysis & macro factors</li>
+            <li><i class="fas fa-microscope"></i> MRI tumor classification using CNNs & Explainable AI (Grad-CAM)</li>
+            <li><i class="fas fa-dna"></i> Sequence modeling for biological systems using attention networks</li>
+            <li><i class="fas fa-heartbeat"></i> Predicting heart disease risk using machine learning</li>
+            <li><i class="fas fa-leaf"></i> Plant disease detection from leaf images using convolutional neural networks</li>
+            <li><i class="fas fa-robot"></i> GPT-powered chatbot for mental health with toxicity detection</li>
+            <li><i class="fas fa-earth-americas"></i> Climate pattern forecasting using deep learning time series models</li>
+            <li><i class="fas fa-car"></i> Autonomous vehicle lane detection using segmentation networks</li>
+            <li><i class="fas fa-hand-peace"></i> Human gesture recognition using video transformer models</li>
+            <li><i class="fas fa-virus"></i> COVID-19 detection from chest X-ray images with transfer learning</li>
+            <li><i class="fas fa-shield-alt"></i> Cybersecurity anomaly detection with autoencoders</li>
+            <li><i class="fas fa-music"></i> Music genre classification using spectrogram CNNs</li>
+            <li><i class="fas fa-language"></i> Fake news detection using transformer embeddings</li>
+            <li><i class="fas fa-chart-pie"></i> Consumer behavior prediction using ML on e-commerce datasets</li>
         </ul>
-        <p>Many students use these projects to strengthen applications to Harvard, MIT, Stanford, Oxford, Cambridge, EPFL, ETH Zürich, and more.</p>
 
-        <a href="students.html" class="cta"><i class="fas fa-graduation-cap"></i> View Student Success</a>
+        <p>Students often use these projects to strengthen university applications to Harvard, MIT, Stanford, Oxford, Cambridge, EPFL, ETH Zürich, and other top global institutions.</p>
+
+        <a href="students.html" class="cta">
+            <i class="fas fa-graduation-cap"></i> View Student Success
+        </a>
     </div>
 </section>
-
 
 <!-- GET STARTED -->
 <section id="booking">
     <h2>Start Your AI Research Journey</h2>
     <div class="highlight-box">
-        <p>Whether you're aiming to publish a research paper or boost your university applications, our mentors can guide you from zero knowledge to advanced research work.</p>
+        <p>Whether you're aiming to publish a research paper, compete in science fairs, or strengthen your university applications, our mentors guide students from beginner level to advanced research.</p>
 
         <a href="contact.html" class="cta"><i class="fas fa-calendar-check"></i> Book a Free Consultation</a>
     </div>
 </section>
-
 
 <footer>
     © 2025 AI Mentoring Program — All Rights Reserved.
