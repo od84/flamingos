@@ -26,6 +26,7 @@
             color: var(--text-dark);
         }
 
+        /* NAVIGATION */
         nav {
             background: var(--navy);
             padding: 0.9em 1.5em;
@@ -58,24 +59,26 @@
             width: 100%;
         }
 
+        /* HERO HEADER */
         .hero {
             background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 55%, #050815 100%);
-            padding: 3.5em 1.5em;
+            padding: 4em 1.5em 3em;
             text-align: center;
             color: white;
         }
 
         .hero img {
-            width: 160px;
-            margin-bottom: 1.5em;
+            width: 180px;
+            margin-bottom: 1.6em;
         }
 
         .hero h1 {
             font-family: 'Merriweather', serif;
-            font-size: 2.4em;
+            font-size: 2.6em;
             margin: 0;
         }
 
+        /* MAIN CONTENT */
         .container {
             max-width: 900px;
             margin: 2.5em auto 4em;
@@ -91,29 +94,31 @@
 
         p, li {
             line-height: 1.65;
-            font-size: 1.02em;
+            font-size: 1.05em;
         }
 
         ul { margin-left: 1.3em; }
 
+        /* PDF BUTTON */
         .pdf-btn {
             display: inline-flex;
             align-items: center;
             gap: 0.5em;
-            padding: 0.8em 1.6em;
+            padding: 0.85em 1.7em;
             background: var(--navy);
             color: white;
             border-radius: 999px;
             font-weight: 600;
             text-decoration: none;
-            margin-top: 1.5em;
             font-size: 1.05em;
+            margin: 0.5em 0 1.5em 0;
         }
 
         .pdf-btn:hover {
-            background: #1a335e;
+            background: #1d3663;
         }
 
+        /* FOOTER */
         footer {
             background: #020511;
             color: #b3b9d4;
@@ -131,6 +136,7 @@
 
 <body>
 
+<!-- NAVIGATION -->
 <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -142,101 +148,98 @@
     <a href="terms.html" class="active">Terms</a>
 </nav>
 
-
+<!-- HERO WITH LOGO -->
 <section class="hero">
-    <img src="assets/images/logo.png" alt="Paper Mentor AI Logo">
+    <img src="assets/images/paper_mentor_ai.png" alt="Paper Mentor AI Logo">
     <h1>Terms & Conditions</h1>
 </section>
 
-
+<!-- MAIN CONTENT -->
 <div class="container">
 
+    <!-- PDF DOWNLOAD BUTTON -->
     <a href="assets/PaperMentorAI_Terms_Premium.pdf"
        download="PaperMentorAI_Terms_Premium.pdf"
        class="pdf-btn">
-       <i class="fas fa-file-arrow-down"></i> Download Full PDF
+        <i class="fas fa-file-arrow-down"></i> Download Full PDF
     </a>
 
     <h2>1. Introduction</h2>
     <p>
-        These Terms & Conditions govern your use of the Paper Mentor AI website and the mentoring
-        services provided by Paper Mentor AI (“we”, “us”, “our”). By accessing or using our services,
-        you agree to be legally bound by these Terms.
+        These Terms & Conditions govern your use of the Paper Mentor AI website and all mentoring
+        services provided (“we”, “us”, “our”). By accessing or using our services, you agree to be
+        legally bound by these Terms.
     </p>
 
     <h2>2. Services Provided</h2>
     <p>
-        Paper Mentor AI offers one-on-one AI research mentoring, project guidance, learning
-        programs, and educational support for students. Mentors provide high-quality instruction,
-        guidance, curriculum support, and feedback to help students complete projects and research papers.
+        Paper Mentor AI provides one-on-one AI research mentoring, project support, educational
+        guidance, and structured research programs. Mentors deliver high-quality instruction,
+        feedback, and research supervision to help students complete projects and research papers.
     </p>
 
-    <h2>3. Payment & Pricing</h2>
+    <h2>3. Pricing & Payments</h2>
     <ul>
         <li>Standard hourly rate: <strong>$100 per hour</strong></li>
-        <li>10% discount available for packages of 10+ hours</li>
-        <li>Sessions must be prepaid before they are delivered</li>
+        <li>10% discount for packages of 10+ hours</li>
+        <li>Sessions must be prepaid</li>
     </ul>
 
     <h2>4. Refund Policy</h2>
     <ul>
-        <li><strong>100% refund after Session 1</strong> if the student chooses not to continue.</li>
-        <li><strong>Pro-rated refunds anytime</strong> for unused hours.</li>
-        <li>No cancellation fees.</li>
-        <li>Sessions may be rescheduled with 24 hours notice.</li>
+        <li><strong>100% refund after Session 1</strong> if the student chooses not to continue</li>
+        <li><strong>Pro-rated refund anytime</strong> for unused hours</li>
+        <li>No cancellation fees</li>
+        <li>Sessions may be rescheduled with 24 hours notice</li>
     </ul>
 
     <h2>5. Student Obligations</h2>
-    <p>
-        Students and parents agree to:
-    </p>
+    <p>Students and families agree to:</p>
     <ul>
-        <li>Provide accurate information during enrollment</li>
-        <li>Attend scheduled sessions on time</li>
-        <li>Use all materials for personal educational use only</li>
+        <li>Provide accurate enrollment information</li>
+        <li>Attend sessions on time</li>
+        <li>Use provided materials only for personal educational purposes</li>
         <li>Respect academic integrity and avoid plagiarism</li>
     </ul>
 
     <h2>6. Intellectual Property</h2>
     <p>
-        Curriculum materials, slides, code templates, and mentor-created content remain the intellectual
-        property of Paper Mentor AI. Students receive a non-exclusive, personal license to use these materials
-        for learning and academic work only.
+        All curriculum materials, research templates, slides, and mentor-created content remain
+        the intellectual property of Paper Mentor AI. Students receive a personal, educational
+        license for use.
     </p>
 
-    <h2>7. GDPR & Data Protection (EU Compliant)</h2>
-    <p>
-        We comply with the General Data Protection Regulation (GDPR).
-        You may request:
-    </p>
+    <h2>7. GDPR & Data Protection (EU Law)</h2>
+    <p>Under the General Data Protection Regulation (GDPR), you have the right to:</p>
     <ul>
-        <li>Access to your stored data</li>
-        <li>Correction or deletion of personal information</li>
-        <li>Export of your data (“right to data portability”)</li>
-        <li>Removal from our system (“right to be forgotten”)</li>
+        <li>Access your personal data</li>
+        <li>Request correction or deletion</li>
+        <li>Request data export (“data portability”)</li>
+        <li>Request to be removed (“right to be forgotten”)</li>
     </ul>
 
     <h2>8. Limitation of Liability</h2>
     <p>
-        Paper Mentor AI is not responsible for outcomes relating to school admissions, competition results,
-        journal decisions, or external evaluations. Mentoring is educational in nature and does not guarantee
-        admission or publication.
+        Paper Mentor AI is not responsible for academic outcomes such as competition results,
+        school admissions, or journal decisions. Mentoring is educational in nature and carries
+        no guarantee of external results.
     </p>
 
     <h2>9. Termination</h2>
     <p>
-        We reserve the right to discontinue services if a student engages in inappropriate behavior,
-        academic dishonesty, harassment, or repeated violations of policy.
+        We may discontinue services for inappropriate behavior, academic dishonesty, harassment,
+        or repeated policy violations.
     </p>
 
     <h2>10. Governing Law</h2>
     <p>
-        These Terms are governed by the laws of the European Union .
+        These Terms are governed under the laws of the European Union and applicable local
+        regulations within the customer’s country of residence.
     </p>
 
 </div>
 
-
+<!-- FOOTER -->
 <footer>
     © 2025 Paper Mentor AI — All Rights Reserved.
     <br>
