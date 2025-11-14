@@ -64,13 +64,14 @@
         header h1 {
             font-family: 'Merriweather', serif;
             margin: 0 0 0.45em;
-            font-size: 2.1em;
+            font-size: 2.2em;
         }
         header p {
             max-width: 720px;
             margin: 0 auto;
-            font-size: 1.02em;
-            color: #dde3ff;
+            font-size: 1.05em;
+            color: #dbe3ff;
+            line-height: 1.65;
         }
 
         main {
@@ -84,6 +85,9 @@
             font-size: 1.55em;
             margin-bottom: 0.4em;
             color: var(--navy-deep);
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
         }
 
         .card {
@@ -108,6 +112,20 @@
             color: var(--gold);
         }
 
+        .btn-primary {
+            display: inline-block;
+            padding: 0.9em 1.6em;
+            border-radius: 999px;
+            text-decoration: none;
+            background: var(--gold);
+            color: var(--navy-deep);
+            font-weight: 600;
+            margin-top: 1.2em;
+        }
+        .btn-primary:hover {
+            background: #e0c488;
+        }
+
         footer {
             background: #020511;
             color: #b3b9d4;
@@ -115,6 +133,7 @@
             padding: 1.8em 1.2em;
             font-size: 0.9em;
         }
+
     </style>
 </head>
 
@@ -133,69 +152,81 @@
 <header>
     <h1>Student Outcomes</h1>
     <p>
-        Students at Paper Mentor AI build serious AI projects and research papers that support university applications,
-        competitions, and long-term STEM ambitions.
+        Students at Paper Mentor AI develop rigorous AI research projects, real-world applications,
+        and publication-ready papers — supported by structured mentoring and university-level guidance.
     </p>
 </header>
 
 <main>
+
+    <!-- OUTCOMES -->
     <section>
-        <h2><i class="fas fa-trophy" style="color:#CBA45B;"></i> What Our Students Achieve</h2>
+        <h2><i class="fas fa-trophy"></i> Verified Student Achievements</h2>
         <div class="card">
             <p>
-                With close support from mentors, students regularly reach milestones that are uncommon at the high-school level:
+                Through personalised mentoring, students consistently achieve results that stand out in academic and competitive settings:
             </p>
             <ul>
-                <li>Completion of structured AI research projects with real datasets and clearly defined research questions.</li>
-                <li>Submission of papers to <strong>student research journals</strong> and online academic platforms.</li>
-                <li>Participation in <strong>regional and national STEM competitions</strong> and research showcases.</li>
-                <li>Use of research projects in applications to <strong>top universities and selective summer programs</strong>.</li>
-                <li>Gaining technical depth that often matches early university-level machine learning coursework.</li>
+                <li>Completion of structured AI research projects with real datasets.</li>
+                <li>Submission of papers to <strong>student research journals</strong>.</li>
+                <li>Participation in <strong>STEM competitions and research showcases</strong>.</li>
+                <li>Use of completed research in applications to <strong>selective schools and summer programs</strong>.</li>
+                <li>Technical proficiency comparable to early university-level machine learning.</li>
             </ul>
+
+            <p style="margin-top:1.1em;">
+                <strong>Due to GDPR and student privacy regulations, detailed success stories are shared privately upon request.</strong>
+            </p>
+
+            <a href="contact.html" class="btn-primary">Request Student Success Examples</a>
         </div>
     </section>
 
+    <!-- PROJECT TOPICS -->
     <section>
-        <h2><i class="fas fa-flask" style="color:#CBA45B;"></i> Sample Research Topics</h2>
+        <h2><i class="fas fa-flask"></i> Example Research Areas</h2>
         <div class="card">
             <ul class="project-list">
-                <li><i class="fas fa-robot"></i>Cyberbullying and hate-speech detection using transformer-based language models.</li>
-                <li><i class="fas fa-chart-line"></i>Stock price and volatility forecasting using LSTMs combined with news sentiment.</li>
-                <li><i class="fas fa-brain"></i>MRI brain tumor classification using convolutional neural networks and interpretability tools.</li>
-                <li><i class="fas fa-dna"></i>Sequence modeling for biological or clinical time-series data.</li>
-                <li><i class="fas fa-cloud-sun"></i>Climate and weather anomaly prediction with spatio-temporal deep learning.</li>
-                <li><i class="fas fa-earth-europe"></i>Satellite imagery classification for environmental monitoring and land-use analysis.</li>
-                <li><i class="fas fa-bolt"></i>Energy demand and consumption forecasting with machine learning.</li>
-                <li><i class="fas fa-comments"></i>Emotion recognition from speech or text using neural architectures.</li>
-                <li><i class="fas fa-shield-alt"></i>Deepfake detection and image forgery identification.</li>
-                <li><i class="fas fa-film"></i>Recommendation systems for media, sports analytics, or personalised content.</li>
+                <li><i class="fas fa-robot"></i>Cyberbullying and hate-speech detection using transformer-based NLP models.</li>
+                <li><i class="fas fa-chart-line"></i>Financial forecasting with LSTMs and news sentiment analysis.</li>
+                <li><i class="fas fa-brain"></i>MRI brain tumour classification via CNNs and explainability methods.</li>
+                <li><i class="fas fa-dna"></i>Time-series modelling for biological, medical, or clinical datasets.</li>
+                <li><i class="fas fa-cloud-sun"></i>Environmental anomaly detection using spatio-temporal deep learning.</li>
+                <li><i class="fas fa-earth-europe"></i>Satellite imagery classification for ecology and land-use monitoring.</li>
+                <li><i class="fas fa-bolt"></i>Energy demand forecasting using neural architectures.</li>
+                <li><i class="fas fa-comments"></i>Speech and text-based emotion recognition.</li>
+                <li><i class="fas fa-shield-alt"></i>Deepfake identification and image forgery detection.</li>
+                <li><i class="fas fa-film"></i>Recommendation systems for sports, media, and personalised analytics.</li>
             </ul>
 
             <p style="margin-top: 1.1em;">
-                Each project is scoped so that it is ambitious but realistic for the student’s background, with a strong emphasis
-                on clarity, reproducibility, and honest reporting of results.
+                Projects are designed to be ambitious yet achievable, with an emphasis on scientific clarity,
+                responsible reporting, and reproducible experimentation.
             </p>
         </div>
     </section>
 
+    <!-- PAPERS -->
     <section>
-        <h2><i class="fas fa-book" style="color:#CBA45B;"></i> Why Research & Papers Matter</h2>
+        <h2><i class="fas fa-book"></i> Why Research Papers Matter</h2>
         <div class="card">
             <p>
-                We never position publication as a requirement. However, pursuing a paper can be highly valuable:
+                While publication is never required, many students choose to pursue a paper because:
             </p>
             <ul>
-                <li>It demonstrates intellectual curiosity and the ability to follow through on complex, long-term work.</li>
-                <li>The writing and review process builds strong technical communication skills.</li>
-                <li>Students gain concrete material for personal statements, interviews, and recommendation letters.</li>
-                <li>Having a structured research project differentiates students from peers with only coursework or short projects.</li>
+                <li>It demonstrates independent thinking and long-term commitment.</li>
+                <li>Students gain experience with real scientific writing and peer feedback.</li>
+                <li>Research becomes strong material for personal statements and interviews.</li>
+                <li>It differentiates students from peers with only coursework-based work.</li>
             </ul>
+
             <p>
-                Mentors support students through every step — from literature review and methodology to results, limitations,
-                and potential next steps.
+                From topic selection to literature review, modelling, evaluation, and writing,
+                mentors guide students through every stage of the research process.
             </p>
         </div>
     </section>
+
 </main>
 
 <footer>
