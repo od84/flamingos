@@ -4,125 +4,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Research Mentoring | Elite 1:1 Guidance</title>
+    <title>Paper Mentor AI | Research Mentoring for Ambitious Students</title>
 
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-    <!-- Shared Stylesheet -->
-    <link rel="stylesheet" href="assets/style.css">
-
     <style>
-        /* --- HERO SECTION --- */
-        .hero {
-            padding: 5em 1.5em;
-            text-align: center;
-            background: linear-gradient(180deg, #6f7edc 0%, #8bbad3 50%, #94dac6 100%);
-            color: white;
-            min-height: 88vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            animation: fadeIn 1.2s ease-in-out;
+        :root {
+            --navy-deep: #0B1F3A;
+            --navy-soft: #12284A;
+            --gold: #CBA45B;
+            --gold-soft: #DCC394;
+            --bg-light: #F4F6FB;
+            --card-bg: #E8EEF8;
+            --text-main: #1B1F2A;
         }
 
-        .hero-container {
-            background: rgba(255, 255, 255, 0.07);
-            backdrop-filter: blur(12px);
-            padding: 2.5em 3em;
-            max-width: 760px;
-            border-radius: 22px;
-            box-shadow: 0 12px 28px rgba(0,0,0,0.18);
-            animation: slideUp 1.2s ease;
+        * {
+            box-sizing: border-box;
         }
 
-        .hero-logo {
-            width: 480px;
-            max-width: 85vw;
-            margin-bottom: 2em;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-            animation: fadeInLogo 1.4s ease forwards;
+        body {
+            margin: 0;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-light);
+            color: var(--text-main);
         }
 
-        .hero h1 {
-            font-size: 2.9em;
-            margin: 0.3em 0 0.5em;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.25em;
-            line-height: 1.7;
-            font-weight: 300;
-            margin-bottom: 2em;
-            max-width: 640px;
-        }
-
-        .cta-big, .cta-apply, .cta {
-            background: #1cc88a;
-            padding: 1em 2em;
-            font-size: 1.1em;
-            border-radius: 10px;
-            text-decoration: none;
-            color: white;
-            font-weight: 600;
-            transition: 0.3s;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.18);
-            display: inline-block;
-            margin: 0.3em;
-        }
-
-        .cta-big:hover, .cta-apply:hover, .cta:hover {
-            background: #17a673;
-            transform: translateY(-3px);
-        }
-
+        /* NAVIGATION */
         nav {
-            background: #f8f9fa;
-            padding: 1em;
-            text-align: center;
+            background: var(--navy-deep);
+            padding: 0.9em 1.5em;
+            display: flex;
+            justify-content: center;
+            gap: 1.8em;
+            position: sticky;
+            top: 0;
+            z-index: 20;
         }
 
         nav a {
-            margin: 0 1em;
+            color: #ffffff;
             text-decoration: none;
-            color: #4E73DF;
-            font-weight: 600;
+            font-weight: 500;
+            font-size: 0.98em;
+            position: relative;
         }
 
-        nav a:hover {
-            color: #1cc88a;
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -0.35em;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.25s ease;
         }
 
-        section {
-            padding: 3em 1.5em;
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 5em 1.5em 4.5em;
+            text-align: center;
+            background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 55%, #050815 100%);
+            color: white;
+        }
+
+        .hero-inner {
             max-width: 900px;
-            margin: auto;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
+            border-radius: 24px;
+            padding: 3em 3.2em;
+            box-shadow: 0 24px 80px rgba(0,0,0,0.45);
+            backdrop-filter: blur(20px);
         }
 
-        .highlight-box {
-            background: #eef4ff;
-            padding: 1.5em;
-            border-left: 6px solid #4e73df;
-            border-radius: 12px;
+        .hero-logo {
+            width: 360px;
+            max-width: 90%;
+            border-radius: 22px;
+            margin-bottom: 2.2em;
         }
 
-        h2 {
-            color: #4E73DF;
-            margin-bottom: 0.8em;
+        .hero-title {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 2.4em;
+            margin: 0 0 0.4em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.05em;
+            max-width: 640px;
+            margin: 0 auto 2em;
+            line-height: 1.7;
+            color: #e7ecff;
+        }
+
+        .hero-tagline {
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            font-size: 0.76em;
+            margin-bottom: 1.2em;
+            color: #d0d6f0;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8em;
+        }
+
+        .btn-primary,
+        .btn-ghost {
+            border-radius: 999px;
+            padding: 0.9em 1.8em;
+            font-size: 0.98em;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5em;
+            transition: all 0.22s ease;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy-deep);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.28);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-soft);
+            transform: translateY(-1px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.38);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: #f4f7ff;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.8);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3.2em 1.5em 3.5em;
+        }
+
+        h2.section-title {
+            font-family: 'Merriweather', serif;
+            font-size: 1.6em;
+            margin-bottom: 0.6em;
+            color: var(--navy-deep);
+        }
+
+        .section-subtitle {
+            font-size: 0.98em;
+            color: #4f5668;
+            margin-bottom: 1.3em;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 1.8em 1.9em;
+            border-left: 5px solid var(--gold);
+            box-shadow: 0 12px 26px rgba(11,31,58,0.08);
+        }
+
+        .card ul {
+            padding-left: 1.2em;
+            margin: 0;
+        }
+
+        .card li {
+            margin-bottom: 0.6em;
+            line-height: 1.6;
+        }
+
+        .card li i {
+            color: var(--gold);
+            margin-right: 0.5em;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.55em;
+            padding-left: 0;
+            list-style: none;
+            margin: 0;
+        }
+
+        .projects-grid li {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .projects-grid i {
+            margin-right: 0.5em;
+            color: var(--gold);
+            margin-top: 0.1em;
+        }
+
+        .callout {
+            margin-top: 1.4em;
+            font-size: 0.95em;
+            color: #50576a;
+        }
+
+        .cta-row {
+            margin-top: 1.4em;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8em;
+        }
+
+        footer {
+            background: #020511;
+            color: #b3b9d4;
+            text-align: center;
+            padding: 1.8em 1.2em;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 720px) {
+            .hero-inner {
+                padding: 2.2em 1.7em;
+            }
+            .hero-title {
+                font-size: 2.05em;
+            }
+            nav {
+                flex-wrap: wrap;
+                gap: 1em;
+            }
         }
     </style>
-
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
 <nav>
-    <a href="index.html">Home</a>
+    <a href="index.html" class="active">Home</a>
     <a href="about.html">About</a>
     <a href="programs.html">Programs</a>
     <a href="students.html">Students</a>
@@ -131,92 +271,114 @@
     <a href="contact.html">Contact</a>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-    <div class="hero-container">
-        <img src="assets/images/paper_mentor_ai.png" class="hero-logo" alt="AI Mentoring Logo">
+<section class="hero">
+    <div class="hero-inner">
+        <img src="assets/images/paper_mentor_ai.png" alt="Paper Mentor AI Logo" class="hero-logo">
 
-        <h1>AI Research Mentoring</h1>
+        <div class="hero-tagline">AI papers mentorship by top-tier researchers & graduate mentors</div>
 
-        <p>
-            Work 1:1 with experienced AI researchers and graduate mentors from world-class universities.
-            Students develop real research projects, gain technical depth, and build exceptional
-            portfolios that strengthen their applications to top STEM programs.
+        <h1 class="hero-title">AI Research & Paper Mentoring for Ambitious Students</h1>
+
+        <p class="hero-subtitle">
+            Paper Mentor AI pairs motivated high-school students with experienced AI researchers and graduate mentors.
+            Together, they design, build, and write publication-level AI projects that stand out in top university and
+            competitive STEM applications.
         </p>
 
-        <a href="programs.html" class="cta-big">
-            <i class="fas fa-arrow-right"></i> Explore Mentoring Programs
-        </a>
-
-        <a href="apply.html" class="cta-apply">
-            <i class="fas fa-paper-plane"></i> Apply Now
-        </a>
-    </div>
-</div>
-
-<!-- WHY SECTION -->
-<section id="why-us">
-    <h2>Why Students Choose Our Program</h2>
-    <div class="highlight-box">
-        <ul>
-            <li><i class="fas fa-check-circle"></i> Personalized 1:1 mentorship tailored to each student’s interests</li>
-            <li><i class="fas fa-check-circle"></i> Mentors from Cornell, EPFL, Stanford, UPenn, and top research labs</li>
-            <li><i class="fas fa-check-circle"></i> All mentors are graduate students from top-tier universities who currently work at leading tech companies in AI, bringing real-world and mentoring experience</li>
-            <li><i class="fas fa-check-circle"></i> Project-based learning using state-of-the-art AI tools</li>
-            <li><i class="fas fa-check-circle"></i> Guidance in research writing, experiments, coding, and publication</li>
-            <li><i class="fas fa-check-circle"></i> A powerful boost for competitive university admissions</li>
-        </ul>
+        <div class="hero-actions">
+            <a href="apply.html" class="btn-primary">
+                <i class="fas fa-paper-plane"></i>
+                Apply for Mentorship
+            </a>
+            <a href="programs.html" class="btn-ghost">
+                <i class="fas fa-diagram-project"></i>
+                Explore Programs
+            </a>
+        </div>
     </div>
 </section>
 
-<!-- SAMPLE PROJECTS -->
-<section id="samples">
-    <h2>Featured Student Research Areas</h2>
-
-    <div class="highlight-box">
-        <ul>
-            <li><i class="fas fa-robot"></i> DDetecting cyberbullying and hate speech using transformer-based NLP</li>
-            <li><i class="fas fa-brain"></i> Brain tumor diagnosis with CNNs and explainable AI</li>
-            <li><i class="fas fa-chart-line"></i> Predicting stock market trends using LSTM networks</li>
-            <li><i class="fas fa-cloud-sun"></i> Climate and weather forecasting with machine learning</li>
-            <li><i class="fas fa-shield-alt"></i> Fake news and misinformation detection with AI</li>
-            <li><i class="fas fa-seedling"></i> Air quality and pollution prediction</li>
-            <li><i class="fas fa-car-side"></i> Lane detection for autonomous driving</li>
-            <li><i class="fas fa-dna"></i> Disease risk prediction using medical datasets</li>
-            <li><i class="fas fa-paw"></i> Wildlife recognition using YOLOv8</li>
-        </ul>
-
-        <a href="students.html" class="cta">
-            <i class="fas fa-graduation-cap"></i> Explore Student Success
-        </a>
-
-        <a href="apply.html" class="cta-apply">
-            <i class="fas fa-paper-plane"></i> Apply Now
-        </a>
-    </div>
-</section>
-
-<!-- BOOKING -->
-<section id="booking">
-    <h2>Begin Your Research Journey</h2>
-    <div class="highlight-box">
-        <p>
-            Book a free consultation to learn how personalized AI research mentorship can help you
-            develop impactful projects, build a strong academic profile, and stand out in university admissions.
+<main>
+    <!-- WHY SECTION -->
+    <section id="why-us">
+        <h2 class="section-title">Why Students Work with Paper Mentor AI</h2>
+        <p class="section-subtitle">
+            We focus on one outcome: helping students create real AI research and papers that genuinely matter.
         </p>
 
-        <a href="contact.html" class="cta">
-            <i class="fas fa-calendar-check"></i> Book a Free Session
-        </a>
+        <div class="card">
+            <ul>
+                <li><i class="fas fa-check-circle"></i> 1:1 mentorship tailored to each student’s background, interests, and goals.</li>
+                <li><i class="fas fa-check-circle"></i> Mentors are graduate students and practitioners in AI with strong research and industry experience.</li>
+                <li><i class="fas fa-check-circle"></i> Project-based learning: students implement real models, not just follow tutorials.</li>
+                <li><i class="fas fa-check-circle"></i> Structured support for research design, experiments, writing, and paper preparation.</li>
+                <li><i class="fas fa-check-circle"></i> A compelling research portfolio that supports applications to competitive universities and summer programs.</li>
+            </ul>
+        </div>
+    </section>
 
-        <a href="apply.html" class="cta-apply">
-            <i class="fas fa-paper-plane"></i> Apply Now
-        </a>
-    </div>
-</section>
+    <!-- PROJECTS SECTION -->
+    <section id="samples" style="margin-top: 3em;">
+        <h2 class="section-title">Examples of Student Research Topics</h2>
+        <p class="section-subtitle">
+            Project themes are adapted to each student’s interests and experience level while maintaining technical depth.
+        </p>
+
+        <div class="card">
+            <ul class="projects-grid">
+                <li><i class="fas fa-robot"></i>Detecting cyberbullying and hate speech in social media using transformer-based NLP models.</li>
+                <li><i class="fas fa-brain"></i>Brain tumor classification in MRI images with CNNs and explainable AI techniques.</li>
+                <li><i class="fas fa-chart-line"></i>Predicting stock market behavior using LSTM networks and news sentiment.</li>
+                <li><i class="fas fa-cloud-sun"></i>Climate and weather anomaly forecasting with time-series machine learning.</li>
+                <li><i class="fas fa-shield-alt"></i>Fake news and misinformation detection using natural language models.</li>
+                <li><i class="fas fa-seedling"></i>Air quality and pollution prediction in major cities using historical sensor data.</li>
+                <li><i class="fas fa-car-side"></i>Lane and object detection for autonomous driving using modern computer vision architectures.</li>
+                <li><i class="fas fa-dna"></i>Early disease risk prediction from medical or genetic datasets.</li>
+                <li><i class="fas fa-paw"></i>Wildlife species recognition in camera-trap images using object detection (e.g., YOLOv8).</li>
+            </ul>
+
+            <div class="cta-row">
+                <a href="students.html" class="btn-ghost" style="border-color: var(--gold); color: var(--navy-deep);">
+                    <i class="fas fa-graduation-cap"></i>
+                    See Student Outcomes
+                </a>
+                <a href="apply.html" class="btn-primary">
+                    <i class="fas fa-paper-plane"></i>
+                    Start Your Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section id="booking" style="margin-top: 3em; margin-bottom: 0;">
+        <h2 class="section-title">Begin Your Research Journey</h2>
+        <p class="section-subtitle">
+            Not sure which track or project is the best fit? We’re happy to speak with you.
+        </p>
+
+        <div class="card">
+            <p>
+                During a short consultation, we review the student’s background, interests, and academic goals. From there,
+                we suggest a project direction, a suitable program track, and a realistic path towards a finished research paper.
+            </p>
+
+            <div class="cta-row">
+                <a href="contact.html" class="btn-ghost" style="border-color: var(--navy-soft); color: var(--navy-soft);">
+                    <i class="fas fa-calendar-check"></i>
+                    Book a Consultation
+                </a>
+                <a href="faq.html" class="btn-ghost">
+                    <i class="fas fa-question-circle"></i>
+                    Read Frequently Asked Questions
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer>
-    © 2025 AI Research Mentoring — All Rights Reserved.
+    © 2025 Paper Mentor AI — All Rights Reserved.
 </footer>
 
 </body>
