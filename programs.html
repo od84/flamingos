@@ -154,6 +154,64 @@
             background: var(--gold-soft);
         }
 
+        .btn-secondary {
+            background: var(--navy-soft);
+            color: white;
+            padding: 0.8em 1.6em;
+            border-radius: 999px;
+            cursor: pointer;
+            margin-top: 1em;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            background: #0A1730;
+        }
+
+        /* --- MODAL --- */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10,15,30,0.65);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 2em;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 680px;
+            width: 100%;
+            padding: 2em 2.2em;
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+            position: relative;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        .modal h3 {
+            margin-top: 0;
+            font-size: 1.35em;
+            color: var(--navy-deep);
+            font-family: 'Merriweather', serif;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 14px;
+            right: 20px;
+            font-size: 1.5em;
+            color: #555;
+            cursor: pointer;
+        }
+
         footer {
             background: #020511;
             color: #b3b9d4;
@@ -192,16 +250,13 @@
         <div class="card">
             <p>
                 Every program is designed around a clear, practical outcome: a complete project or
-                research paper that demonstrates real understanding and initiative. Depending on the chosen track, students may:
+                research paper that demonstrates real understanding and initiative.
             </p>
             <ul>
-                <li>Learn foundational Python, machine learning, and evaluation techniques.</li>
+                <li>Learn foundational Python, ML, and evaluation techniques.</li>
                 <li>Complete an applied AI project using real datasets.</li>
                 <li>Develop a full research paper suitable for journals or STEM competitions.</li>
             </ul>
-            <p>
-                All pacing and project complexity are adjusted based on the student’s grade level, interests, and prior experience.
-            </p>
         </div>
     </section>
 
@@ -209,7 +264,7 @@
     <section>
         <h2>1:1 Research Mentoring Tracks</h2>
         <p class="section-subtitle">
-            Personalized, flexible, and ideal for students who want to work on meaningful research at their own pace.
+            Personalized and flexible mentoring for students who want meaningful research experience.
         </p>
 
         <div class="card">
@@ -219,10 +274,9 @@
                 <span class="badge">Mini Project</span>
             </div>
             <ul>
-                <li>Learn Python and core ML concepts with guided coding.</li>
-                <li>Complete a small research-style project using a curated dataset.</li>
-                <li>Understand how models work and how to interpret results.</li>
-                <li>Perfect for students with little or no AI background.</li>
+                <li>Python + ML fundamentals</li>
+                <li>Mini research-style project</li>
+                <li>Beginner friendly</li>
             </ul>
         </div>
 
@@ -230,13 +284,12 @@
             <div class="program-title">
                 <i class="fas fa-rocket"></i>
                 Advanced Research Track (≈ 12–16 hours)
-                <span class="badge">Full Research Paper</span>
+                <span class="badge">Research Paper</span>
             </div>
             <ul>
-                <li>End-to-end research pipeline: problem definition, modeling, experimentation, and analysis.</li>
-                <li>Use real datasets from medicine, environment, finance, or custom domains.</li>
-                <li>Write a full research paper with mentor-guided revision.</li>
-                <li>Recommended for journal submissions or competitive STEM programs.</li>
+                <li>Full end-to-end research pipeline</li>
+                <li>Real-world datasets</li>
+                <li>Paper-writing guidance</li>
             </ul>
 
             <a href="apply.html" class="btn-primary">
@@ -245,110 +298,56 @@
         </div>
     </section>
 
-    <!-- COHORT OPTIONS -->
-    <section>
-        <h2>Small Cohort Options</h2>
-        <p class="section-subtitle">
-            Collaborative tracks with 2–3 students at a similar level.
-        </p>
-
-        <div class="card">
-            <div class="program-title">
-                <i class="fas fa-users"></i>
-                AI Foundations Cohort
-            </div>
-            <ul>
-                <li>Python + ML fundamentals taught in small groups.</li>
-                <li>Live coding sessions with hands-on exercises.</li>
-                <li>Ends with a collaborative mini-project.</li>
-                <li>Best for beginners starting their AI journey.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <div class="program-title">
-                <i class="fas fa-flask"></i>
-                Research Cohort Lab
-            </div>
-            <ul>
-                <li>Team-based research environment using a shared dataset.</li>
-                <li>Students collaborate on modeling, analysis, and writing.</li>
-                <li>Culminates in a group research presentation.</li>
-                <li>Ideal for students with some coding experience.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- PRICING -->
+    <!-- PRICING BUTTON -->
     <section>
         <h2>Pricing & Tuition</h2>
-        <p class="section-subtitle">
-            Simple, transparent pricing designed to fit different program lengths.
-        </p>
+        <p class="section-subtitle">Transparent pricing and flexible refund policy.</p>
 
-        <div class="card">
-            <ul style="list-style:none; padding-left:0;">
-                <li style="margin-bottom:1em; font-size:1.1em;">
-                    <i class="fas fa-dollar-sign" style="color:#CBA45B;"></i>
-                    <strong>Standard Rate:</strong> $100 per hour
-                </li>
-
-                <li style="margin-bottom:1em; font-size:1.1em;">
-                    <i class="fas fa-tags" style="color:#CBA45B;"></i>
-                    <strong>Discount:</strong> 10% off for 10+ hour packages
-                </li>
-
-                <li style="margin-bottom:1em; font-size:1.1em;">
-                    <i class="fas fa-hand-holding-dollar" style="color:#CBA45B;"></i>
-                    Flexible billing options available.
-                </li>
-            </ul>
-        </div>
+        <a class="btn-secondary" id="openModal">
+            <i class="fas fa-file-invoice-dollar"></i> View Pricing Details & Refund Policy
+        </a>
     </section>
 
-    <!-- REFUND POLICY -->
-    <section>
-        <h2>Refund Policy</h2>
-
-        <div class="card">
-            <ul style="list-style:none; padding-left:0;">
-                <li style="margin-bottom:1em;">
-                    <i class="fas fa-check-circle" style="color:#CBA45B;"></i>
-                    <strong>100% refund after Session 1:</strong>
-                    If the student chooses not to continue, the full amount is refunded immediately.
-                </li>
-
-                <li style="margin-bottom:1em;">
-                    <i class="fas fa-check-circle" style="color:#CBA45B;"></i>
-                    <strong>Pro-rated refund anytime:</strong>
-                    Families may request a refund for all unused hours at any stage in the program.
-                </li>
-
-                <li style="margin-bottom:1em;">
-                    <i class="fas fa-check-circle" style="color:#CBA45B;"></i>
-                    Sessions can be rescheduled with 24 hours notice.
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- FIT -->
-    <section>
-        <h2>Which Program Is Right for Me?</h2>
-        <div class="card">
-            <ul>
-                <li><strong>New to programming or AI:</strong> Foundations Cohort or Standard Track.</li>
-                <li><strong>Some Python experience:</strong> Standard or Advanced Track.</li>
-                <li><strong>Aiming for competitions or journals:</strong> Advanced Track or Research Cohort Lab.</li>
-            </ul>
-
-            <a href="contact.html" class="btn-primary">
-                <i class="fas fa-calendar-check"></i>
-                Book a Consultation
-            </a>
-        </div>
-    </section>
 </main>
+
+<!-- MODAL -->
+<div class="modal" id="pricingModal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+
+        <h3>Pricing, Refunds & Discounts</h3>
+
+        <p><strong>Hourly Rate:</strong> $100 per hour</p>
+        <p><strong>Package Discount:</strong> 10% off when enrolling for 10+ hours</p>
+
+        <h4>Refund Policy</h4>
+        <ul>
+            <li><strong>100% refund after Session 1</strong> if you choose not to continue.</li>
+            <li><strong>Pro-rated refund anytime</strong> for all unused hours.</li>
+            <li>No cancellation fees.</li>
+        </ul>
+
+        <br>
+        <a href="terms.html" class="btn-primary" style="margin-right:10px;">
+            Full Terms & Conditions
+        </a>
+
+        <a id="downloadPDF" class="btn-secondary">
+            <i class="fas fa-file-pdf"></i> Download PDF
+        </a>
+    </div>
+</div>
+
+<script>
+    const modal = document.getElementById("pricingModal");
+    document.getElementById("openModal").onclick = () => modal.style.display = "flex";
+    document.getElementById("closeModal").onclick = () => modal.style.display = "none";
+    window.onclick = (e) => { if(e.target === modal) modal.style.display = "none"; };
+
+    document.getElementById("downloadPDF").onclick = () => {
+        window.location.href = "terms_conditions.pdf";
+    };
+</script>
 
 <footer>
     © 2025 Paper Mentor AI — All Rights Reserved.
