@@ -38,7 +38,6 @@
             animation: slideUp 1.2s ease;
         }
 
-        /* BIGGER HERO IMAGE */
         .hero-logo {
             width: 480px;
             max-width: 85vw;
@@ -62,7 +61,7 @@
             max-width: 640px;
         }
 
-        .cta-big {
+        .cta-big, .cta-apply {
             background: #1cc88a;
             padding: 1em 2em;
             font-size: 1.1em;
@@ -72,14 +71,15 @@
             font-weight: 600;
             transition: 0.3s;
             box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+            display: inline-block;
+            margin: 0.3em;
         }
 
-        .cta-big:hover {
+        .cta-big:hover, .cta-apply:hover {
             background: #17a673;
             transform: translateY(-3px);
         }
 
-        /* Animations */
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         @keyframes slideUp {
             from { transform: translateY(40px); opacity: 0; }
@@ -90,7 +90,6 @@
             100% { opacity: 1; transform: scale(1); }
         }
 
-        /* --- CONTENT SECTION --- */
         section {
             padding: 3em 1.5em;
             max-width: 900px;
@@ -123,6 +122,10 @@
         <a href="programs.html" class="cta-big">
             <i class="fas fa-arrow-right"></i> Explore Mentoring Programs
         </a>
+
+        <a href="apply.html" class="cta-apply">
+            <i class="fas fa-paper-plane"></i> Apply Now
+        </a>
     </div>
 </div>
 
@@ -133,6 +136,10 @@
         <ul>
             <li><i class="fas fa-check-circle"></i> Personalized 1:1 mentorship tailored to each student’s interests</li>
             <li><i class="fas fa-check-circle"></i> Mentors from Cornell, EPFL, Stanford, UPenn, and top research labs</li>
+
+            <!-- ⭐ NEW LINE ADDED HERE ⭐ -->
+            <li><i class="fas fa-check-circle"></i> All mentors are graduate students from top-tier universities who currently work at leading tech companies in the field of AI, bringing strong mentoring and real-world experience.</li>
+
             <li><i class="fas fa-check-circle"></i> Project-based learning using state-of-the-art AI tools</li>
             <li><i class="fas fa-check-circle"></i> Guidance in research writing, experiments, coding, and publication</li>
             <li><i class="fas fa-check-circle"></i> A powerful boost for competitive university admissions</li>
@@ -160,6 +167,10 @@
         <a href="students.html" class="cta">
             <i class="fas fa-graduation-cap"></i> Explore Student Success
         </a>
+
+        <a href="apply.html" class="cta-apply">
+            <i class="fas fa-paper-plane"></i> Apply Now
+        </a>
     </div>
 </section>
 
@@ -171,8 +182,13 @@
             Book a free consultation to learn how personalized AI research mentorship can help you
             develop impactful projects, build a strong academic profile, and stand out in university admissions.
         </p>
+
         <a href="contact.html" class="cta">
             <i class="fas fa-calendar-check"></i> Book a Free Session
+        </a>
+
+        <a href="apply.html" class="cta-apply">
+            <i class="fas fa-paper-plane"></i> Apply Now
         </a>
     </div>
 </section>
