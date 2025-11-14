@@ -107,6 +107,10 @@
     <!-- ⭐ APPLICATION FORM ⭐ -->
     <form id="applyForm" action="https://formspree.io/f/xananvqn" method="POST">
 
+        <!-- REQUIRED FIX: NO REDIRECT -->
+        <input type="hidden" name="_redirect" value="false">
+        <input type="hidden" name="_captcha" value="false">
+
         <!-- PERSONAL INFORMATION -->
         <div class="form-section-title">Personal Information</div>
 
@@ -180,14 +184,14 @@
             <option>2</option>
             <option>3 – Some small projects</option>
             <option>4</option>
-            <option>5 – Significant experience, multiple projects</option>
+            <option>5 – Strong experience</option>
         </select>
 
         <label>If you have prior programming experience, describe it briefly</label>
         <textarea name="programming_background" placeholder="Languages, projects, courses, etc."></textarea>
 
         <label>Domains you are interested in applying AI to</label>
-        <textarea name="ai_domains" placeholder="Healthcare, NLP, robotics, climate, finance, etc."></textarea>
+        <textarea name="ai_domains" placeholder="Healthcare, NLP, Robotics, Climate..."></textarea>
 
         <label>Why are you interested in joining the program? (Recommended: 150 words)</label>
         <textarea name="why_join" required></textarea>
@@ -198,7 +202,7 @@
 
         <label>Which upcoming session are you applying for?</label>
         <select name="session" required>
-            <option value="">Select...</option>
+            <option value="">Select…</option>
             <option>Winter 2025</option>
             <option>Spring 2026</option>
             <option>Summer 2026</option>
@@ -208,7 +212,7 @@
         <textarea name="exciting_aspects"></textarea>
 
         <label>How did you hear about us?</label>
-        <textarea name="referral_source" placeholder="Teacher, counselor, student, Instagram, etc."></textarea>
+        <textarea name="referral_source" placeholder="Teacher, counselor, Instagram, friend, etc."></textarea>
 
         <label>If referred by a teacher/counselor, please provide their name</label>
         <input type="text" name="referral_contact">
@@ -227,13 +231,14 @@
 
 </div>
 
-<!-- ⭐ JAVASCRIPT HANDLER (prevents redirect + shows success) ⭐ -->
+<!-- ⭐ JAVASCRIPT HANDLER (NO REDIRECT + SUCCESS MESSAGE) ⭐ -->
 <script>
     const form = document.getElementById("applyForm");
     const successMessage = document.getElementById("success");
 
     form.addEventListener("submit", async function(event) {
         event.preventDefault();
+
         const response = await fetch(form.action, {
             method: "POST",
             body: new FormData(form),
@@ -243,7 +248,9 @@
         if (response.ok) {
             form.reset();
             successMessage.style.display = "block";
-            history.replaceState(null, null, location.href);
+
+            // Prevent back button from re-triggering redirect
+            history.replaceState(null, null, window.location.href);
         }
     });
 </script>
