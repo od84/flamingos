@@ -61,7 +61,7 @@
             max-width: 640px;
         }
 
-        .cta-big, .cta-apply, .cta-faq {
+        .cta-big, .cta-apply, .cta {
             background: #1cc88a;
             padding: 1em 2em;
             font-size: 1.1em;
@@ -75,25 +75,39 @@
             margin: 0.3em;
         }
 
-        .cta-big:hover, .cta-apply:hover, .cta-faq:hover {
+        .cta-big:hover, .cta-apply:hover, .cta:hover {
             background: #17a673;
             transform: translateY(-3px);
         }
 
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes slideUp {
-            from { transform: translateY(40px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        nav {
+            background: #f8f9fa;
+            padding: 1em;
+            text-align: center;
         }
-        @keyframes fadeInLogo {
-            0% { opacity: 0; transform: scale(0.85); }
-            100% { opacity: 1; transform: scale(1); }
+
+        nav a {
+            margin: 0 1em;
+            text-decoration: none;
+            color: #4E73DF;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #1cc88a;
         }
 
         section {
             padding: 3em 1.5em;
             max-width: 900px;
             margin: auto;
+        }
+
+        .highlight-box {
+            background: #eef4ff;
+            padding: 1.5em;
+            border-left: 6px solid #4e73df;
+            border-radius: 12px;
         }
 
         h2 {
@@ -112,6 +126,7 @@
     <a href="about.html">About</a>
     <a href="programs.html">Programs</a>
     <a href="students.html">Students</a>
+    <a href="apply.html">Apply</a>
     <a href="faq.html">FAQ</a>
     <a href="contact.html">Contact</a>
 </nav>
@@ -136,10 +151,6 @@
         <a href="apply.html" class="cta-apply">
             <i class="fas fa-paper-plane"></i> Apply Now
         </a>
-
-        <a href="faq.html" class="cta-faq">
-            <i class="fas fa-question-circle"></i> View FAQs
-        </a>
     </div>
 </div>
 
@@ -150,16 +161,12 @@
         <ul>
             <li><i class="fas fa-check-circle"></i> Personalized 1:1 mentorship tailored to each student’s interests</li>
             <li><i class="fas fa-check-circle"></i> Mentors from Cornell, EPFL, Stanford, UPenn, and top research labs</li>
-            <li><i class="fas fa-check-circle"></i> All mentors are graduate students from leading universities who currently work at top AI-focused tech companies, bringing deep expertise and real-world mentoring experience</li>
+            <li><i class="fas fa-check-circle"></i> All mentors are graduate students from top-tier universities who currently work at leading tech companies in AI, bringing real-world and mentoring experience</li>
             <li><i class="fas fa-check-circle"></i> Project-based learning using state-of-the-art AI tools</li>
             <li><i class="fas fa-check-circle"></i> Guidance in research writing, experiments, coding, and publication</li>
             <li><i class="fas fa-check-circle"></i> A powerful boost for competitive university admissions</li>
         </ul>
     </div>
-
-    <a href="faq.html" class="cta-faq">
-        <i class="fas fa-question-circle"></i> Read Frequently Asked Questions
-    </a>
 </section>
 
 <!-- SAMPLE PROJECTS -->
@@ -168,15 +175,15 @@
 
     <div class="highlight-box">
         <ul>
-            <li><i class="fas fa-robot"></i> Detecting cyberbullying and hate speech using transformer-based NLP</li>
+            <li><i class="fas fa-robot"></i> DDetecting cyberbullying and hate speech using transformer-based NLP</li>
             <li><i class="fas fa-brain"></i> Brain tumor diagnosis with CNNs and explainable AI</li>
             <li><i class="fas fa-chart-line"></i> Predicting stock market trends using LSTM networks</li>
             <li><i class="fas fa-cloud-sun"></i> Climate and weather forecasting with machine learning</li>
             <li><i class="fas fa-shield-alt"></i> Fake news and misinformation detection with AI</li>
-            <li><i class="fas fa-seedling"></i> Air quality and pollution prediction using time-series models</li>
-            <li><i class="fas fa-car-side"></i> Lane detection for autonomous driving using computer vision</li>
-            <li><i class="fas fa-dna"></i> Early disease risk prediction using medical datasets</li>
-            <li><i class="fas fa-paw"></i> Wildlife species recognition using YOLOv8 object detection</li>
+            <li><i class="fas fa-seedling"></i> Air quality and pollution prediction</li>
+            <li><i class="fas fa-car-side"></i> Lane detection for autonomous driving</li>
+            <li><i class="fas fa-dna"></i> Disease risk prediction using medical datasets</li>
+            <li><i class="fas fa-paw"></i> Wildlife recognition using YOLOv8</li>
         </ul>
 
         <a href="students.html" class="cta">
@@ -185,10 +192,6 @@
 
         <a href="apply.html" class="cta-apply">
             <i class="fas fa-paper-plane"></i> Apply Now
-        </a>
-
-        <a href="faq.html" class="cta-faq">
-            <i class="fas fa-question-circle"></i> Read FAQs
         </a>
     </div>
 </section>
@@ -208,10 +211,6 @@
 
         <a href="apply.html" class="cta-apply">
             <i class="fas fa-paper-plane"></i> Apply Now
-        </a>
-
-        <a href="faq.html" class="cta-faq">
-            <i class="fas fa-question-circle"></i> FAQ
         </a>
     </div>
 </section>
