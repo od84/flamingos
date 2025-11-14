@@ -169,7 +169,7 @@
             background: #0A1730;
         }
 
-        /* --- MODAL --- */
+        /* MODAL */
         .modal {
             position: fixed;
             top: 0;
@@ -218,6 +218,11 @@
             text-align: center;
             padding: 1.8em 1.2em;
             font-size: 0.9em;
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
         }
     </style>
 </head>
@@ -332,7 +337,7 @@
             Full Terms & Conditions
         </a>
 
-        <a id="downloadPDF" class="btn-secondary">
+        <a id="downloadPDF" class="btn-secondary" href="#">
             <i class="fas fa-file-pdf"></i> Download PDF
         </a>
     </div>
@@ -344,8 +349,12 @@
     document.getElementById("closeModal").onclick = () => modal.style.display = "none";
     window.onclick = (e) => { if(e.target === modal) modal.style.display = "none"; };
 
+    // FIXED PDF DOWNLOAD
     document.getElementById("downloadPDF").onclick = () => {
-        window.location.href = "terms_conditions.pdf";
+        const link = document.createElement("a");
+        link.href = "assets/PaperMentorAI_Terms_Premium.pdf";
+        link.download = "PaperMentorAI_Terms_Premium.pdf";
+        link.click();
     };
 </script>
 
