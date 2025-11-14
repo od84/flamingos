@@ -3,69 +3,129 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>About PaperMentorAI</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <title>About | Paper Mentor AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
     <style>
-        header {
-            background: linear-gradient(135deg, #4E73DF, #1CC88A);
-            color: white;
-            text-align: center;
-            padding: 3em 2em;
-            border-bottom-left-radius: 35px;
-            border-bottom-right-radius: 35px;
+        :root {
+            --navy-deep: #0B1F3A;
+            --navy-soft: #12284A;
+            --gold: #CBA45B;
+            --bg-light: #F4F6FB;
+            --card-bg: #E8EEF8;
+            --text-main: #1B1F2A;
         }
-        header h1 { margin: 0; font-size: 2.4em; }
-        header p { margin-top: 0.5em; font-size: 1.2em; }
+
+        body {
+            margin: 0;
+            background: var(--bg-light);
+            font-family: 'Inter', system-ui, sans-serif;
+            color: var(--text-main);
+        }
 
         nav {
-            background: #f8f9fa;
-            padding: 1em;
-            text-align: center;
+            background: var(--navy-deep);
+            padding: 0.9em 1.5em;
+            display: flex;
+            justify-content: center;
+            gap: 1.8em;
         }
         nav a {
-            margin: 0 1em;
-            font-weight: 600;
+            color: #fff;
             text-decoration: none;
-            color: #4E73DF;
+            font-weight: 500;
+            font-size: 0.98em;
+            position: relative;
         }
-        nav a:hover { color: #1CC88A; }
-
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 2.5em 1.5em;
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -0.35em;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.25s ease;
         }
-        h2 { color: #4E73DF; }
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
 
-        .highlight-box {
-            background: #eef4ff;
-            padding: 1.5em;
-            border-left: 6px solid #4E73DF;
-            border-radius: 12px;
-            margin-bottom: 1.5em;
+        header {
+            background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 60%, #050814 100%);
+            color: white;
+            text-align: center;
+            padding: 3.5em 1.8em 3em;
+        }
+        header h1 {
+            font-family: 'Merriweather', serif;
+            margin: 0 0 0.4em;
+            font-size: 2.2em;
+        }
+        header p {
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 1.02em;
+            line-height: 1.7;
+            color: #dde3ff;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 3em 1.5em 3.5em;
+        }
+
+        h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5em;
+            margin-bottom: 0.4em;
+            color: var(--navy-deep);
+        }
+        .section-subtitle {
+            font-size: 0.96em;
+            color: #495163;
+            margin-bottom: 1em;
+        }
+
+        .box {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 1.8em 1.9em;
+            border-left: 5px solid var(--gold);
+            box-shadow: 0 12px 26px rgba(11,31,58,0.08);
+            margin-bottom: 1.8em;
+        }
+
+        .box ul {
+            padding-left: 1.2em;
         }
 
         footer {
+            background: #020511;
+            color: #b3b9d4;
             text-align: center;
-            padding: 1.5em;
-            margin-top: 2em;
-            background: #f1f1f1;
+            padding: 1.8em 1.2em;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 720px) {
+            header {
+                padding: 3em 1.4em 2.7em;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>About PaperMentorAI</h1>
-    <p>Personalized AI research mentorship from experienced researchers and graduate mentors.</p>
-</header>
-
 <nav>
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+    <a href="about.html" class="active">About</a>
     <a href="programs.html">Programs</a>
     <a href="students.html">Students</a>
     <a href="apply.html">Apply</a>
@@ -73,52 +133,78 @@
     <a href="contact.html">Contact</a>
 </nav>
 
-<section>
+<header>
+    <h1>About Paper Mentor AI</h1>
+    <p>
+        Paper Mentor AI is a boutique mentoring program focused on helping motivated students design, execute,
+        and write high-quality AI research projects and papers with close support from experienced mentors.
+    </p>
+</header>
 
-    <h2>Our Mission</h2>
-    <div class="highlight-box">
-        <p>
-            PaperMentorAI was created to give students the opportunity to work directly with experienced AI researchers
-            on meaningful, project-based research. We help students develop strong technical foundations, discover their
-            academic interests, and build high-impact research portfolios that support university and future STEM goals.
-        </p>
-    </div>
+<main>
+    <section>
+        <h2>Mission & Philosophy</h2>
+        <div class="box">
+            <p>
+                Our mission is to bridge the gap between high-school education and the type of research thinking expected
+                in top universities and selective STEM programs. We do this through project-based mentorship where students:
+            </p>
+            <ul>
+                <li>Learn how modern AI and machine learning methods actually work and are applied.</li>
+                <li>Design a research question grounded in real data and a concrete impact area.</li>
+                <li>Implement, evaluate, and iterate on models with the guidance of an experienced mentor.</li>
+                <li>Document their work in a structured research report or paper, suitable for competitions or journals.</li>
+            </ul>
+            <p>
+                Rather than “camps” or pre-recorded courses, Paper Mentor AI is built around focused collaboration between
+                the student and their mentor.
+            </p>
+        </div>
+    </section>
 
-    <h2>Our Mentors</h2>
-    <div class="highlight-box">
-        <p>
-            All mentors at PaperMentorAI are <strong>graduate students in Computer Science, AI, or related fields</strong>
-            from top-tier international universities. They bring a high level of academic excellence, research depth, and
-            hands-on experience with modern AI technologies.
-        </p>
+    <section>
+        <h2>Who Our Mentors Are</h2>
+        <div class="box">
+            <p>
+                All mentors at Paper Mentor AI are graduate-level researchers and practitioners in Computer Science, AI,
+                or closely related fields. They combine:
+            </p>
+            <ul>
+                <li>Strong academic backgrounds in machine learning, data science, or applied AI.</li>
+                <li>Hands-on experience working with modern tools (e.g. deep learning frameworks, cloud platforms, NLP and vision models).</li>
+                <li>Real-world exposure through research labs, industry roles, or applied AI projects.</li>
+            </ul>
+            <p>
+                Equally important, they have <strong>years of experience mentoring students</strong>—supporting them through
+                research design, implementation, and scientific writing, and helping them use these projects in applications
+                to top universities and competitive master’s programs.
+            </p>
+        </div>
+    </section>
 
-        <p>
-            In addition to their academic backgrounds, our mentors also have <strong>real-world industry experience</strong>
-            at leading technology and AI companies. They work with cutting-edge machine learning systems daily and integrate
-            these skills into their teaching and project guidance.
-        </p>
-
-        <p>
-            Most importantly, our mentors have <strong>years of experience guiding students</strong> through research projects,
-            competitions, publications, and university preparation. Through PaperMentorAI, they have helped students gain
-            admission to <strong>top universities and highly competitive master's programs</strong>, providing both academic and
-            long-term career support.
-        </p>
-    </div>
-
-    <h2>Program Leadership</h2>
-    <div class="highlight-box">
-        <p>
-            PaperMentorAI is led by an experienced AI researchers with a background in advanced machine learning and
-            interdisciplinary research. With years of teaching and mentorship experience, the program lead ensures that every
-            student receives high-quality, structured, and personalized research guidance.
-        </p>
-    </div>
-
-</section>
+    <section>
+        <h2>How Mentoring Works in Practice</h2>
+        <div class="box">
+            <p>
+                Mentoring is typically organised into 1:1 sessions, adapted to the student’s schedule and timezone.
+                Depending on the track, a student might:
+            </p>
+            <ul>
+                <li>Start with core foundations in Python, ML, and model evaluation.</li>
+                <li>Move into a focused applied project (e.g. medical imaging, NLP, finance, sustainability).</li>
+                <li>Run experiments and refine models together with their mentor.</li>
+                <li>Structure the project into a formal written paper or presentation.</li>
+            </ul>
+            <p>
+                Throughout, the mentor’s role is to challenge the student, provide feedback, and make sure the work is
+                technically sound while still being understandable and achievable at the high-school level.
+            </p>
+        </div>
+    </section>
+</main>
 
 <footer>
-    © 2025 PaperMentorAI — All Rights Reserved.
+    © 2025 Paper Mentor AI — All Rights Reserved.
 </footer>
 
 </body>

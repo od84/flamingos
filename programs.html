@@ -1,168 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Mentoring Programs</title>
+    <title>Programs | Paper Mentor AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
     <style>
-        .hero-programs {
-            background: linear-gradient(135deg, #4E73DF, #1CC88A);
-            padding: 3em 2em;
+        :root {
+            --navy-deep: #0B1F3A;
+            --navy-soft: #12284A;
+            --gold: #CBA45B;
+            --bg-light: #F4F6FB;
+            --card-bg: #E8EEF8;
+            --text-main: #1B1F2A;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg-light);
+            font-family: 'Inter', system-ui, sans-serif;
+            color: var(--text-main);
+        }
+
+        nav {
+            background: var(--navy-deep);
+            padding: 0.9em 1.5em;
+            display: flex;
+            justify-content: center;
+            gap: 1.8em;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            font-size: 0.98em;
+        }
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -0.35em;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.25s ease;
+        }
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        .hero {
+            background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 60%, #050814 100%);
             color: white;
             text-align: center;
-            border-bottom-left-radius: 35px;
-            border-bottom-right-radius: 35px;
+            padding: 3.2em 1.8em 2.9em;
         }
-        .hero-programs h1 {
-            font-size: 2.5em;
-            margin-bottom: 0.3em;
+        .hero h1 {
+            font-family: 'Merriweather', serif;
+            margin: 0 0 0.45em;
+            font-size: 2.2em;
         }
-        .program-card {
-            background: #eef4ff;
-            padding: 1.5em;
-            border-radius: 12px;
+        .hero p {
+            max-width: 720px;
+            margin: 0 auto;
+            font-size: 1.02em;
+            color: #dbe2ff;
+            line-height: 1.7;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 3em 1.5em 3.5em;
+        }
+
+        h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.55em;
+            margin-bottom: 0.4em;
+            color: var(--navy-deep);
+        }
+
+        .section-subtitle {
+            font-size: 0.95em;
+            color: #4f5668;
+            margin-bottom: 1em;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 1.7em 1.9em;
+            border-left: 5px solid var(--gold);
+            box-shadow: 0 12px 26px rgba(11,31,58,0.08);
             margin-bottom: 1.8em;
-            border-left: 6px solid #4E73DF;
-            transition: 0.3s ease;
         }
-        .program-card:hover {
-            background: #dce8ff;
-            transform: translateY(-4px);
-        }
+
         .program-title {
-            font-size: 1.4em;
-            font-weight: bold;
+            font-weight: 600;
+            font-size: 1.1em;
             margin-bottom: 0.6em;
-            color: #4E73DF;
+            color: var(--navy-soft);
             display: flex;
             align-items: center;
+            gap: 0.5em;
         }
         .program-title i {
-            margin-right: 0.5em;
-            color: #1CC88A;
+            color: var(--gold);
         }
-        .goal-box {
-            background: #fff8e6;
-            border-left: 6px solid #f6c23e;
-            padding: 1.5em;
-            border-radius: 12px;
-            margin-bottom: 2em;
+
+        .card ul {
+            padding-left: 1.2em;
         }
-        .goal-box i {
-            color: #f6c23e;
-            margin-right: 0.4em;
+
+        .badge {
+            display: inline-block;
+            background: var(--navy-deep);
+            color: #fff;
+            font-size: 0.78em;
+            padding: 0.25em 0.7em;
+            border-radius: 999px;
+            margin-left: 0.4em;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy-deep);
+            border-radius: 999px;
+            padding: 0.8em 1.6em;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4em;
+            margin-top: 0.8em;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: #e0c588;
+        }
+
+        footer {
+            background: #020511;
+            color: #b3b9d4;
+            text-align: center;
+            padding: 1.8em 1.2em;
+            font-size: 0.9em;
         }
     </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero-programs">
-    <h1>Mentoring Programs</h1>
-    <p>Find the pathway that fits your goals, interests, and experience level.</p>
-</div>
-
 <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="programs.html">Programs</a>
+    <a href="programs.html" class="active">Programs</a>
     <a href="students.html">Students</a>
+    <a href="apply.html">Apply</a>
+    <a href="faq.html">FAQ</a>
     <a href="contact.html">Contact</a>
 </nav>
 
-<section>
-    <h2><i class="fas fa-bullseye"></i> Our Mission</h2>
+<section class="hero">
+    <h1>Mentoring Programs</h1>
+    <p>
+        Paper Mentor AI offers flexible tracks for students at different experience levels —
+        from first steps in AI to fully developed research papers aimed at competitions or journals.
+    </p>
+</section>
 
-    <div class="goal-box">
-        <p>
-            <i class="fas fa-trophy"></i>
-            The primary goal of our program is to help <strong>high school students design, complete, and publish</strong>
-            real AI research projects. These projects can be submitted to <strong>student research journals</strong> and to
-            major <strong>U.S. STEM competitions</strong> such as:
+<main>
+    <section>
+        <h2>Overall Structure</h2>
+        <div class="card">
+            <p>
+                Our programs are built around a core principle: every student should finish with a concrete,
+                well-structured project that demonstrates genuine understanding and initiative. Depending on the
+                chosen track, students may:
+            </p>
+            <ul>
+                <li>Focus on foundations in Python, machine learning, and model evaluation.</li>
+                <li>Complete a full applied AI project with datasets, experiments, and a written report.</li>
+                <li>Prepare a manuscript suitable for submission to student research journals or STEM competitions.</li>
+            </ul>
+            <p>
+                We adjust pacing, depth, and project complexity based on the student’s grade, background, and goals.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>1:1 Research Mentoring Tracks</h2>
+        <p class="section-subtitle">
+            One-to-one mentoring is ideal for students who want maximum flexibility and a highly customized research direction.
         </p>
-        <ul>
-            <li>Regeneron STS</li>
-            <li>ISEF (International Science & Engineering Fair)</li>
-            <li>JSHS (Junior Science & Humanities Symposium)</li>
-            <li>Local & national academic showcases</li>
-        </ul>
-        <p>
-            Completing a strong research project significantly strengthens university applications and demonstrates
-            authentic interest in STEM.
+
+        <div class="card">
+            <div class="program-title">
+                <i class="fas fa-star"></i>
+                Standard Research Track (≈ 8 hours) <span class="badge">Foundations + Mini Project</span>
+            </div>
+            <ul>
+                <li>Introduces Python, core ML concepts, and basic experimentation workflows.</li>
+                <li>Students complete a focused mini-project, often on a pre-curated dataset.</li>
+                <li>Emphasis on understanding how models work and how to interpret results.</li>
+                <li>Recommended for students with little or no prior AI experience.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="program-title">
+                <i class="fas fa-rocket"></i>
+                Advanced Research Track (≈ 12–16 hours) <span class="badge">Full Research Paper</span>
+            </div>
+            <ul>
+                <li>End-to-end research project: from question design to experiments and analysis.</li>
+                <li>Work with real data: medical, environmental, finance, language, or custom sources.</li>
+                <li>Students write a structured report or research paper with mentor feedback.</li>
+                <li>Suitable for students aiming at publications or selective STEM competitions.</li>
+            </ul>
+            <a href="apply.html" class="btn-primary">
+                <i class="fas fa-paper-plane"></i> Apply to 1:1 Research
+            </a>
+        </div>
+    </section>
+
+    <section>
+        <h2>Small Cohort Options</h2>
+        <p class="section-subtitle">
+            For students who enjoy collaboration, we occasionally run small groups with 2–3 students at a similar level.
         </p>
-    </div>
-</section>
 
-<section>
-    <h2><i class="fas fa-user"></i> 1–1 Personalized Research Mentoring (8–12 Hours)</h2>
+        <div class="card">
+            <div class="program-title">
+                <i class="fas fa-users"></i>
+                AI Foundations Cohort
+            </div>
+            <ul>
+                <li>Shared lessons on Python, ML basics, and core AI concepts.</li>
+                <li>Live coding sessions and guided exercises.</li>
+                <li>Ends with a small collaborative project and presentation.</li>
+                <li>Best for students just starting their AI journey.</li>
+            </ul>
+        </div>
 
-    <div class="program-card">
-        <p class="program-title"><i class="fas fa-star"></i>1–1 Standard Research Track (8 Hours)</p>
-        <ul>
-            <li>Personalized AI mentorship tailored to the student</li>
-            <li>Learn ML + Python fundamentals</li>
-            <li>Start a research-grade project with guidance</li>
-            <li>Weekly 1–1 live sessions</li>
-            <li>Perfect for students new to AI or research</li>
-        </ul>
-    </div>
+        <div class="card">
+            <div class="program-title">
+                <i class="fas fa-flask"></i>
+                Research Cohort Lab
+            </div>
+            <ul>
+                <li>Team-based research environment with a shared dataset and topic.</li>
+                <li>Roles divided between exploration, modeling, analysis, and writing.</li>
+                <li>Students present a group research outcome at the end.</li>
+                <li>Good for students with some prior coding experience who enjoy working in teams.</li>
+            </ul>
+        </div>
+    </section>
 
-    <div class="program-card">
-        <p class="program-title"><i class="fas fa-rocket"></i>1–1 Advanced Research Track (12 Hours)</p>
-        <ul>
-            <li>Full end-to-end research project</li>
-            <li>Model selection, training, experimentation & evaluation</li>
-            <li>Manuscript writing & research paper structure</li>
-            <li>Preparation for publication or competitions</li>
-            <li>Ideal for ambitious or experienced students</li>
-        </ul>
-    </div>
-</section>
-
-<section>
-    <h2><i class="fas fa-users"></i> Small-Group Mentoring (3-Student Cohorts)</h2>
-
-    <div class="program-card">
-        <p class="program-title"><i class="fas fa-people-group"></i>AI Foundations Group Program (3 Students)</p>
-        <ul>
-            <li>Groups formed by similar level/experience</li>
-            <li>Interactive lessons & guided live coding</li>
-            <li>Collaborative mini research project</li>
-            <li>Total 8 hours of group mentoring</li>
-        </ul>
-    </div>
-
-    <div class="program-card">
-        <p class="program-title"><i class="fas fa-flask"></i>Group Research Lab (3 Students)</p>
-        <ul>
-            <li>Team-based research environment</li>
-            <li>Learn advanced AI/ML topics together</li>
-            <li>Shared experimentation & model analysis</li>
-            <li>Perfect for students who enjoy teamwork</li>
-        </ul>
-    </div>
-</section>
-
-<section>
-    <h2><i class="fas fa-question-circle"></i> Which Program Is Right for You?</h2>
-
-    <div class="program-card">
-        <ul>
-            <li><strong>New to coding or AI?</strong> → Group Foundations or 1–1 Standard Track</li>
-            <li><strong>Some experience with Python?</strong> → 1–1 Standard Track</li>
-            <li><strong>Want to publish or compete?</strong> → Advanced Research Track</li>
-            <li><strong>Prefer teamwork?</strong> → Group Research Lab</li>
-        </ul>
-        <a href="contact.html" class="cta"><i class="fas fa-calendar-check"></i> Book a Free Consultation</a>
-    </div>
-</section>
+    <section>
+        <h2>Which Program Is a Good Fit?</h2>
+        <div class="card">
+            <ul>
+                <li><strong>New to programming or AI:</strong> AI Foundations Cohort or Standard Research Track.</li>
+                <li><strong>Some Python experience, curious about research:</strong> Standard or Advanced Research Track.</li>
+                <li><strong>Interested in publications or competitions:</strong> Advanced Research Track or Research Cohort Lab.</li>
+            </ul>
+            <a href="contact.html" class="btn-primary">
+                <i class="fas fa-calendar-check"></i>
+                Schedule a Short Consultation
+            </a>
+        </div>
+    </section>
+</main>
 
 <footer>
-    © 2025 AI Mentoring Program — All Rights Reserved.
+    © 2025 Paper Mentor AI — All Rights Reserved.
 </footer>
 
 </body>
