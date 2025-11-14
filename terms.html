@@ -15,7 +15,6 @@
             --navy-deep: #0B1F3A;
             --navy-soft: #12284A;
             --gold: #CBA45B;
-            --gold-soft: #DCC394;
             --bg-light: #F4F6FB;
             --card-bg: #E8EEF8;
             --text-main: #1B1F2A;
@@ -28,7 +27,7 @@
             color: var(--text-main);
         }
 
-        /* NAV */
+        /* NAVIGATION */
         nav {
             background: var(--navy-deep);
             padding: 0.9em 1.5em;
@@ -36,6 +35,7 @@
             justify-content: center;
             gap: 1.8em;
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
@@ -43,6 +43,7 @@
             position: relative;
             font-size: 0.98em;
         }
+
         nav a::after {
             content: "";
             position: absolute;
@@ -53,85 +54,84 @@
             background: var(--gold);
             transition: width 0.25s ease;
         }
+
         nav a:hover::after,
         nav a.active::after {
             width: 100%;
         }
 
         /* HERO */
-        .hero-terms {
+        .hero {
             background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 60%, #050814 100%);
             color: white;
             text-align: center;
-            padding: 3.5em 1.8em 3em;
+            padding: 3em 2em;
         }
 
-        .hero-terms h1 {
+        .hero img {
+            width: 150px;
+            margin-bottom: 1em;
+        }
+
+        .hero h1 {
             font-family: 'Merriweather', serif;
-            font-size: 2.4em;
-            margin: 0 0 0.5em;
-        }
-
-        .hero-terms p {
-            max-width: 720px;
-            margin: 0 auto;
-            font-size: 1.05em;
-            color: #e2e6ff;
-            line-height: 1.7;
+            font-size: 2.3em;
+            margin-bottom: 0.4em;
         }
 
         /* CONTENT */
-        main {
+        .container {
             max-width: 900px;
-            margin: 0 auto;
-            padding: 3em 1.5em 4em;
+            margin: 3em auto;
+            padding: 0 1.5em;
         }
 
         h2 {
             font-family: 'Merriweather', serif;
-            font-size: 1.5em;
             color: var(--navy-deep);
-            margin-top: 2em;
-            margin-bottom: 0.6em;
+            margin-top: 2.2em;
+            font-size: 1.45em;
         }
 
         .card {
             background: var(--card-bg);
-            border-radius: 16px;
-            padding: 1.7em 1.9em;
+            padding: 1.5em 1.8em;
             border-left: 5px solid var(--gold);
-            box-shadow: 0 12px 26px rgba(11,31,58,0.08);
-            margin-bottom: 1.8em;
-            line-height: 1.7;
+            border-radius: 14px;
+            margin-bottom: 1.5em;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        p {
+            line-height: 1.65;
         }
 
         .download-btn {
+            display: inline-block;
             background: var(--gold);
-            padding: 0.8em 1.6em;
-            border-radius: 999px;
             color: var(--navy-deep);
-            text-decoration: none;
+            padding: 0.8em 1.4em;
+            border-radius: 999px;
             font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5em;
             margin-top: 1.2em;
+            text-decoration: none;
         }
 
         .download-btn:hover {
-            background: var(--gold-soft);
+            background: #e0c588;
         }
 
-        /* FOOTER */
         footer {
             background: #020511;
             color: #b3b9d4;
             text-align: center;
-            padding: 2em 1em;
+            padding: 1.8em 1.2em;
+            margin-top: 3em;
             font-size: 0.9em;
         }
+
         footer a {
-            color: #CBA45B;
+            color: var(--gold);
             text-decoration: none;
         }
     </style>
@@ -139,7 +139,6 @@
 
 <body>
 
-<!-- NAVIGATION -->
 <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -150,89 +149,106 @@
     <a href="contact.html">Contact</a>
 </nav>
 
-<!-- HERO -->
-<section class="hero-terms">
+<section class="hero">
+    <img src="assets/images/logo.png" alt="Paper Mentor AI Logo">
     <h1>Terms & Conditions</h1>
-    <p>Clear, transparent policies designed to protect students and families.</p>
-
-    <a href="assets/terms_styled.pdf" download class="download-btn">
-        <i class="fas fa-file-download"></i>
-        Download As PDF
-    </a>
 </section>
 
-<main>
+<div class="container">
 
-    <section class="card">
-        <h2>1. Introduction</h2>
+    <a class="download-btn" href="assets/PaperMentorAI_Terms_Premium.pdf" download>
+        <i class="fas fa-file-download"></i> Download PDF Version
+    </a>
+
+    <h2>1. Introduction</h2>
+    <div class="card">
         <p>
-            These Terms & Conditions (“Terms”) govern participation in Paper Mentor AI programs.
-            By enrolling, you agree to abide by the following policies.
+            By accessing or using Paper Mentor AI services, you agree to these Terms & Conditions.
+            These terms govern participation in our AI mentoring programs, research support, and related services.
         </p>
-    </section>
+    </div>
 
-    <section class="card">
-        <h2>2. Program Structure & Sessions</h2>
+    <h2>2. Modifications</h2>
+    <div class="card">
         <p>
-            All sessions are delivered online and typically run for 60 minutes.
-            Programs are customized to each student’s goals, background, and pace.
+            Paper Mentor AI may update these Terms at any time. Continued use of our services
+            indicates acceptance of any modifications.
         </p>
-    </section>
+    </div>
 
-    <section class="card">
-        <h2>3. Payment & Billing</h2>
-        <ul>
-            <li>Standard hourly rate: <strong>$100/hour</strong></li>
-            <li>10% discount on 10+ hour packages</li>
-            <li>Payment may be made upfront or in installments</li>
-        </ul>
-    </section>
-
-    <section class="card">
-        <h2>4. Refund Policy</h2>
-        <ul>
-            <li><strong>100% refund after Session 1</strong> if the student chooses not to continue.</li>
-            <li><strong>Pro-rated refunds</strong> available at any time for unused hours.</li>
-            <li>Rescheduling permitted with 24 hours notice.</li>
-        </ul>
-    </section>
-
-    <section class="card">
-        <h2>5. Responsibilities</h2>
-        <p><strong>Students</strong> must attend sessions with stable internet and required materials.</p>
-        <p><strong>Mentors</strong> will provide professional, high-quality instruction and guidance.</p>
-    </section>
-
-    <section class="card">
-        <h2>6. Academic Integrity</h2>
+    <h2>3. Payment & Pricing</h2>
+    <div class="card">
         <p>
-            Mentors assist with learning and research but do not complete schoolwork or write papers
-            for students. All work must reflect the student’s own authorship.
+            • Standard rate: $100/hr<br>
+            • 10% discount for 10+ hour packages<br>
+            • Payment is due before sessions begin unless otherwise arranged.
         </p>
-    </section>
+    </div>
 
-    <section class="card">
-        <h2>7. Privacy & Data</h2>
+    <h2>4. Refund Policy</h2>
+    <div class="card">
         <p>
-            All personal information is confidential and will not be sold or shared with third parties.
+            • 100% refund after Session 1 if a student chooses not to continue.<br>
+            • At any stage, families may request a refund for unused hours.<br>
+            • 24-hour notice required for rescheduling.
         </p>
-    </section>
+    </div>
 
-    <section class="card">
-        <h2>8. Limitation of Liability</h2>
+    <h2>5. Student Responsibilities</h2>
+    <div class="card">
         <p>
-            Paper Mentor AI is not responsible for academic outcomes, admissions results,
-            or external technical issues (e.g., internet connection).
+            Students must adhere to academic integrity, participate actively, and use AI responsibly.
         </p>
-    </section>
+    </div>
 
-</main>
+    <h2>6. Mentor Responsibilities</h2>
+    <div class="card">
+        <p>
+            Mentors provide high-quality instruction and support but do not guarantee publication or competition outcomes.
+        </p>
+    </div>
+
+    <h2>7. Intellectual Property</h2>
+    <div class="card">
+        <p>
+            Students retain ownership of their work. Educational templates provided by mentors remain licensed for instructional use.
+        </p>
+    </div>
+
+    <h2>8. Privacy</h2>
+    <div class="card">
+        <p>
+            Personal data is kept confidential and handled in compliance with European data protection laws.
+        </p>
+    </div>
+
+    <h2>9. Liability</h2>
+    <div class="card">
+        <p>
+            Paper Mentor AI is not liable for internet disruptions, academic outcomes, or indirect damages.
+        </p>
+    </div>
+
+    <h2>10. Indemnification</h2>
+    <div class="card">
+        <p>
+            You agree to indemnify Paper Mentor AI from claims arising from misuse of services.
+        </p>
+    </div>
+
+    <h2>11. Governing Law</h2>
+    <div class="card">
+        <p>
+            These Terms are governed by the laws of the European Union and relevant member-state regulations.
+        </p>
+    </div>
+
+</div>
 
 <footer>
     © 2025 Paper Mentor AI — All Rights Reserved.
-    <br><br>
-    <a href="terms.html">Terms & Conditions</a> |
-    <a href="assets/terms_styled.pdf" download>Download PDF</a>
+    <br>
+    <a href="terms.html">Terms & Conditions</a>
 </footer>
 
 </body>
