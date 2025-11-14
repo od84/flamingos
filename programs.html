@@ -6,6 +6,7 @@
     <title>Programs | Paper Mentor AI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
@@ -14,6 +15,7 @@
             --navy-deep: #0B1F3A;
             --navy-soft: #12284A;
             --gold: #CBA45B;
+            --gold-soft: #DCC394;
             --bg-light: #F4F6FB;
             --card-bg: #E8EEF8;
             --text-main: #1B1F2A;
@@ -22,10 +24,11 @@
         body {
             margin: 0;
             background: var(--bg-light);
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Inter', sans-serif;
             color: var(--text-main);
         }
 
+        /* NAVIGATION */
         nav {
             background: var(--navy-deep);
             padding: 0.9em 1.5em;
@@ -33,6 +36,7 @@
             justify-content: center;
             gap: 1.8em;
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
@@ -40,6 +44,7 @@
             position: relative;
             font-size: 0.98em;
         }
+
         nav a::after {
             content: "";
             position: absolute;
@@ -50,26 +55,30 @@
             background: var(--gold);
             transition: width 0.25s ease;
         }
+
         nav a:hover::after,
         nav a.active::after {
             width: 100%;
         }
 
+        /* HERO */
         .hero {
             background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 60%, #050814 100%);
             color: white;
             text-align: center;
             padding: 3.2em 1.8em 2.9em;
         }
+
         .hero h1 {
             font-family: 'Merriweather', serif;
             margin: 0 0 0.45em;
-            font-size: 2.2em;
+            font-size: 2.3em;
         }
+
         .hero p {
             max-width: 720px;
             margin: 0 auto;
-            font-size: 1.02em;
+            font-size: 1.05em;
             color: #dbe2ff;
             line-height: 1.7;
         }
@@ -77,7 +86,7 @@
         main {
             max-width: 960px;
             margin: 0 auto;
-            padding: 3em 1.5em 3.5em;
+            padding: 3em 1.5em 4em;
         }
 
         h2 {
@@ -111,24 +120,19 @@
             align-items: center;
             gap: 0.5em;
         }
+
         .program-title i {
             color: var(--gold);
-        }
-
-        .card ul {
-            padding-left: 1.2em;
         }
 
         .badge {
             display: inline-block;
             background: var(--navy-deep);
             color: #fff;
-            font-size: 0.78em;
+            font-size: 0.75em;
             padding: 0.25em 0.7em;
             border-radius: 999px;
             margin-left: 0.4em;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
         }
 
         .btn-primary {
@@ -143,12 +147,11 @@
             align-items: center;
             gap: 0.4em;
             margin-top: 0.8em;
-            border: none;
             cursor: pointer;
         }
 
         .btn-primary:hover {
-            background: #e0c588;
+            background: var(--gold-soft);
         }
 
         footer {
@@ -176,71 +179,77 @@
 <section class="hero">
     <h1>Mentoring Programs</h1>
     <p>
-        Paper Mentor AI offers flexible tracks for students at different experience levels —
-        from first steps in AI to fully developed research papers aimed at competitions or journals.
+        From beginner-friendly introductions to full research papers, Paper Mentor AI offers
+        flexible, high-impact mentoring tailored to each student’s background and goals.
     </p>
 </section>
 
 <main>
+
+    <!-- STRUCTURE -->
     <section>
-        <h2>Overall Structure</h2>
+        <h2>Program Structure</h2>
         <div class="card">
             <p>
-                Our programs are built around a core principle: every student should finish with a concrete,
-                well-structured project that demonstrates genuine understanding and initiative. Depending on the
-                chosen track, students may:
+                Every program is designed around a clear, practical outcome: a complete project or
+                research paper that demonstrates real understanding and initiative. Depending on the chosen track, students may:
             </p>
             <ul>
-                <li>Focus on foundations in Python, machine learning, and model evaluation.</li>
-                <li>Complete a full applied AI project with datasets, experiments, and a written report.</li>
-                <li>Prepare a manuscript suitable for submission to student research journals or STEM competitions.</li>
+                <li>Learn foundational Python, machine learning, and evaluation techniques.</li>
+                <li>Complete an applied AI project using real datasets.</li>
+                <li>Develop a full research paper suitable for journals or STEM competitions.</li>
             </ul>
             <p>
-                We adjust pacing, depth, and project complexity based on the student’s grade, background, and goals.
+                All pacing and project complexity are adjusted based on the student’s grade level, interests, and prior experience.
             </p>
         </div>
     </section>
 
+    <!-- 1:1 PROGRAMS -->
     <section>
         <h2>1:1 Research Mentoring Tracks</h2>
         <p class="section-subtitle">
-            One-to-one mentoring is ideal for students who want maximum flexibility and a highly customized research direction.
+            Personalized, flexible, and ideal for students who want to work on meaningful research at their own pace.
         </p>
 
         <div class="card">
             <div class="program-title">
                 <i class="fas fa-star"></i>
-                Standard Research Track (≈ 8 hours) <span class="badge">Foundations + Mini Project</span>
+                Standard Research Track (≈ 8 hours)
+                <span class="badge">Mini Project</span>
             </div>
             <ul>
-                <li>Introduces Python, core ML concepts, and basic experimentation workflows.</li>
-                <li>Students complete a focused mini-project, often on a pre-curated dataset.</li>
-                <li>Emphasis on understanding how models work and how to interpret results.</li>
-                <li>Recommended for students with little or no prior AI experience.</li>
+                <li>Learn Python and core ML concepts with guided coding.</li>
+                <li>Complete a small research-style project using a curated dataset.</li>
+                <li>Understand how models work and how to interpret results.</li>
+                <li>Perfect for students with little or no AI background.</li>
             </ul>
         </div>
 
         <div class="card">
             <div class="program-title">
                 <i class="fas fa-rocket"></i>
-                Advanced Research Track (≈ 12–16 hours) <span class="badge">Full Research Paper</span>
+                Advanced Research Track (≈ 12–16 hours)
+                <span class="badge">Full Research Paper</span>
             </div>
             <ul>
-                <li>End-to-end research project: from question design to experiments and analysis.</li>
-                <li>Work with real data: medical, environmental, finance, language, or custom sources.</li>
-                <li>Students write a structured report or research paper with mentor feedback.</li>
-                <li>Suitable for students aiming at publications or selective STEM competitions.</li>
+                <li>End-to-end research pipeline: problem definition, modeling, experimentation, and analysis.</li>
+                <li>Use real datasets from medicine, environment, finance, or custom domains.</li>
+                <li>Write a full research paper with mentor-guided revision.</li>
+                <li>Recommended for journal submissions or competitive STEM programs.</li>
             </ul>
+
             <a href="apply.html" class="btn-primary">
                 <i class="fas fa-paper-plane"></i> Apply to 1:1 Research
             </a>
         </div>
     </section>
 
+    <!-- COHORT OPTIONS -->
     <section>
         <h2>Small Cohort Options</h2>
         <p class="section-subtitle">
-            For students who enjoy collaboration, we occasionally run small groups with 2–3 students at a similar level.
+            Collaborative tracks with 2–3 students at a similar level.
         </p>
 
         <div class="card">
@@ -249,10 +258,10 @@
                 AI Foundations Cohort
             </div>
             <ul>
-                <li>Shared lessons on Python, ML basics, and core AI concepts.</li>
-                <li>Live coding sessions and guided exercises.</li>
-                <li>Ends with a small collaborative project and presentation.</li>
-                <li>Best for students just starting their AI journey.</li>
+                <li>Python + ML fundamentals taught in small groups.</li>
+                <li>Live coding sessions with hands-on exercises.</li>
+                <li>Ends with a collaborative mini-project.</li>
+                <li>Best for beginners starting their AI journey.</li>
             </ul>
         </div>
 
@@ -262,25 +271,80 @@
                 Research Cohort Lab
             </div>
             <ul>
-                <li>Team-based research environment with a shared dataset and topic.</li>
-                <li>Roles divided between exploration, modeling, analysis, and writing.</li>
-                <li>Students present a group research outcome at the end.</li>
-                <li>Good for students with some prior coding experience who enjoy working in teams.</li>
+                <li>Team-based research environment using a shared dataset.</li>
+                <li>Students collaborate on modeling, analysis, and writing.</li>
+                <li>Culminates in a group research presentation.</li>
+                <li>Ideal for students with some coding experience.</li>
             </ul>
         </div>
     </section>
 
+    <!-- PRICING -->
     <section>
-        <h2>Which Program Is a Good Fit?</h2>
+        <h2>Pricing & Tuition</h2>
+        <p class="section-subtitle">
+            Simple, transparent pricing designed to fit different program lengths.
+        </p>
+
+        <div class="card">
+            <ul style="list-style:none; padding-left:0;">
+                <li style="margin-bottom:1em; font-size:1.1em;">
+                    <i class="fas fa-dollar-sign" style="color:#CBA45B;"></i>
+                    <strong>Standard Rate:</strong> $100 per hour
+                </li>
+
+                <li style="margin-bottom:1em; font-size:1.1em;">
+                    <i class="fas fa-tags" style="color:#CBA45B;"></i>
+                    <strong>Discount:</strong> 10% off for 10+ hour packages
+                </li>
+
+                <li style="margin-bottom:1em; font-size:1.1em;">
+                    <i class="fas fa-hand-holding-dollar" style="color:#CBA45B;"></i>
+                    Flexible billing options available.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- REFUND POLICY -->
+    <section>
+        <h2>Refund Policy</h2>
+
+        <div class="card">
+            <ul style="list-style:none; padding-left:0;">
+                <li style="margin-bottom:1em;">
+                    <i class="fas fa-check-circle" style="color:#CBA45B;"></i>
+                    <strong>100% refund after Session 1:</strong>
+                    If the student chooses not to continue, the full amount is refunded immediately.
+                </li>
+
+                <li style="margin-bottom:1em;">
+                    <i class="fas fa-check-circle" style="color:#CBA45B;"></i>
+                    <strong>Pro-rated refund anytime:</strong>
+                    Families may request a refund for all unused hours at any stage in the program.
+                </li>
+
+                <li style="margin-bottom:1em;">
+                    <i class="fas fa-check-circle" style="color:#CBA45B;"></i>
+                    Sessions can be rescheduled with 24 hours notice.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FIT -->
+    <section>
+        <h2>Which Program Is Right for Me?</h2>
         <div class="card">
             <ul>
-                <li><strong>New to programming or AI:</strong> AI Foundations Cohort or Standard Research Track.</li>
-                <li><strong>Some Python experience, curious about research:</strong> Standard or Advanced Research Track.</li>
-                <li><strong>Interested in publications or competitions:</strong> Advanced Research Track or Research Cohort Lab.</li>
+                <li><strong>New to programming or AI:</strong> Foundations Cohort or Standard Track.</li>
+                <li><strong>Some Python experience:</strong> Standard or Advanced Track.</li>
+                <li><strong>Aiming for competitions or journals:</strong> Advanced Track or Research Cohort Lab.</li>
             </ul>
+
             <a href="contact.html" class="btn-primary">
                 <i class="fas fa-calendar-check"></i>
-                Schedule a Short Consultation
+                Book a Consultation
             </a>
         </div>
     </section>
@@ -288,6 +352,8 @@
 
 <footer>
     © 2025 Paper Mentor AI — All Rights Reserved.
+    <br>
+    <a href="terms.html" style="color:#CBA45B; text-decoration:none;">Terms & Conditions</a>
 </footer>
 
 </body>

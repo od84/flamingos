@@ -15,22 +15,19 @@
             --navy-deep: #0B1F3A;
             --navy-soft: #12284A;
             --gold: #CBA45B;
-            --gold-soft: #DCC394;
             --bg-light: #F4F6FB;
             --card-bg: #E8EEF8;
-            --text-main: #1B1F2A;
         }
 
         * { box-sizing: border-box; }
 
         body {
             margin: 0;
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', sans-serif;
             background: var(--bg-light);
-            color: var(--text-main);
+            color: #1B1F2A;
         }
 
-        /* NAVIGATION */
         nav {
             background: var(--navy-deep);
             padding: 0.9em 1.5em;
@@ -66,7 +63,6 @@
             width: 100%;
         }
 
-        /* HERO / PAGE HEADER */
         .hero-faq {
             background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 55%, #050815 100%);
             padding: 3.5em 1.5em 3em;
@@ -80,26 +76,17 @@
             margin: 0 0 0.6em;
         }
 
-        .hero-faq p {
-            font-size: 1.02em;
-            max-width: 640px;
-            margin: 0 auto;
-            color: #dde4ff;
-            line-height: 1.7;
-        }
-
-        /* FAQ CONTENT */
         .faq-container {
             max-width: 900px;
             margin: 3em auto 4em;
-            padding: 0 1.5em 0;
+            padding: 0 1.5em;
         }
 
         h2.section-title {
             font-family: 'Merriweather', serif;
             font-size: 1.5em;
             color: var(--navy-deep);
-            margin-top: 2.8em;
+            margin-top: 3em;
             margin-bottom: 1em;
         }
 
@@ -110,14 +97,11 @@
             border-radius: 14px;
             margin-bottom: 1em;
             cursor: pointer;
-            transition: background 0.25s ease, transform 0.15s ease, box-shadow 0.2s ease;
-            box-shadow: 0 10px 22px rgba(11,31,58,0.08);
+            transition: 0.25s ease;
         }
 
         .faq-item:hover {
             background: #dde5f7;
-            transform: translateY(-1px);
-            box-shadow: 0 14px 30px rgba(11,31,58,0.12);
         }
 
         .faq-question {
@@ -125,13 +109,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: #1f2937;
-        }
-
-        .faq-question i {
-            margin-left: 0.8em;
-            font-size: 0.9em;
-            color: var(--navy-soft);
         }
 
         .faq-answer {
@@ -139,7 +116,6 @@
             padding-top: 0.8em;
             line-height: 1.6;
             color: #303642;
-            font-size: 0.97em;
         }
 
         footer {
@@ -149,18 +125,11 @@
             padding: 2em 1em;
             font-size: 0.9em;
         }
-
-        @media (max-width: 720px) {
-            .hero-faq h1 { font-size: 2em; }
-            .faq-container { padding: 0 1.2em; }
-        }
     </style>
-
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
 <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -171,214 +140,111 @@
     <a href="contact.html">Contact</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero-faq">
     <h1>Frequently Asked Questions</h1>
-    <p>Your guide to admissions, prerequisites, program structure, and more.</p>
+    <p>Find answers about applications, pricing, prerequisites, and refund policies.</p>
 </section>
 
-<!-- FAQ CONTENT -->
 <div class="faq-container">
 
     <!-- APPLICATIONS -->
     <h2 class="section-title">Applications & Prerequisites</h2>
 
-    <div class="faq-item">
-        <div class="faq-question">
-            When are applications due?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            Applications are reviewed on a rolling basis. We recommend applying early, as spots fill quickly.
-        </div>
+    <div class="faq-item"><div class="faq-question">When are applications due?<i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Applications are reviewed on a rolling basis. Early application is recommended.</div>
     </div>
 
-    <div class="faq-item">
-        <div class="faq-question">
-            When will I hear back about my application?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            You will typically receive an update within 3–5 days of submitting your application.
-        </div>
+    <div class="faq-item"><div class="faq-question">When will I hear back?<i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Most applicants receive an update within 3–5 days.</div>
     </div>
 
-    <div class="faq-item">
-        <div class="faq-question">
-            What happens after I submit my application?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            You will receive an email confirmation and, if accepted, next steps to secure your spot and begin onboarding.
-        </div>
+    <div class="faq-item"><div class="faq-question">Do I need coding experience?<i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">No. Many students start with zero experience. Advanced students receive more challenging projects.</div>
     </div>
 
-    <div class="faq-item">
-        <div class="faq-question">
-            Are there any prerequisites? Is it okay if I’ve never coded before?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            Absolutely! No prior coding experience is required.
-            <br><br>
-            Our curriculum is beginner-friendly, and many students join without any programming background.
-            Advanced students will be placed in more challenging tracks with mentors experienced in working with high-level students.
-        </div>
+    <div class="faq-item"><div class="faq-question">Are there math requirements?<i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Only basic algebra is needed. All AI concepts are taught from the ground up.</div>
     </div>
 
-    <div class="faq-item">
-        <div class="faq-question">
-            Are there math requirements?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            Basic algebra is sufficient. We teach all AI and coding concepts from the ground up.
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">
-            Can students outside the U.S. join the program?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            Yes! We work with students from over 25+ countries worldwide. All sessions are delivered online.
-        </div>
+    <div class="faq-item"><div class="faq-question">Do you accept international students?<i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Yes — students from 25+ countries participate. All sessions are online.</div>
     </div>
 
 
     <!-- PRICING -->
-    <h2 class="section-title">Program Pricing</h2>
+    <h2 class="section-title">Pricing & Tuition</h2>
 
     <div class="faq-item">
-        <div class="faq-question">
-            How much does the program cost?
-            <i class="fas fa-chevron-down"></i>
-        </div>
+        <div class="faq-question">How much does the program cost?<i class="fas fa-chevron-down"></i></div>
         <div class="faq-answer">
-            Our programs vary in duration and format. Detailed pricing is provided during your consultation session.
+            Our standard rate is <strong>$100 per hour</strong>.
+            Students enrolling for 10+ hours receive a <strong>10% discount</strong>.
         </div>
     </div>
 
     <div class="faq-item">
-        <div class="faq-question">
-            Do you offer scholarships or financial aid?
-            <i class="fas fa-chevron-down"></i>
-        </div>
+        <div class="faq-question">Do you offer refunds?<i class="fas fa-chevron-down"></i></div>
         <div class="faq-answer">
-            Yes — we offer limited financial aid based on demonstrated need.
-            Please indicate interest in your application or email us for details.
+            Yes. Paper Mentor AI offers one of the most flexible refund policies:
+            <ul>
+                <li><strong>100% refund</strong> after Session 1 if you choose not to continue.</li>
+                <li><strong>Pro-rated refund anytime</strong> — unused hours are fully refunded.</li>
+                <li>No penalty for early program completion.</li>
+            </ul>
         </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Are there discounts available?<i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Yes — 10% off for 10+ hours. Additional support available for long-term research plans.</div>
     </div>
 
 
     <!-- PROGRAM DETAILS -->
     <h2 class="section-title">Program Details</h2>
 
-    <div class="faq-item">
-        <div class="faq-question">
-            How big are class or mentoring groups?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            We focus on highly personalized attention. Our 1:1 programs are entirely individualized.
-        </div>
+    <div class="faq-item"><div class="faq-question">How big are groups?<i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">1:1 mentoring is fully individualized. Cohorts contain 2–3 students only.</div>
     </div>
 
-    <div class="faq-item">
-        <div class="faq-question">
-            Who are the mentors?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            All mentors are graduate students or researchers from top universities (Cornell, EPFL, Stanford, UPenn) and work professionally in AI at leading tech companies.
-            They are experienced in guiding students through real research projects.
-        </div>
+    <div class="faq-item"><div class="faq-question">Who are the mentors?<i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Mentors come from Cornell, EPFL, Stanford, UPenn, and top AI industry roles.</div>
     </div>
 
-    <div class="faq-item">
-        <div class="faq-question">
-            Is there homework?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            Most work is completed during live sessions. Toward the end of the program, students may spend 2–4 hours preparing their final project presentation.
-        </div>
+    <div class="faq-item"><div class="faq-question">Is there homework?<i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Most work happens during sessions. Students may spend 2–4 hours on final project preparation.</div>
     </div>
 
 
     <!-- AFTER PROGRAM -->
     <h2 class="section-title">After the Program</h2>
 
-    <div class="faq-item">
-        <div class="faq-question">
-            Will students receive a certificate?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            Yes — all students who complete a project receive a certificate of completion.
-        </div>
+    <div class="faq-item"><div class="faq-question">Do students receive a certificate?<i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Yes — all students completing a project receive a certificate.</div>
     </div>
 
-    <div class="faq-item">
-        <div class="faq-question">
-            Are course materials available afterward?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            Yes, students retain access to project materials and resources after the program ends.
-        </div>
+    <div class="faq-item"><div class="faq-question">Do students keep the materials?<i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Yes — all code, slides, and datasets remain available after completion.</div>
     </div>
 
-    <div class="faq-item">
-        <div class="faq-question">
-            Do you offer follow-up programs?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            Yes — students can continue with advanced AI projects or specialized research mentoring.
-        </div>
+    <div class="faq-item"><div class="faq-question">Are follow-up programs available?<i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Yes — advanced AI, competitions preparation, and publication-focused mentoring.</div>
     </div>
-
-
-    <!-- MIDDLE SCHOOL -->
-    <h2 class="section-title">Middle School Students</h2>
-
-    <div class="faq-item">
-        <div class="faq-question">
-            Can 8th graders or rising freshmen join?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            Yes — if they already have some programming experience.
-            Otherwise, we recommend starting with foundational material.
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">
-            Do you offer a middle school program?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            We occasionally offer beginner-friendly versions of our program for younger students. Contact us for availability.
-        </div>
-    </div>
-
 </div>
 
 <footer>
     © 2025 Paper Mentor AI — All Rights Reserved.
+    <br>
+    <a href="terms.html" style="color:#CBA45B;">Terms & Conditions</a>
 </footer>
 
 <script>
     document.querySelectorAll(".faq-item").forEach(item => {
         item.addEventListener("click", () => {
-            const answer = item.querySelector(".faq-answer");
+            const ans = item.querySelector(".faq-answer");
             const icon = item.querySelector(".faq-question i");
-
-            const isOpen = answer.style.display === "block";
-            answer.style.display = isOpen ? "none" : "block";
+            const open = ans.style.display === "block";
+            ans.style.display = open ? "none" : "block";
             icon.classList.toggle("fa-chevron-down");
             icon.classList.toggle("fa-chevron-up");
         });
