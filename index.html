@@ -1,385 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paper Mentor AI | Research Mentoring for Ambitious Students</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Paper Mentor AI | Elite AI Research Mentorship</title>
 
-    <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <style>
-        :root {
-            --navy-deep: #0B1F3A;
-            --navy-soft: #12284A;
-            --gold: #CBA45B;
-            --gold-soft: #DCC394;
-            --bg-light: #F4F6FB;
-            --card-bg: #E8EEF8;
-            --text-main: #1B1F2A;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-light);
-            color: var(--text-main);
-        }
-
-        /* NAVIGATION */
-        nav {
-            background: var(--navy-deep);
-            padding: 0.9em 1.5em;
-            display: flex;
-            justify-content: center;
-            gap: 1.8em;
-            position: sticky;
-            top: 0;
-            z-index: 20;
-        }
-
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.98em;
-            position: relative;
-        }
-
-        nav a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -0.35em;
-            width: 0;
-            height: 2px;
-            background: var(--gold);
-            transition: width 0.25s ease;
-        }
-
-        nav a:hover::after,
-        nav a.active::after {
-            width: 100%;
-        }
-
-        /* HERO */
-        .hero {
-            padding: 5em 1.5em 4.5em;
-            text-align: center;
-            background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 55%, #050815 100%);
-            color: white;
-        }
-
-        .hero-inner {
-            max-width: 900px;
-            margin: 0 auto;
-            background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
-            border-radius: 24px;
-            padding: 3em 3.2em;
-            box-shadow: 0 24px 80px rgba(0,0,0,0.45);
-            backdrop-filter: blur(20px);
-        }
-
-        .hero-logo {
-            width: 360px;
-            max-width: 90%;
-            border-radius: 22px;
-            margin-bottom: 2.2em;
-        }
-
-        .hero-title {
-            font-family: 'Merriweather', serif;
-            font-weight: 700;
-            font-size: 2.4em;
-            margin: 0 0 0.4em;
-        }
-
-        .hero-subtitle {
-            font-size: 1.05em;
-            max-width: 640px;
-            margin: 0 auto 2em;
-            line-height: 1.7;
-            color: #e7ecff;
-        }
-
-        .hero-tagline {
-            text-transform: uppercase;
-            letter-spacing: 0.22em;
-            font-size: 0.76em;
-            margin-bottom: 1.2em;
-            color: #d0d6f0;
-        }
-
-        .hero-actions {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 0.8em;
-        }
-
-        .btn-primary,
-        .btn-ghost {
-            border-radius: 999px;
-            padding: 0.9em 1.8em;
-            font-size: 0.98em;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5em;
-            transition: all 0.22s ease;
-        }
-
-        .btn-primary {
-            background: var(--gold);
-            color: var(--navy-deep);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.28);
-        }
-
-        .btn-primary:hover {
-            background: var(--gold-soft);
-            transform: translateY(-1px);
-            box-shadow: 0 16px 40px rgba(0,0,0,0.38);
-        }
-
-        .btn-ghost {
-            background: transparent;
-            color: #f4f7ff;
-            border: 1px solid rgba(255,255,255,0.4);
-        }
-
-        .btn-ghost:hover {
-            background: rgba(255,255,255,0.08);
-            border-color: rgba(255,255,255,0.8);
-        }
-
-        main {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 3.2em 1.5em 3.5em;
-        }
-
-        h2.section-title {
-            font-family: 'Merriweather', serif;
-            font-size: 1.6em;
-            margin-bottom: 0.6em;
-            color: var(--navy-deep);
-        }
-
-        .section-subtitle {
-            font-size: 0.98em;
-            color: #4f5668;
-            margin-bottom: 1.3em;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 1.8em 1.9em;
-            border-left: 5px solid var(--gold);
-            box-shadow: 0 12px 26px rgba(11,31,58,0.08);
-        }
-
-        .card ul {
-            padding-left: 1.2em;
-            margin: 0;
-        }
-
-        .card li {
-            margin-bottom: 0.6em;
-            line-height: 1.6;
-        }
-
-        .card li i {
-            color: var(--gold);
-            margin-right: 0.5em;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 0.55em;
-            padding-left: 0;
-            list-style: none;
-            margin: 0;
-        }
-
-        .projects-grid li {
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .projects-grid i {
-            margin-right: 0.5em;
-            color: var(--gold);
-            margin-top: 0.1em;
-        }
-
-        .callout {
-            margin-top: 1.4em;
-            font-size: 0.95em;
-            color: #50576a;
-        }
-
-        .cta-row {
-            margin-top: 1.4em;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8em;
-        }
-
-        footer {
-            background: #020511;
-            color: #b3b9d4;
-            text-align: center;
-            padding: 1.8em 1.2em;
-            font-size: 0.9em;
-        }
-
-        @media (max-width: 720px) {
-            .hero-inner {
-                padding: 2.2em 1.7em;
-            }
-            .hero-title {
-                font-size: 2.05em;
-            }
-            nav {
-                flex-wrap: wrap;
-                gap: 1em;
-            }
-        }
-    </style>
+<style>
+:root {
+  --navy-deep: #0b1f3a;
+  --navy-soft: #12284a;
+  --gold: #d4b06a;
+  --gold-soft: #e7d3a5;
+  --bg-light: #f4f6fb;
+  --card-bg: #eef2fb;
+  --text-main: #1b1f2a;
+}
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg-light);
+  color: var(--text-main);
+}
+nav {
+  background: var(--navy-deep);
+  padding: 1.1em 1.8em;
+  display: flex;
+  justify-content: center;
+  gap: 2.2em;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  font-size: 1.04em;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.35em;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+.hero {
+  padding: 6em 1.6em 5em;
+  background: radial-gradient(circle at top left, #203b66, #0b1f3a 55%, #050815 100%);
+  color: white;
+  text-align: center;
+}
+.hero-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 3.5em 3em;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.55);
+}
+.hero-logo {
+  width: 380px;
+  max-width: 92%;
+  border-radius: 24px;
+  margin-bottom: 2.6em;
+}
+.hero-tagline {
+  letter-spacing: 0.28em;
+  font-size: 0.82em;
+  text-transform: uppercase;
+  color: #dde3ff;
+  margin-bottom: 1.4em;
+}
+.hero-title {
+  font-family: "Merriweather", serif;
+  font-size: 2.65em;
+  color: white;
+  margin-bottom: 0.5em;
+}
+.hero-title span {
+  background: linear-gradient(90deg, #f7e7b2, #d4b06a);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.hero-elite {
+  margin-top: 1.3em;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0.9em 1.4em;
+  display: inline-block;
+  border-radius: 14px;
+  font-size: 0.95em;
+  color: #f9f7f2;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.hero-subtitle {
+  font-size: 1.12em;
+  max-width: 650px;
+  margin: 1.2em auto 2.4em;
+  line-height: 1.75;
+  color: #e8eeff;
+}
+.btn-primary,
+.btn-ghost {
+  border-radius: 999px;
+  padding: 1em 2em;
+  font-weight: 600;
+  font-size: 1em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--navy-deep);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.32);
+}
+.btn-primary:hover {
+  background: var(--gold-soft);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.38);
+}
+.btn-ghost {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.85);
+}
+main {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 3.8em 1.6em;
+}
+h2.section-title {
+  font-family: "Merriweather", serif;
+  font-size: 1.85em;
+  color: var(--navy-deep);
+}
+.section-subtitle {
+  font-size: 1.05em;
+  color: #4e5566;
+  margin-bottom: 1.5em;
+}
+.card {
+  background: var(--card-bg);
+  padding: 2em;
+  border-radius: 18px;
+  border-left: 6px solid var(--gold);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+.projects-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.8em;
+}
+footer {
+  background: #020511;
+  color: #b8bdd6;
+  text-align: center;
+  padding: 2em;
+  font-size: 0.92em;
+}
+</style>
 </head>
-
 <body>
-
 <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About</a>
-    <a href="programs.html">Programs</a>
-    <a href="students.html">Students</a>
-    <a href="apply.html">Apply</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
+  <a class="active" href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="programs.html">Programs</a>
+  <a href="students.html">Students</a>
+  <a href="apply.html">Apply</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
 <section class="hero">
-    <div class="hero-inner">
-        <img src="assets/images/paper_mentor_ai.png" alt="Paper Mentor AI Logo" class="hero-logo">
+  <div class="hero-inner">
+    <img src="assets/images/paper_mentor_ai.png" class="hero-logo" />
 
-        <div class="hero-tagline">AI papers mentorship by top-tier researchers & graduate mentors</div>
+    <div class="hero-tagline">AI Research Mentorship by Experts</div>
 
-        <h1 class="hero-title">AI Research & Paper Mentoring for Ambitious Students</h1>
+    <h1 class="hero-title">
+      Elite <span>AI Paper Mentoring</span> for Ambitious Students
+    </h1>
 
-        <p class="hero-subtitle">
-            Paper Mentor AI pairs motivated high-school students with experienced AI researchers and graduate mentors.
-            Together, they design, build, and write publication-level AI projects that stand out in top university and
-            competitive STEM applications.
-        </p>
-
-        <div class="hero-actions">
-            <a href="apply.html" class="btn-primary">
-                <i class="fas fa-paper-plane"></i>
-                Apply for Mentorship
-            </a>
-            <a href="programs.html" class="btn-ghost">
-                <i class="fas fa-diagram-project"></i>
-                Explore Programs
-            </a>
-        </div>
+    <div class="hero-elite">
+      Founded & run by Ivy League–trained researchers from Cornell, Columbia & top global institutions
     </div>
+
+    <p class="hero-subtitle">
+      Paper Mentor AI pairs motivated students with experienced AI researchers
+      and graduate-level mentors. Together, they design, build, and publish
+      university-level AI research projects.
+    </p>
+
+    <div class="hero-actions">
+      <a href="apply.html" class="btn-primary"><i class="fas fa-paper-plane"></i> Apply Now</a>
+      <a href="programs.html" class="btn-ghost"><i class="fas fa-diagram-project"></i> Explore Programs</a>
+    </div>
+  </div>
 </section>
 
 <main>
-    <!-- WHY SECTION -->
-    <section id="why-us">
-        <h2 class="section-title">Why Students Work with Paper Mentor AI</h2>
-        <p class="section-subtitle">
-            We focus on one outcome: helping students create real AI research and papers that genuinely matter.
-        </p>
+  <section id="why-us">
+    <h2 class="section-title">Why Students Choose Paper Mentor AI</h2>
+    <p class="section-subtitle">We help students conduct real AI research with professional publication potential.</p>
 
-        <div class="card">
-            <ul>
-                <li><i class="fas fa-check-circle"></i> 1:1 mentorship tailored to each student’s background, interests, and goals.</li>
-                <li><i class="fas fa-check-circle"></i> Mentors are graduate students and practitioners in AI with strong research and industry experience.</li>
-                <li><i class="fas fa-check-circle"></i> Project-based learning: students implement real models, not just follow tutorials.</li>
-                <li><i class="fas fa-check-circle"></i> Structured support for research design, experiments, writing, and paper preparation.</li>
-                <li><i class="fas fa-check-circle"></i> A compelling research portfolio that supports applications to competitive universities and summer programs.</li>
-            </ul>
-        </div>
-    </section>
+    <div class="card">
+      <ul>
+        <li><i class="fas fa-check-circle"></i> 1:1 personalized mentorship tailored to every student.</li>
+        <li><i class="fas fa-check-circle"></i> Mentors from Ivy League & top global institutions.</li>
+        <li><i class="fas fa-check-circle"></i> Students build real working models — not tutorials.</li>
+        <li><i class="fas fa-check-circle"></i> Guidance through research design, experiments, and writing.</li>
+        <li><i class="fas fa-check-circle"></i> A strong research portfolio for top university applications.</li>
+      </ul>
+    </div>
+  </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="samples" style="margin-top: 3em;">
-        <h2 class="section-title">Examples of Student Research Topics</h2>
-        <p class="section-subtitle">
-            Project themes are adapted to each student’s interests and experience level while maintaining technical depth.
-        </p>
-
-        <div class="card">
-            <ul class="projects-grid">
-                <li><i class="fas fa-robot"></i>Detecting cyberbullying and hate speech in social media using transformer-based NLP models.</li>
-                <li><i class="fas fa-brain"></i>Brain tumor classification in MRI images with CNNs and explainable AI techniques.</li>
-                <li><i class="fas fa-chart-line"></i>Predicting stock market behavior using LSTM networks and news sentiment.</li>
-                <li><i class="fas fa-cloud-sun"></i>Climate and weather anomaly forecasting with time-series machine learning.</li>
-                <li><i class="fas fa-shield-alt"></i>Fake news and misinformation detection using natural language models.</li>
-                <li><i class="fas fa-seedling"></i>Air quality and pollution prediction in major cities using historical sensor data.</li>
-                <li><i class="fas fa-car-side"></i>Lane and object detection for autonomous driving using modern computer vision architectures.</li>
-                <li><i class="fas fa-dna"></i>Early disease risk prediction from medical or genetic datasets.</li>
-                <li><i class="fas fa-paw"></i>Wildlife species recognition in camera-trap images using object detection (e.g., YOLOv8).</li>
-            </ul>
-
-            <div class="cta-row">
-                <a href="students.html" class="btn-ghost" style="border-color: var(--gold); color: var(--navy-deep);">
-                    <i class="fas fa-graduation-cap"></i>
-                    See Student Outcomes
-                </a>
-                <a href="apply.html" class="btn-primary">
-                    <i class="fas fa-paper-plane"></i>
-                    Start Your Project
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- BOOKING SECTION -->
-    <section id="booking" style="margin-top: 3em; margin-bottom: 0;">
-        <h2 class="section-title">Begin Your Research Journey</h2>
-        <p class="section-subtitle">
-            Not sure which track or project is the best fit? We’re happy to speak with you.
-        </p>
-
-        <div class="card">
-            <p>
-                During a short consultation, we review the student’s background, interests, and academic goals. From there,
-                we suggest a project direction, a suitable program track, and a realistic path towards a finished research paper.
-            </p>
-
-            <div class="cta-row">
-                <a href="contact.html" class="btn-ghost" style="border-color: var(--navy-soft); color: var(--navy-soft);">
-                    <i class="fas fa-calendar-check"></i>
-                    Book a Consultation
-                </a>
-                <a href="faq.html" class="btn-ghost">
-                    <i class="fas fa-question-circle"></i>
-                    Read Frequently Asked Questions
-                </a>
-            </div>
-        </div>
-    </section>
-</main>
-
-<footer>
-    © 2025 Paper Mentor AI — All Rights Reserved.
-</footer>
-
-</body>
-</html>
+  <section id="samples" style="margin-top: 3em;">
