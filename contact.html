@@ -5,198 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Paper Mentor AI</title>
+    <meta name="description" content="Contact Paper Mentor AI with questions about programs, applications, or consultations.">
 
-    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-    <style>
-        :root {
-            --navy-deep: #0B1F3A;
-            --navy-soft: #12284A;
-            --gold: #CBA45B;
-            --gold-soft: #DCC394;
-            --bg-light: #F4F6FB;
-            --card-bg: #E8EEF8;
-            --text-main: #1B1F2A;
-        }
-
-        * { box-sizing: border-box; }
-
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-light);
-            color: var(--text-main);
-        }
-
-        /* NAVIGATION */
-        nav {
-            background: var(--navy-deep);
-            padding: 0.9em 1.5em;
-            display: flex;
-            justify-content: center;
-            gap: 1.8em;
-            position: sticky;
-            top: 0;
-            z-index: 20;
-        }
-
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.98em;
-            position: relative;
-        }
-        nav a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -0.35em;
-            width: 0;
-            height: 2px;
-            background: var(--gold);
-            transition: width 0.25s ease;
-        }
-        nav a:hover::after,
-        nav a.active::after {
-            width: 100%;
-        }
-
-        /* HERO */
-        .hero-contact {
-            background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 55%, #050815 100%);
-            padding: 3.5em 1.5em 3em;
-            text-align: center;
-            color: white;
-        }
-
-        .hero-contact h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 2.4em;
-            margin: 0 0 0.4em;
-        }
-
-        .hero-contact p {
-            font-size: 1.03em;
-            color: #dde4ff;
-            max-width: 620px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        /* CONTACT SECTION */
-        .contact-section {
-            max-width: 880px;
-            margin: 3.2em auto 4.5em;
-            padding: 0 1.5em;
-        }
-
-        .contact-section h2 {
-            font-family: 'Merriweather', serif;
-            color: var(--navy-deep);
-            font-size: 1.45em;
-            margin-bottom: 0.7em;
-        }
-
-        .contact-card {
-            background: var(--card-bg);
-            padding: 2em;
-            border-radius: 16px;
-            border-left: 6px solid var(--gold);
-            box-shadow: 0 14px 30px rgba(11,31,58,0.10);
-            margin-bottom: 2.2em;
-        }
-
-        /* FORM */
-        form label {
-            display: block;
-            margin-top: 0.9em;
-            font-weight: 600;
-        }
-
-        form input, form textarea {
-            width: 100%;
-            padding: 0.9em;
-            margin-top: 0.4em;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            font-size: 1em;
-            font-family: inherit;
-            background: #F9FBFF;
-        }
-
-        textarea {
-            resize: vertical;
-            height: 150px;
-        }
-
-        .submit-btn {
-            margin-top: 1.4em;
-            padding: 0.9em 1.9em;
-            border: none;
-            border-radius: 30px;
-            background: var(--gold);
-            color: var(--navy-deep);
-            font-size: 1.05em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 10px 26px rgba(0,0,0,0.18);
-        }
-
-        .submit-btn:hover {
-            background: var(--gold-soft);
-            transform: translateY(-1px);
-            box-shadow: 0 14px 32px rgba(0,0,0,0.25);
-        }
-
-        .success-message {
-            padding: 1.2em;
-            background: #d4f8e8;
-            color: #0b6b3a;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: 1.4em;
-            display: none;
-            font-size: 1em;
-        }
-
-        footer {
-            background: #020511;
-            color: #b3b9d4;
-            text-align: center;
-            padding: 2em 1em;
-            font-size: 0.9em;
-        }
-
-        @media (max-width: 720px) {
-            .hero-contact h1 { font-size: 2em; }
-            .contact-card { padding: 1.6em; }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="programs.html">Programs</a>
-    <a href="students.html">Students</a>
-    <a href="apply.html">Apply</a>
-    <a href="contact.html" class="active">Contact</a>
-</nav>
+<header class="navbar">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-brand">
+            <div class="nav-logo">
+                <img src="assets/images/paper_mentor_ai.png" alt="Paper Mentor AI Logo">
+            </div>
+            <span>Paper Mentor AI</span>
+        </a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="programs.html">Programs</a>
+            <a href="students.html">Students</a>
+            <a href="apply.html">Apply</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </div>
+</header>
 
-<!-- HERO -->
 <section class="hero-contact">
     <h1>Contact Us</h1>
     <p>Reach out for questions, consultations, or program details — we’re here to help.</p>
 </section>
 
-<!-- CONTACT CONTENT -->
 <section class="contact-section">
 
     <h2><i class="fas fa-envelope"></i> Send Us a Message</h2>
@@ -239,20 +81,20 @@
 </footer>
 
 <script>
-    const form = document.getElementById("contactForm");
-    const successMessage = document.getElementById("success");
+    const contactForm = document.getElementById("contactForm");
+    const contactSuccess = document.getElementById("success");
 
-    form.addEventListener("submit", async function(event) {
+    contactForm.addEventListener("submit", async function(event) {
         event.preventDefault();
-        const response = await fetch(form.action, {
+        const response = await fetch(contactForm.action, {
             method: "POST",
-            body: new FormData(form),
+            body: new FormData(contactForm),
             headers: { 'Accept': 'application/json' }
         });
 
         if (response.ok) {
-            form.reset();
-            successMessage.style.display = "block";
+            contactForm.reset();
+            contactSuccess.style.display = "block";
         }
     });
 </script>
