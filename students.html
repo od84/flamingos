@@ -5,36 +5,151 @@
     <meta charset="UTF-8">
     <title>Students & Outcomes | Paper Mentor AI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Student outcomes and example research areas from Paper Mentor AI's AI research mentoring programs.">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <style>
+        :root {
+            --navy-deep: #0B1F3A;
+            --navy-soft: #12284A;
+            --gold: #CBA45B;
+            --bg-light: #F4F6FB;
+            --card-bg: #E8EEF8;
+            --text-main: #1B1F2A;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg-light);
+            font-family: 'Inter', system-ui, sans-serif;
+            color: var(--text-main);
+        }
+
+        nav {
+            background: var(--navy-deep);
+            padding: 0.9em 1.5em;
+            display: flex;
+            justify-content: center;
+            gap: 1.8em;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            font-size: 0.98em;
+        }
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -0.35em;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.25s ease;
+        }
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        header {
+            background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 60%, #050814 100%);
+            color: white;
+            text-align: center;
+            padding: 3.2em 1.8em 2.9em;
+        }
+        header h1 {
+            font-family: 'Merriweather', serif;
+            margin: 0 0 0.45em;
+            font-size: 2.2em;
+        }
+        header p {
+            max-width: 720px;
+            margin: 0 auto;
+            font-size: 1.05em;
+            color: #dbe3ff;
+            line-height: 1.65;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 3em 1.5em 3.5em;
+        }
+
+        h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.55em;
+            margin-bottom: 0.4em;
+            color: var(--navy-deep);
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 1.8em 1.9em;
+            border-left: 5px solid var(--gold);
+            box-shadow: 0 12px 26px rgba(11,31,58,0.08);
+            margin-bottom: 1.9em;
+        }
+
+        .card ul {
+            padding-left: 1.2em;
+        }
+
+        .project-list li {
+            margin-bottom: 0.6em;
+        }
+
+        .project-list i {
+            margin-right: 0.45em;
+            color: var(--gold);
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 0.9em 1.6em;
+            border-radius: 999px;
+            text-decoration: none;
+            background: var(--gold);
+            color: var(--navy-deep);
+            font-weight: 600;
+            margin-top: 1.2em;
+        }
+        .btn-primary:hover {
+            background: #e0c488;
+        }
+
+        footer {
+            background: #020511;
+            color: #b3b9d4;
+            text-align: center;
+            padding: 1.8em 1.2em;
+            font-size: 0.9em;
+        }
+
+    </style>
 </head>
 
 <body>
 
-<header class="navbar">
-    <div class="nav-inner">
-        <a href="index.html" class="nav-brand">
-            <div class="nav-logo">
-                <img src="assets/images/paper_mentor_ai.png" alt="Paper Mentor AI Logo">
-            </div>
-            <span>Paper Mentor AI</span>
-        </a>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="programs.html">Programs</a>
-            <a href="students.html" class="active">Students</a>
-            <a href="apply.html">Apply</a>
-            <a href="faq.html">FAQ</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </div>
-</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="students.html" class="active">Students</a>
+    <a href="apply.html">Apply</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
-<header class="hero-students">
+<header>
     <h1>Student Outcomes</h1>
     <p>
         Students at Paper Mentor AI develop rigorous AI research projects, real-world applications,
@@ -46,7 +161,7 @@
 
     <!-- OUTCOMES -->
     <section>
-        <h2 class="section-title"><i class="fas fa-trophy"></i> Verified Student Achievements</h2>
+        <h2><i class="fas fa-trophy"></i> Verified Student Achievements</h2>
         <div class="card">
             <p>
                 Through personalised mentoring, students consistently achieve results that stand out in academic and competitive settings:
@@ -63,15 +178,13 @@
                 <strong>Due to GDPR and student privacy regulations, detailed success stories are shared upon request.</strong>
             </p>
 
-            <a href="contact.html" class="btn-primary">
-                Request Student Success Examples
-            </a>
+            <a href="contact.html" class="btn-primary">Request Student Success Examples</a>
         </div>
     </section>
 
     <!-- PROJECT TOPICS -->
     <section>
-        <h2 class="section-title"><i class="fas fa-flask"></i> Example Research Areas</h2>
+        <h2><i class="fas fa-flask"></i> Example Research Areas</h2>
         <div class="card">
             <ul class="project-list">
                 <li><i class="fas fa-robot"></i>Cyberbullying and hate-speech detection using transformer-based NLP models.</li>
@@ -95,7 +208,7 @@
 
     <!-- PAPERS -->
     <section>
-        <h2 class="section-title"><i class="fas fa-book"></i> Why Research Papers Matter</h2>
+        <h2><i class="fas fa-book"></i> Why Research Papers Matter</h2>
         <div class="card">
             <p>
                 While publication is never required, many students choose to pursue a paper because:
@@ -104,7 +217,7 @@
                 <li>It demonstrates independent thinking and long-term commitment.</li>
                 <li>Students gain experience with real scientific writing and peer feedback.</li>
                 <li>Research becomes strong material for personal statements and interviews.</li>
-                <li>It differentiates students from peers with only coursework-based experience.</li>
+                <li>It differentiates students from peers with only coursework-based work.</li>
             </ul>
 
             <p>
