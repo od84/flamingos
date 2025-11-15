@@ -1,238 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Paper Mentor AI | Elite AI Research Mentorship</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paper Mentor AI | Research Mentoring for Ambitious Students</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-<style>
-:root {
-  --navy-deep: #0b1f3a;
-  --navy-soft: #12284a;
-  --gold: #d4b06a;
-  --gold-soft: #e7d3a5;
-  --bg-light: #f4f6fb;
-  --card-bg: #eef2fb;
-  --text-main: #1b1f2a;
-}
-body {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  background: var(--bg-light);
-  color: var(--text-main);
-}
-nav {
-  background: var(--navy-deep);
-  padding: 1.1em 1.8em;
-  display: flex;
-  justify-content: center;
-  gap: 2.2em;
-  position: sticky;
-  top: 0;
-  z-index: 30;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-  font-size: 1.04em;
-}
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.35em;
-  width: 0;
-  height: 2px;
-  background: var(--gold);
-  transition: width 0.3s ease;
-}
-nav a:hover::after,
-nav a.active::after {
-  width: 100%;
-}
-.hero {
-  padding: 6em 1.6em 5em;
-  background: radial-gradient(circle at top left, #203b66, #0b1f3a 55%, #050815 100%);
-  color: white;
-  text-align: center;
-}
-.hero-inner {
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 3.5em 3em;
-  border-radius: 26px;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(22px);
-  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.55);
-}
-.hero-logo {
-  width: 380px;
-  max-width: 92%;
-  border-radius: 24px;
-  margin-bottom: 2.6em;
-}
-.hero-tagline {
-  letter-spacing: 0.28em;
-  font-size: 0.82em;
-  text-transform: uppercase;
-  color: #dde3ff;
-  margin-bottom: 1.4em;
-}
-.hero-title {
-  font-family: "Merriweather", serif;
-  font-size: 2.65em;
-  color: white;
-  margin-bottom: 0.5em;
-}
-.hero-title span {
-  background: linear-gradient(90deg, #f7e7b2, #d4b06a);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-.hero-elite {
-  margin-top: 1.3em;
-  background: rgba(255, 255, 255, 0.12);
-  padding: 0.9em 1.4em;
-  display: inline-block;
-  border-radius: 14px;
-  font-size: 0.95em;
-  color: #f9f7f2;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-}
-.hero-subtitle {
-  font-size: 1.12em;
-  max-width: 650px;
-  margin: 1.2em auto 2.4em;
-  line-height: 1.75;
-  color: #e8eeff;
-}
-.btn-primary,
-.btn-ghost {
-  border-radius: 999px;
-  padding: 1em 2em;
-  font-weight: 600;
-  font-size: 1em;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6em;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  text-decoration: none;
-}
-.btn-primary {
-  background: var(--gold);
-  color: var(--navy-deep);
-  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.32);
-}
-.btn-primary:hover {
-  background: var(--gold-soft);
-  transform: translateY(-2px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.38);
-}
-.btn-ghost {
-  background: transparent;
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-}
-.btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.85);
-}
-main {
-  max-width: 1020px;
-  margin: 0 auto;
-  padding: 3.8em 1.6em;
-}
-h2.section-title {
-  font-family: "Merriweather", serif;
-  font-size: 1.85em;
-  color: var(--navy-deep);
-}
-.section-subtitle {
-  font-size: 1.05em;
-  color: #4e5566;
-  margin-bottom: 1.5em;
-}
-.card {
-  background: var(--card-bg);
-  padding: 2em;
-  border-radius: 18px;
-  border-left: 6px solid var(--gold);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
-}
-.projects-grid {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  gap: 0.8em;
-}
-footer {
-  background: #020511;
-  color: #b8bdd6;
-  text-align: center;
-  padding: 2em;
-  font-size: 0.92em;
-}
-</style>
+    <style>
+        :root {
+            --navy-deep: #0B1F3A;
+            --navy-soft: #12284A;
+            --gold: #CBA45B;
+            --gold-soft: #E3CFA1;
+            --bg-light: #F4F6FB;
+            --card-bg: #E8EEF8;
+            --text-main: #1B1F2A;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-main);
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: var(--navy-deep);
+            padding: 1em 1.8em;
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            font-size: 1.02em;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -0.28em;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.25s ease;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 5.5em 1.5em 4.8em;
+            text-align: center;
+            background: radial-gradient(circle at top left, #24406A, #0B1F3A 60%, #050815 100%);
+            color: white;
+        }
+
+        .hero-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.06);
+            border-radius: 26px;
+            padding: 3.4em 3em;
+            box-shadow: 0 28px 90px rgba(0,0,0,0.55);
+            backdrop-filter: blur(22px);
+        }
+
+        .hero-logo {
+            width: 360px;
+            max-width: 90%;
+            margin-bottom: 2.2em;
+        }
+
+        .hero-tagline {
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            font-size: 0.82em;
+            color: #dce2ff;
+            margin-bottom: 1em;
+        }
+
+        /* Ivy League Banner */
+        .ivy-banner {
+            background: linear-gradient(90deg, #F7E7B2, #CBA45B);
+            color: #1B1F2A;
+            padding: 0.8em 1.2em;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 0.95em;
+            display: inline-block;
+            margin-bottom: 1.4em;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+        }
+
+        .hero-title {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 2.55em;
+            margin-bottom: 0.5em;
+            line-height: 1.25;
+        }
+
+        .hero-subtitle {
+            font-size: 1.12em;
+            max-width: 650px;
+            margin: 1em auto 2.2em;
+            line-height: 1.75;
+            color: #e8eeff;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+
+        .btn-primary, .btn-ghost {
+            border-radius: 999px;
+            padding: 1em 2em;
+            font-size: 1em;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6em;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.22s ease;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy-deep);
+            box-shadow: 0 14px 30px rgba(0,0,0,0.28);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-soft);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 42px rgba(0,0,0,0.38);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: #f4f7ff;
+            border: 1px solid rgba(255,255,255,0.45);
+        }
+
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+        }
+
+        /* MAIN */
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3.4em 1.4em 3.8em;
+        }
+
+        h2.section-title {
+            font-family: 'Merriweather', serif;
+            font-size: 1.85em;
+            margin-bottom: 0.5em;
+            color: var(--navy-deep);
+        }
+
+        .section-subtitle {
+            font-size: 1.05em;
+            color: #50576a;
+            margin-bottom: 1.4em;
+        }
+
+        /* CARD */
+        .card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 2em;
+            border-left: 6px solid var(--gold);
+            box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+        }
+
+        .card ul {
+            padding-left: 1.2em;
+        }
+
+        .card li {
+            margin-bottom: 0.75em;
+            font-size: 1.02em;
+            line-height: 1.65;
+        }
+
+        .card li i {
+            color: var(--gold);
+            margin-right: 0.55em;
+        }
+
+        /* PROJECT GRID */
+        .projects-grid {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            gap: 0.6em;
+        }
+
+        footer {
+            background: #020511;
+            color: #b3b9d4;
+            text-align: center;
+            padding: 2em;
+        }
+    </style>
 </head>
+
 <body>
+
 <nav>
-  <a class="active" href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="programs.html">Programs</a>
-  <a href="students.html">Students</a>
-  <a href="apply.html">Apply</a>
-  <a href="faq.html">FAQ</a>
-  <a href="contact.html">Contact</a>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="students.html">Students</a>
+    <a href="apply.html">Apply</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
 <section class="hero">
-  <div class="hero-inner">
-    <img src="assets/images/paper_mentor_ai.png" class="hero-logo" />
+    <div class="hero-inner">
 
-    <div class="hero-tagline">AI Research Mentorship by Experts</div>
+        <img src="assets/images/paper_mentor_ai.png" alt="Paper Mentor AI Logo" class="hero-logo">
 
-    <h1 class="hero-title">
-      Elite <span>AI Paper Mentoring</span> for Ambitious Students
-    </h1>
+        <div class="hero-tagline">AI papers mentorship by top-tier researchers & graduate mentors</div>
 
-    <div class="hero-elite">
-      Founded & run by Ivy League–trained researchers from Cornell, Columbia & top global institutions
-    </div>
-
-    <p class="hero-subtitle">
-      Paper Mentor AI pairs motivated students with experienced AI researchers
-      and graduate-level mentors. Together, they design, build, and publish
-      university-level AI research projects.
-    </p>
-
-    <div class="hero-actions">
-      <a href="apply.html" class="btn-primary"><i class="fas fa-paper-plane"></i> Apply Now</a>
-      <a href="programs.html" class="btn-ghost"><i class="fas fa-diagram-project"></i> Explore Programs</a>
-    </div>
-  </div>
-</section>
-
-<main>
-  <section id="why-us">
-    <h2 class="section-title">Why Students Choose Paper Mentor AI</h2>
-    <p class="section-subtitle">We help students conduct real AI research with professional publication potential.</p>
-
-    <div class="card">
-      <ul>
-        <li><i class="fas fa-check-circle"></i> 1:1 personalized mentorship tailored to every student.</li>
-        <li><i class="fas fa-check-circle"></i> Mentors from Ivy League & top global institutions.</li>
-        <li><i class="fas fa-check-circle"></i> Students build real working models — not tutorials.</li>
-        <li><i class="fas fa-check-circle"></i> Guidance through research design, experiments, and writing.</li>
-        <li><i class="fas fa-check-circle"></i> A strong research portfolio for top university applications.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="samples" style="margin-top: 3em;">
+        <!-- Added Ivy League credibility banner -->
+        <div class="ivy-banner">
+            Founded & run by researchers trained at Cornell, Columbia, MIT, and top global institutions
