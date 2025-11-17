@@ -18,8 +18,8 @@
             --gold-soft: #DCC394;
             --bg-light: #F4F6FB;
             --card-bg: #E8EEF8;
-            --card-white: #ffffff;
             --text-main: #1B1F2A;
+            --white: #FFFFFF;
         }
 
         * {
@@ -78,33 +78,33 @@
         }
 
         .hero-inner {
-            max-width: 980px;
+            max-width: 900px;
             margin: 0 auto;
-            background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
-            border-radius: 28px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
+            border-radius: 24px;
             padding: 3.2em 3.4em;
             box-shadow: 0 24px 80px rgba(0,0,0,0.45);
-            backdrop-filter: blur(22px);
+            backdrop-filter: blur(20px);
         }
 
         .hero-logo {
-            width: 540px;           /* bigger logo */
-            max-width: 100%;
-            border-radius: 26px;
-            margin-bottom: 2.6em;
+            width: 520px;              /* bigger company logo */
+            max-width: 95%;
+            border-radius: 24px;
+            margin-bottom: 2.4em;
         }
 
         .hero-title {
             font-family: 'Merriweather', serif;
             font-weight: 700;
             font-size: 2.6em;
-            margin: 0 0 0.4em;
+            margin: 0 0 0.5em;
         }
 
         .hero-subtitle {
             font-size: 1.05em;
-            max-width: 720px;
-            margin: 0.5em auto 2em;
+            max-width: 700px;
+            margin: 0 auto 2.1em;
             line-height: 1.8;
             color: #e7ecff;
         }
@@ -112,8 +112,8 @@
         .hero-tagline {
             text-transform: uppercase;
             letter-spacing: 0.22em;
-            font-size: 0.78em;
-            margin-bottom: 1.2em;
+            font-size: 0.76em;
+            margin-bottom: 1.3em;
             color: #d0d6f0;
         }
 
@@ -121,15 +121,13 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 0.9em;
+            gap: 0.8em;
         }
 
-        /* BUTTONS */
         .btn-primary,
-        .btn-ghost,
-        .btn-navy {
+        .btn-ghost {
             border-radius: 999px;
-            padding: 0.9em 1.9em;
+            padding: 0.9em 1.8em;
             font-size: 0.98em;
             font-weight: 600;
             border: none;
@@ -137,9 +135,8 @@
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 0.6em;
+            gap: 0.5em;
             transition: all 0.22s ease;
-            white-space: nowrap;
         }
 
         .btn-primary {
@@ -162,31 +159,18 @@
 
         .btn-ghost:hover {
             background: rgba(255,255,255,0.08);
-            border-color: rgba(255,255,255,0.85);
-        }
-
-        .btn-navy {
-            background: var(--navy-soft);
-            color: #ffffff;
-            border: 1px solid var(--navy-soft);
-            box-shadow: 0 10px 24px rgba(11,31,58,0.25);
-        }
-
-        .btn-navy:hover {
-            background: #0c2140;
-            border-color: #0c2140;
-            transform: translateY(-1px);
+            border-color: rgba(255,255,255,0.8);
         }
 
         main {
-            max-width: 1080px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 3.2em 1.5em 3.5em;
         }
 
         h2.section-title {
             font-family: 'Merriweather', serif;
-            font-size: 1.8em;
+            font-size: 1.9em;
             margin-bottom: 0.6em;
             color: var(--navy-deep);
         }
@@ -194,7 +178,7 @@
         .section-subtitle {
             font-size: 0.98em;
             color: #4f5668;
-            margin-bottom: 1.3em;
+            margin-bottom: 1.4em;
         }
 
         .card {
@@ -220,56 +204,6 @@
             margin-right: 0.5em;
         }
 
-        /* MENTOR ORIGINS */
-        .mentors-card {
-            background: var(--card-white);
-            border-radius: 18px;
-            padding: 1.8em 2em 1.6em;
-            box-shadow: 0 18px 40px rgba(11,31,58,0.08);
-            border-left: 5px solid var(--gold);
-        }
-
-        .mentors-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1.1em 1.2em;
-            margin: 1.4em 0 0.3em;
-        }
-
-        .mentor-pill {
-            background: #f8f9ff;
-            border-radius: 16px;
-            padding: 0.8em 1.1em;
-            display: flex;
-            align-items: center;
-            gap: 0.7em;
-            box-shadow: 0 8px 22px rgba(15,23,42,0.05);
-        }
-
-        .mentor-logo {
-            width: 32px;
-            height: 32px;
-            flex-shrink: 0;
-        }
-
-        .mentor-school {
-            font-weight: 600;
-            color: var(--navy-deep);
-            font-size: 0.96em;
-        }
-
-        .mentor-university {
-            font-size: 0.86em;
-            color: #4f5668;
-        }
-
-        .mentors-note {
-            margin-top: 1em;
-            font-size: 0.92em;
-            color: #555c70;
-        }
-
-        /* PROJECTS GRID */
         .projects-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -297,19 +231,63 @@
             gap: 0.8em;
         }
 
-        .callout-text {
-            margin-top: 1em;
-            font-size: 0.94em;
-            color: #50576a;
+        /* MENTOR LOGOS SECTION */
+        .mentor-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5em;
+            margin-top: 0.6em;
         }
 
-        /* BOOKING SECTION */
-        .booking-card {
-            background: var(--card-white);
+        .mentor-card {
+            background: var(--white);
             border-radius: 18px;
-            padding: 1.9em 2em;
-            box-shadow: 0 18px 40px rgba(11,31,58,0.08);
-            border-left: 5px solid var(--gold);
+            padding: 1.3em 1.8em;
+            min-width: 230px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 18px 40px rgba(11,31,58,0.12);
+        }
+
+        .mentor-card img {
+            max-width: 180px;
+            height: auto;
+            display: block;
+        }
+
+        .mentor-note {
+            margin-top: 1.2em;
+            font-size: 0.95em;
+            color: #555f73;
+            text-align: center;
+        }
+
+        /* BOOKING SECTION WITH IMAGE */
+        .booking-card-inner {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8em;
+            align-items: center;
+        }
+
+        .booking-copy {
+            flex: 1 1 260px;
+        }
+
+        .booking-visual {
+            flex: 1 1 260px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .students-photo {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 18px;
+            box-shadow: 0 18px 40px rgba(11,31,58,0.18);
+            object-fit: cover;
         }
 
         footer {
@@ -320,32 +298,16 @@
             font-size: 0.9em;
         }
 
-        @media (max-width: 900px) {
-            .mentors-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-
+        @media (max-width: 720px) {
             .hero-inner {
-                padding: 2.4em 1.9em;
+                padding: 2.3em 1.7em;
             }
-
             .hero-title {
                 font-size: 2.2em;
             }
-        }
-
-        @media (max-width: 640px) {
-            nav {
-                flex-wrap: wrap;
-                gap: 1em;
-            }
-
-            .mentors-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero {
-                padding-top: 4em;
+            .hero-logo {
+                width: 100%;
+                max-width: 430px;
             }
         }
     </style>
@@ -367,18 +329,18 @@
     <div class="hero-inner">
         <img src="assets/images/paper_mentor_ai.png" alt="Paper Mentor AI Logo" class="hero-logo">
 
-        <div class="hero-tagline">AI papers mentorship by Ivy League & top-tier university mentors</div>
+        <div class="hero-tagline">AI PAPERS MENTORSHIP BY IVY LEAGUE & TOP-TIER UNIVERSITY MENTORS</div>
 
         <h1 class="hero-title">AI Research & Paper Mentoring for Ambitious Students</h1>
 
         <p class="hero-subtitle">
-            Paper Mentor AI pairs motivated high-school students with AI researchers and graduate mentors from leading
-            institutions such as <strong>Stanford, MIT, Cornell, Columbia, Princeton, and Harvard</strong>. Together,
-            students design, build, and write sophisticated AI research projects that often lead to publication in
-            selective journals including the <strong>Stanford Intersect</strong>, <strong>Journal of Emerging Investigators (JEI)</strong>,
-            <strong>National High School Journal of Science (NHSJS)</strong>, <strong>International Journal of High School Research (IJHSR)</strong>,
-            <strong>STEM Fellowship Journal</strong>, <strong>American Journal of Student Research (AJSR)</strong>, and the
-            <strong>Journal of High School Science (JHSS)</strong>.
+            Paper Mentor AI pairs motivated high-school students with AI researchers and graduate mentors from institutions
+            such as Stanford, Cornell, and other Ivy League & top-tier universities. Together, students design, build, and
+            write sophisticated AI research projects that are often submitted to selective journals including the
+            <strong>Stanford Intersect</strong>, <strong>Journal of Emerging Investigators (JEI)</strong>,
+            <strong>National High School Journal of Science (NHSJS)</strong>, <strong>International Journal of High School
+            Research (IJHSR)</strong>, <strong>STEM Fellowship Journal</strong>, <strong>American Journal of Student Research
+            (AJSR)</strong>, and the <strong>Journal of High School Science (JHSS)</strong>.
         </p>
 
         <div class="hero-actions">
@@ -391,11 +353,6 @@
                 Explore Programs
             </a>
         </div>
-
-        <p class="callout-text" style="margin-top:1.6em; color:#c9d3ff; font-size:0.9em;">
-            Because many projects use sensitive or proprietary data, most student papers are shared privately.
-            We are happy to provide anonymized sample papers on request.
-        </p>
     </div>
 </section>
 
@@ -404,157 +361,53 @@
     <section id="why-us">
         <h2 class="section-title">Why Students Work with Paper Mentor AI</h2>
         <p class="section-subtitle">
-            We focus on one outcome: helping students create real AI research and publication-ready papers that genuinely matter.
+            We focus on one outcome: helping students create real AI research and papers that genuinely matter—and that
+            hold up to scrutiny from competitive journals and top universities.
         </p>
 
         <div class="card">
             <ul>
-                <li><i class="fas fa-check-circle"></i> 1:1 mentorship tailored to each student’s background, interests, and goals.</li>
-                <li><i class="fas fa-check-circle"></i> Mentors are graduate students, researchers, and practitioners in AI from top universities (Stanford, MIT, Cornell, Columbia, Harvard, Princeton, and more).</li>
-                <li><i class="fas fa-check-circle"></i> Project-based learning: students implement real models, run their own experiments, and learn to debug like researchers.</li>
-                <li><i class="fas fa-check-circle"></i> Structured support across every stage: topic selection, research design, experiments, writing, and journal submission.</li>
-                <li><i class="fas fa-check-circle"></i> Guidance on selecting realistic yet impressive target journals and conferences for high-school work.</li>
-                <li><i class="fas fa-check-circle"></i> A compelling research portfolio that strengthens applications to top universities, summer programs, and scholarships.</li>
+                <li><i class="fas fa-check-circle"></i>1:1 mentorship tailored to each student’s background, interests, and goals.</li>
+                <li><i class="fas fa-check-circle"></i>All mentors are researchers or graduate students from Ivy League and top-tier universities (e.g., Stanford, Cornell, Columbia, MIT, Harvard, Princeton).</li>
+                <li><i class="fas fa-check-circle"></i>Project-based learning: students implement real models and experiments, not just follow tutorials.</li>
+                <li><i class="fas fa-check-circle"></i>Structured support across the full research lifecycle—idea selection, methods, experiments, writing, and responding to reviewers.</li>
+                <li><i class="fas fa-check-circle"></i>A compelling, publication-ready research portfolio that strengthens applications to competitive universities, summer programs, and scholarships.</li>
             </ul>
-
-            <p class="callout-text">
-                Every student leaves with a polished research paper draft, an understanding of how real AI research works,
-                and concrete next steps for publication.
+            <p style="margin-top: 1em; font-size:0.94em; color:#50576a;">
+                For privacy and student data protection, full past papers are not listed publicly, but representative
+                samples can be shared privately upon request during a consultation.
             </p>
         </div>
     </section>
 
-    <!-- WHERE OUR MENTORS COME FROM -->
-    <section id="mentors" style="margin-top:3.2em;">
+    <!-- MENTOR ORIGINS SECTION -->
+    <section id="mentors" style="margin-top: 3em;">
         <h2 class="section-title">Where Our Mentors Come From</h2>
         <p class="section-subtitle">
             Students work directly with mentors who have trained and conducted research at institutions such as:
         </p>
 
-        <div class="mentors-card">
-            <div class="mentors-grid">
-                <!-- Stanford -->
-                <div class="mentor-pill">
-                    <svg class="mentor-logo" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="gradStanford" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#8C1515"/>
-                                <stop offset="1" stop-color="#5b0e0e"/>
-                            </linearGradient>
-                        </defs>
-                        <rect x="4" y="4" width="32" height="32" rx="9" fill="url(#gradStanford)"/>
-                        <text x="50%" y="56%" text-anchor="middle" fill="#ffffff" font-size="16" font-family="Inter, system-ui" font-weight="700">S</text>
-                    </svg>
-                    <div>
-                        <div class="mentor-school">Stanford</div>
-                        <div class="mentor-university">Stanford University</div>
-                    </div>
-                </div>
-
-                <!-- MIT -->
-                <div class="mentor-pill">
-                    <svg class="mentor-logo" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="gradMIT" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#A31F34"/>
-                                <stop offset="1" stop-color="#6d1422"/>
-                            </linearGradient>
-                        </defs>
-                        <rect x="4" y="4" width="32" height="32" rx="9" fill="url(#gradMIT)"/>
-                        <text x="50%" y="56%" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Inter, system-ui" font-weight="700">MIT</text>
-                    </svg>
-                    <div>
-                        <div class="mentor-school">MIT</div>
-                        <div class="mentor-university">Massachusetts Institute of Technology</div>
-                    </div>
-                </div>
-
-                <!-- Cornell -->
-                <div class="mentor-pill">
-                    <svg class="mentor-logo" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="gradCornell" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#B31B1B"/>
-                                <stop offset="1" stop-color="#741010"/>
-                            </linearGradient>
-                        </defs>
-                        <rect x="4" y="4" width="32" height="32" rx="9" fill="url(#gradCornell)"/>
-                        <text x="50%" y="56%" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Inter, system-ui" font-weight="700">Co</text>
-                    </svg>
-                    <div>
-                        <div class="mentor-school">Cornell</div>
-                        <div class="mentor-university">Cornell University</div>
-                    </div>
-                </div>
-
-                <!-- Columbia -->
-                <div class="mentor-pill">
-                    <svg class="mentor-logo" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="gradColumbia" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#9BD7FF"/>
-                                <stop offset="1" stop-color="#3B7CBF"/>
-                            </linearGradient>
-                        </defs>
-                        <rect x="4" y="4" width="32" height="32" rx="9" fill="url(#gradColumbia)"/>
-                        <text x="50%" y="56%" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Inter, system-ui" font-weight="700">CU</text>
-                    </svg>
-                    <div>
-                        <div class="mentor-school">Columbia</div>
-                        <div class="mentor-university">Columbia University</div>
-                    </div>
-                </div>
-
-                <!-- Harvard -->
-                <div class="mentor-pill">
-                    <svg class="mentor-logo" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="gradHarvard" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#A41034"/>
-                                <stop offset="1" stop-color="#650820"/>
-                            </linearGradient>
-                        </defs>
-                        <rect x="4" y="4" width="32" height="32" rx="9" fill="url(#gradHarvard)"/>
-                        <text x="50%" y="56%" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Inter, system-ui" font-weight="700">H</text>
-                    </svg>
-                    <div>
-                        <div class="mentor-school">Harvard</div>
-                        <div class="mentor-university">Harvard University</div>
-                    </div>
-                </div>
-
-                <!-- Princeton -->
-                <div class="mentor-pill">
-                    <svg class="mentor-logo" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="gradPrinceton" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#F58025"/>
-                                <stop offset="1" stop-color="#c55a10"/>
-                            </linearGradient>
-                        </defs>
-                        <rect x="4" y="4" width="32" height="32" rx="9" fill="url(#gradPrinceton)"/>
-                        <text x="50%" y="56%" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Inter, system-ui" font-weight="700">P</text>
-                    </svg>
-                    <div>
-                        <div class="mentor-school">Princeton</div>
-                        <div class="mentor-university">Princeton University</div>
-                    </div>
-                </div>
+        <div class="mentor-logos">
+            <div class="mentor-card">
+                <img src="assets/images/stanford-logo-660x330.png" alt="Stanford University logo">
             </div>
-
-            <p class="mentors-note">
-                Every mentor is vetted for both <strong>technical depth in machine learning / AI</strong> and
-                <strong>experience working with high-school students</strong>, so ambitious students feel challenged,
-                supported, and inspired throughout their project.
-            </p>
+            <div class="mentor-card">
+                <img src="assets/images/Cornell_University_Logo.png" alt="Cornell University logo">
+            </div>
         </div>
+
+        <p class="mentor-note">
+            Every mentor is vetted for both <strong>technical depth</strong> in machine learning / AI and
+            <strong> experience working with high-school students</strong>, so ambitious students feel challenged,
+            supported, and inspired throughout their project.
+        </p>
     </section>
 
     <!-- PROJECTS SECTION -->
     <section id="samples" style="margin-top: 3em;">
         <h2 class="section-title">Examples of Student Research Topics</h2>
         <p class="section-subtitle">
-            Project themes are adapted to each student’s interests and experience level while maintaining technical depth.
+            Project themes are adapted to each student’s interests and experience level while maintaining real technical depth.
         </p>
 
         <div class="card">
@@ -583,29 +436,43 @@
         </div>
     </section>
 
-    <!-- BOOKING SECTION -->
+    <!-- BOOKING SECTION WITH STUDENT PHOTO -->
     <section id="booking" style="margin-top: 3em; margin-bottom: 0;">
         <h2 class="section-title">Begin Your Research Journey</h2>
         <p class="section-subtitle">
             Not sure which track or project is the best fit? We’re happy to speak with you.
         </p>
 
-        <div class="booking-card">
-            <p style="margin-top:0;">
-                During a short consultation, we review the student’s background, interests, and academic goals.
-                From there, we suggest a project direction, a suitable program track, and a realistic path towards
-                a finished research paper and potential publication.
-            </p>
+        <div class="card booking-card">
+            <div class="booking-card-inner">
+                <div class="booking-copy">
+                    <p>
+                        During a short consultation, we review the student’s background, interests, and academic goals.
+                        From there, we suggest a project direction, a suitable program track, and a realistic path
+                        towards a finished research paper and potential journal submission.
+                    </p>
 
-            <div class="cta-row">
-                <a href="contact.html" class="btn-navy">
-                    <i class="fas fa-calendar-check"></i>
-                    Book a Consultation
-                </a>
-                <a href="faq.html" class="btn-navy">
-                    <i class="fas fa-question-circle"></i>
-                    Read Frequently Asked Questions
-                </a>
+                    <div class="cta-row">
+                        <a href="contact.html" class="btn-primary">
+                            <i class="fas fa-calendar-check"></i>
+                            Book a Consultation
+                        </a>
+                        <!-- Same style as Book a Consultation -->
+                        <a href="faq.html" class="btn-primary">
+                            <i class="fas fa-question-circle"></i>
+                            Read Frequently Asked Questions
+                        </a>
+                    </div>
+                </div>
+
+                <div class="booking-visual">
+                    <!-- Student study photo -->
+                    <img
+                        src="assets/images/ChatGPT Image Nov 18, 2025, 01_26_32 AM.png"
+                        alt="High school students working together on research"
+                        class="students-photo"
+                    >
+                </div>
             </div>
         </div>
     </section>
