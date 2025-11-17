@@ -102,7 +102,7 @@
 
         .hero-subtitle {
             font-size: 1.05em;
-            max-width: 680px;
+            max-width: 640px;
             margin: 0 auto 2em;
             line-height: 1.7;
             color: #e7ecff;
@@ -124,8 +124,7 @@
         }
 
         .btn-primary,
-        .btn-ghost,
-        .btn-secondary {
+        .btn-ghost {
             border-radius: 999px;
             padding: 0.9em 1.8em;
             font-size: 0.98em;
@@ -162,17 +161,6 @@
             border-color: rgba(255,255,255,0.8);
         }
 
-        /* FIXED FAQ BUTTON */
-        .btn-faq {
-            background: white;
-            color: var(--navy-soft);
-            border: 1px solid #cdd3e1;
-        }
-        .btn-faq:hover {
-            background: #f0f3fa;
-            border-color: #aeb7ce;
-        }
-
         main {
             max-width: 1000px;
             margin: 0 auto;
@@ -198,6 +186,48 @@
             padding: 1.8em 1.9em;
             border-left: 5px solid var(--gold);
             box-shadow: 0 12px 26px rgba(11,31,58,0.08);
+        }
+
+        .card ul {
+            padding-left: 1.2em;
+            margin: 0;
+        }
+
+        .card li {
+            margin-bottom: 0.6em;
+            line-height: 1.6;
+        }
+
+        .card li i {
+            color: var(--gold);
+            margin-right: 0.5em;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.55em;
+            padding-left: 0;
+            list-style: none;
+            margin: 0;
+        }
+
+        .projects-grid li {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .projects-grid i {
+            margin-right: 0.5em;
+            color: var(--gold);
+            margin-top: 0.1em;
+        }
+
+        .cta-row {
+            margin-top: 1.4em;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8em;
         }
 
         footer {
@@ -230,14 +260,15 @@
 
         <h1 class="hero-title">AI Research & Paper Mentoring for Ambitious Students</h1>
 
-        <!-- ⭐ UPDATED SUBTITLE WITH TOP UNIVERSITIES ⭐ -->
+        <!-- ⭐ NEW FANCY SUBTITLE ⭐ -->
         <p class="hero-subtitle">
-            Paper Mentor AI pairs motivated high-school students with experienced AI researchers and graduate mentors from
-            <strong>top institutions including Cornell, Columbia, Stanford, MIT, Harvard, and other Ivy-tier universities</strong>.
-            Students design, build, and publish sophisticated AI research, with many earning publication in selective
-            journals such as the <strong>Stanford Intersect</strong>, <strong>Journal of Emerging Investigators (JEI)</strong>,
-            <strong>NHSJS</strong>, <strong>IJHSR</strong>, <strong>STEM Fellowship Journal</strong>,
-            <strong>AJSR</strong>, and the <strong>Journal of High School Science (JHSS)</strong>.
+            Paper Mentor AI pairs motivated high-school students with experienced AI researchers and graduate mentors to
+            design, build, and publish sophisticated AI research. Many students successfully publish in selective journals
+            such as the <strong>Stanford Intersect</strong>, <strong>Journal of Emerging Investigators (JEI)</strong>,
+            <strong>National High School Journal of Science (NHSJS)</strong>, <strong>International Journal of High School
+            Research (IJHSR)</strong>, <strong>STEM Fellowship Journal</strong>, <strong>American Journal of Student
+            Research (AJSR)</strong>, and the <strong>Journal of High School Science (JHSS)</strong>.
+            These publications help students stand out in competitive STEM programs and top university admissions.
         </p>
 
         <div class="hero-actions">
@@ -253,38 +284,10 @@
     </div>
 </section>
 
-<section id="booking" style="margin-top: 3em; margin-bottom: 0;">
-    <main>
-        <h2 class="section-title">Begin Your Research Journey</h2>
-        <p class="section-subtitle">
-            Not sure which track or project is the best fit? We’re happy to speak with you.
-        </p>
-
-        <div class="card">
-            <p>
-                During a short consultation, we review the student’s background, interests, and academic goals. From there,
-                we suggest a project direction, a suitable program track, and a realistic path toward a finished research paper.
-            </p>
-
-            <div class="cta-row">
-                <a href="contact.html" class="btn-secondary" style="background: var(--navy-soft); color: white;">
-                    <i class="fas fa-calendar-check"></i>
-                    Book a Consultation
-                </a>
-
-                <!-- ⭐ FIXED FAQ BUTTON ⭐ -->
-                <a href="faq.html" class="btn-faq">
-                    <i class="fas fa-question-circle"></i>
-                    Read Frequently Asked Questions
-                </a>
-            </div>
-        </div>
-    </main>
-</section>
+</body>
 
 <footer>
     © 2025 Paper Mentor AI — All Rights Reserved.
 </footer>
 
-</body>
 </html>
