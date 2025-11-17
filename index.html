@@ -21,10 +21,6 @@
             --text-main: #1B1F2A;
         }
 
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
             font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -77,41 +73,41 @@
         }
 
         .hero-inner {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
             background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
             border-radius: 24px;
-            padding: 3em 3.2em;
+            padding: 3.5em 3.5em;
             box-shadow: 0 24px 80px rgba(0,0,0,0.45);
             backdrop-filter: blur(20px);
         }
 
         .hero-logo {
-            width: 360px;
-            max-width: 90%;
-            border-radius: 22px;
-            margin-bottom: 2.2em;
+            width: 420px;
+            max-width: 95%;
+            border-radius: 24px;
+            margin-bottom: 2.4em;
         }
 
         .hero-title {
             font-family: 'Merriweather', serif;
             font-weight: 700;
-           	font-size: 2.4em;
+            font-size: 2.65em;
             margin: 0 0 0.4em;
         }
 
         .hero-subtitle {
-            font-size: 1.05em;
-            max-width: 640px;
-            margin: 0 auto 2em;
-            line-height: 1.7;
+            font-size: 1.08em;
+            max-width: 700px;
+            margin: 0 auto 2.2em;
+            line-height: 1.75;
             color: #e7ecff;
         }
 
         .hero-tagline {
             text-transform: uppercase;
             letter-spacing: 0.22em;
-            font-size: 0.76em;
+            font-size: 0.78em;
             margin-bottom: 1.2em;
             color: #d0d6f0;
         }
@@ -120,21 +116,22 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 0.8em;
+            gap: 1em;
         }
 
         .btn-primary,
-        .btn-ghost {
+        .btn-ghost,
+        .btn-dark {
             border-radius: 999px;
-            padding: 0.9em 1.8em;
-            font-size: 0.98em;
+            padding: 0.95em 2em;
+            font-size: 1em;
             font-weight: 600;
-            border: none;
+            border: 2px solid transparent;
             cursor: pointer;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 0.5em;
+            gap: 0.55em;
             transition: all 0.22s ease;
         }
 
@@ -146,36 +143,34 @@
 
         .btn-primary:hover {
             background: var(--gold-soft);
-            transform: translateY(-1px);
-            box-shadow: 0 16px 40px rgba(0,0,0,0.38);
         }
 
-        .btn-ghost {
-            background: transparent;
-            color: #f4f7ff;
-            border: 1px solid rgba(255,255,255,0.4);
+        .btn-dark {
+            background: white;
+            color: var(--navy-deep);
+            border: 2px solid white;
         }
 
-        .btn-ghost:hover {
-            background: rgba(255,255,255,0.08);
-            border-color: rgba(255,255,255,0.8);
+        .btn-dark:hover {
+            background: #e9eef6;
+            border-color: #e9eef6;
         }
 
         main {
-            max-width: 1000px;
+            max-width: 1050px;
             margin: 0 auto;
             padding: 3.2em 1.5em 3.5em;
         }
 
         h2.section-title {
             font-family: 'Merriweather', serif;
-            font-size: 1.6em;
+            font-size: 1.8em;
             margin-bottom: 0.6em;
             color: var(--navy-deep);
         }
 
         .section-subtitle {
-            font-size: 0.98em;
+            font-size: 1.02em;
             color: #4f5668;
             margin-bottom: 1.3em;
         }
@@ -183,51 +178,9 @@
         .card {
             background: var(--card-bg);
             border-radius: 16px;
-            padding: 1.8em 1.9em;
+            padding: 2em;
             border-left: 5px solid var(--gold);
             box-shadow: 0 12px 26px rgba(11,31,58,0.08);
-        }
-
-        .card ul {
-            padding-left: 1.2em;
-            margin: 0;
-        }
-
-        .card li {
-            margin-bottom: 0.6em;
-            line-height: 1.6;
-        }
-
-        .card li i {
-            color: var(--gold);
-            margin-right: 0.5em;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 0.55em;
-            padding-left: 0;
-            list-style: none;
-            margin: 0;
-        }
-
-        .projects-grid li {
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .projects-grid i {
-            margin-right: 0.5em;
-            color: var(--gold);
-            margin-top: 0.1em;
-        }
-
-        .cta-row {
-            margin-top: 1.4em;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8em;
         }
 
         footer {
@@ -260,15 +213,17 @@
 
         <h1 class="hero-title">AI Research & Paper Mentoring for Ambitious Students</h1>
 
-        <!-- ⭐ NEW FANCY SUBTITLE ⭐ -->
         <p class="hero-subtitle">
-            Paper Mentor AI pairs motivated high-school students with experienced AI researchers and graduate mentors to
-            design, build, and publish sophisticated AI research. Many students successfully publish in selective journals
-            such as the <strong>Stanford Intersect</strong>, <strong>Journal of Emerging Investigators (JEI)</strong>,
-            <strong>National High School Journal of Science (NHSJS)</strong>, <strong>International Journal of High School
-            Research (IJHSR)</strong>, <strong>STEM Fellowship Journal</strong>, <strong>American Journal of Student
-            Research (AJSR)</strong>, and the <strong>Journal of High School Science (JHSS)</strong>.
-            These publications help students stand out in competitive STEM programs and top university admissions.
+            Paper Mentor AI pairs motivated high-school students with elite mentors from
+            <strong>top universities such as Stanford, Cornell, Columbia, MIT, UC Berkeley, and more</strong>.
+            Students work 1:1 with researchers and graduate mentors to design, build, and publish
+            sophisticated AI research. Many students successfully publish in selective journals including
+            <strong>Stanford Intersect</strong>, <strong>Journal of Emerging Investigators (JEI)</strong>,
+            <strong>NHSJS</strong>, <strong>IJHSR</strong>, <strong>STEM Fellowship Journal</strong>,
+            <strong>AJSR</strong>, and <strong>JHSS</strong>.
+            <br><br>
+            For privacy reasons, full student papers are not publicly posted — however,
+            <strong>publication samples can be shared upon request during consultation</strong>.
         </p>
 
         <div class="hero-actions">
@@ -276,18 +231,21 @@
                 <i class="fas fa-paper-plane"></i>
                 Apply for Mentorship
             </a>
-            <a href="programs.html" class="btn-ghost">
+            <a href="programs.html" class="btn-dark">
                 <i class="fas fa-diagram-project"></i>
                 Explore Programs
+            </a>
+            <a href="faq.html" class="btn-dark">
+                <i class="fas fa-question-circle"></i>
+                Read Frequently Asked Questions
             </a>
         </div>
     </div>
 </section>
 
-</body>
-
 <footer>
     © 2025 Paper Mentor AI — All Rights Reserved.
 </footer>
 
+</body>
 </html>
