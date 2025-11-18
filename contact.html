@@ -30,6 +30,7 @@
             color: var(--text-main);
         }
 
+        /* NAVIGATION (UPDATED WITH MOBILE FIX) */
         nav {
             background: var(--navy-deep);
             padding: 0.9em 1.5em;
@@ -60,6 +61,13 @@
         nav a:hover::after,
         nav a.active::after {
             width: 100%;
+        }
+
+        @media (max-width: 720px) {
+            nav {
+                flex-wrap: wrap;
+                gap: 1em;
+            }
         }
 
         .hero-contact {
