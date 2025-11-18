@@ -17,19 +17,25 @@
             --bg-light: #F4F6FB;
             --text-dark: #1B1F2A;
         }
+
         body {
             margin: 0;
             background: var(--bg-light);
             font-family: 'Inter', sans-serif;
             color: var(--text-dark);
         }
+
         nav {
             background: var(--navy);
             padding: 0.9em 1.5em;
             display: flex;
             justify-content: center;
             gap: 1.8em;
+            position: sticky;
+            top: 0;
+            z-index: 20;
         }
+
         nav a {
             color: white;
             text-decoration: none;
@@ -37,6 +43,7 @@
             font-size: 0.98em;
             position: relative;
         }
+
         nav a::after {
             content: "";
             position: absolute;
@@ -47,41 +54,50 @@
             background: var(--gold);
             transition: width 0.25s ease;
         }
+
         nav a:hover::after,
         nav a.active::after {
             width: 100%;
         }
+
         .hero {
             background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 55%, #050815 100%);
             padding: 4em 1.5em 3em;
             text-align: center;
             color: white;
         }
+
         .hero img {
-            width: 560px; /* bigger logo */
+            width: 560px;
             margin-bottom: 1.6em;
         }
+
         .hero h1 {
             font-family: 'Merriweather', serif;
             font-size: 2.6em;
             margin: 0;
         }
+
         .container {
             max-width: 900px;
             margin: 2.5em auto 4em;
             padding: 0 1.5em;
         }
+
         h2 {
             font-family: 'Merriweather', serif;
             color: var(--navy);
             margin-top: 2em;
             font-size: 1.7em;
         }
+
         p, li {
             line-height: 1.65;
             font-size: 1.05em;
         }
+
         ul { margin-left: 1.3em; }
+
         .pdf-btn {
             display: inline-flex;
             align-items: center;
@@ -95,9 +111,11 @@
             font-size: 1.05em;
             margin: 0.5em 0 1.5em 0;
         }
+
         .pdf-btn:hover {
             background: #1d3663;
         }
+
         footer {
             background: #020511;
             color: #b3b9d4;
@@ -105,10 +123,29 @@
             text-align: center;
             font-size: 0.9em;
         }
+
         footer a {
             color: var(--gold);
             text-decoration: none;
         }
+
+        /* --- MOBILE NAV FIX (same as all other pages) --- */
+        @media (max-width: 720px) {
+            nav {
+                flex-wrap: wrap;
+                gap: 1em;
+            }
+
+            .hero img {
+                width: 90%;
+                max-width: 380px;
+            }
+
+            .hero h1 {
+                font-size: 2.1em;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -139,92 +176,77 @@
     <p>
         These Terms & Conditions (“Terms”) govern your use of the Paper Mentor AI website located at
         <strong>papermentorai.com</strong> and all related services and mentoring programs provided by Paper Mentor AI.
-        By registering, enrolling, or using our services, you agree to be bound by these Terms as well as any additional
-        program-specific terms we may publish.
+        By registering, enrolling, or using our services, you agree to be bound by these Terms.
     </p>
 
     <h2>2. Scope of Services</h2>
     <p>
-        Paper Mentor AI provides personalised one-on-one mentoring, research project supervision, educational feedback, and
-        support in artificial intelligence and machine-learning research for students. Our services may include live sessions,
-        project feedback, writing guidance, and final deliverables (project report, code, presentation).
+        Paper Mentor AI provides personalised mentoring, project supervision, and AI/ML educational support.
     </p>
 
     <h2>3. Modification of Terms</h2>
     <p>
-        We reserve the right to modify, update or replace any part of these Terms at our discretion.
-        Changes will become effective when published on our website. Your continued participation after changes indicates acceptance.
+        We may update or replace portions of these Terms at any time. Continued use indicates acceptance.
     </p>
 
     <h2>4. Contact Information</h2>
     <p>
-        For questions regarding these Terms or our services, please contact:<br>
         <strong>Email:</strong> papermentorai@gmail.com<br>
-        <strong>Address:</strong> London, England <br>
+        <strong>Address:</strong> London, England
     </p>
 
     <h2>5. Payments & Pricing</h2>
     <ul>
-      <li>Standard hourly rate: <strong>$100 per hour</strong></li>
-      <li>10% discount for packages of 10 or more hours</li>
-      <li>Payment must be made in advance unless otherwise agreed</li>
+        <li>Standard hourly rate: <strong>$100 per hour</strong></li>
+        <li>10% discount for 10+ hours</li>
+        <li>Payment is required in advance</li>
     </ul>
 
     <h2>6. Refund & Cancellation Policy</h2>
     <ul>
-      <li>100% refund if the student chooses not to continue after Session 1</li>
-      <li>Pro-rated refund available at any time for unused hours</li>
-      <li>Sessions may be rescheduled with at least 24 hours’ notice</li>
+        <li>100% refund if discontinued after Session 1</li>
+        <li>Pro-rated refund anytime for unused hours</li>
+        <li>24-hour notice required to reschedule</li>
     </ul>
 
-    <h2>7. Student & User Obligations</h2>
+    <h2>7. Student Obligations</h2>
     <p>
-        You agree to use our services for lawful, educational purposes only. You must comply with all applicable laws and regulations.
-        You are responsible for maintaining a functional internet connection and preparation for each session.
+        You must use our services responsibly and prepare adequately for each session.
     </p>
 
-    <h2>8. Intellectual Property Rights</h2>
+    <h2>8. Intellectual Property</h2>
     <p>
-        All materials provided by Paper Mentor AI (including slides, templates, code snippets, feedback) remain the property
-        of Paper Mentor AI or its licensors. You are granted a non-exclusive, personal, non-transferable license to use such materials
-        solely for your educational purposes.
+        All materials provided remain the property of Paper Mentor AI. You may use them only for personal educational purposes.
     </p>
 
     <h2>9. Privacy & Data Protection</h2>
     <p>
-        We are committed to compliance with the EU General Data Protection Regulation (GDPR) and platform-relevant data laws.
-        You have the right to access, correct, delete or export your personal data; please contact us for details.
+        We comply with GDPR. You may request data access, correction, or deletion.
     </p>
 
     <h2>10. Limitation of Liability</h2>
     <p>
-        To the fullest extent permitted by law, Paper Mentor AI shall not be liable for indirect, incidental, special or consequential
-        damages, including but not limited to loss of profits, data loss, or academic outcome loss. While we strive for high-quality mentoring,
-        we do not guarantee any particular academic result, publication, admission, or competition outcome.
+        We are not liable for indirect damages, academic outcomes, or lost opportunities.
     </p>
 
     <h2>11. Indemnification</h2>
     <p>
-        You agree to indemnify and hold harmless Paper Mentor AI, its mentors, staff and affiliates from any claim or demand arising out
-        of your misuse of our services, violation of these Terms or infringement of any third-party rights.
+        You agree to indemnify Paper Mentor AI for misuse or violations of these Terms.
     </p>
 
     <h2>12. Termination</h2>
     <p>
-        We may terminate or suspend your access to our services immediately, without prior notice or liability, if you breach these Terms
-        or engage in illegal or harmful conduct.
+        We may suspend or remove access to our services if these Terms are violated.
     </p>
 
     <h2>13. Severability</h2>
     <p>
-        If any provision of these Terms is held invalid or unenforceable by a court, then that provision will be deemed severed from these
-        Terms and the remaining provisions will remain in full force and effect.
+        Invalid provisions do not affect the remainder of the Terms.
     </p>
 
-    <h2>14. Governing Law & Jurisdiction</h2>
+    <h2>14. Governing Law</h2>
     <p>
-        These Terms and your use of our services are governed by the laws of the European Union. Any dispute
-        shall be subject to the exclusive jurisdiction of the courts of European Union.
+        These Terms are governed by EU law and disputes fall under EU jurisdiction.
     </p>
 
 </div>
