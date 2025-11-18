@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- VIEWPORT FIXED -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apply Now | Paper Mentor AI</title>
 
@@ -30,7 +31,7 @@
             color: var(--text-main);
         }
 
-        /* NAVIGATION */
+        /* NAVIGATION (MATCHED TO HOMEPAGE) */
         nav {
             background: var(--navy-deep);
             padding: 0.9em 1.5em;
@@ -167,9 +168,20 @@
             font-size: 0.9em;
         }
 
+        /* --- MOBILE FIX (SAME AS HOME PAGE) --- */
         @media (max-width: 720px) {
-            .form-wrapper { padding: 1.8em; }
-            .page-header h1 { font-size: 2em; }
+            nav {
+                flex-wrap: wrap;
+                gap: 1em;
+            }
+
+            .form-wrapper {
+                padding: 1.8em;
+            }
+
+            .page-header h1 {
+                font-size: 2em;
+            }
         }
 
     </style>
@@ -192,9 +204,7 @@
 <!-- HEADER -->
 <section class="page-header">
     <h1>Apply for Mentorship</h1>
-    <p>
-        Please complete the application below. Our team will contact you within 24 hours with next steps.
-    </p>
+    <p>Please complete the application below. Our team will contact you within 24 hours with next steps.</p>
 </section>
 
 <!-- FORM -->
@@ -326,6 +336,7 @@
     © 2025 Paper Mentor AI — All Rights Reserved.
 </footer>
 
+<!-- FORM SCRIPT -->
 <script>
     const form = document.getElementById("applyForm");
     const successMessage = document.getElementById("success");
