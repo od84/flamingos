@@ -34,6 +34,9 @@
             display: flex;
             justify-content: center;
             gap: 1.8em;
+            position: sticky;
+            top: 0;
+            z-index: 20;
         }
 
         nav a {
@@ -60,6 +63,7 @@
             width: 100%;
         }
 
+        /* HERO */
         .hero {
             background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 60%, #050814 100%);
             color: white;
@@ -190,7 +194,6 @@
         }
 
         /* MODAL */
-
         .modal {
             position: fixed;
             top: 0;
@@ -229,6 +232,14 @@
         @keyframes fadeIn {
             from { opacity: 0; transform: scale(0.92); }
             to   { opacity: 1; transform: scale(1); }
+        }
+
+        /* --- MOBILE FIX (same as Homepage) --- */
+        @media (max-width: 720px) {
+            nav {
+                flex-wrap: wrap;
+                gap: 1em;
+            }
         }
 
     </style>
