@@ -26,13 +26,18 @@
             color: var(--text-main);
         }
 
+        /* NAVIGATION (UPDATED WITH MOBILE FIX) */
         nav {
             background: var(--navy-deep);
             padding: 0.9em 1.5em;
             display: flex;
             justify-content: center;
             gap: 1.8em;
+            position: sticky;
+            top: 0;
+            z-index: 20;
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
@@ -40,6 +45,7 @@
             font-size: 0.98em;
             position: relative;
         }
+
         nav a::after {
             content: "";
             position: absolute;
@@ -50,9 +56,17 @@
             background: var(--gold);
             transition: width 0.25s ease;
         }
+
         nav a:hover::after,
         nav a.active::after {
             width: 100%;
+        }
+
+        @media (max-width: 720px) {
+            nav {
+                flex-wrap: wrap;
+                gap: 1em;
+            }
         }
 
         header {
@@ -61,11 +75,13 @@
             text-align: center;
             padding: 3.5em 1.8em 3em;
         }
+
         header h1 {
             font-family: 'Merriweather', serif;
             margin: 0 0 0.4em;
             font-size: 2.2em;
         }
+
         header p {
             max-width: 650px;
             margin: 0 auto;
@@ -171,8 +187,7 @@
                 <li>Document their work in a structured research report or paper, suitable for competitions or journals.</li>
             </ul>
             <p>
-                Rather than “camps” or pre-recorded courses, Paper Mentor AI is built around focused collaboration between
-                the student and their mentor.
+                Paper Mentor AI is built around focused collaboration between the student and their mentor — not pre-recorded content or mass classrooms.
             </p>
         </div>
     </section>
@@ -186,13 +201,12 @@
             </p>
             <ul>
                 <li>Strong academic backgrounds in machine learning, data science, or applied AI.</li>
-                <li>Hands-on experience working with modern tools (e.g. deep learning frameworks, cloud platforms, NLP and vision models).</li>
+                <li>Hands-on experience with modern tools (e.g., deep learning frameworks, cloud platforms, NLP and vision models).</li>
                 <li>Real-world exposure through research labs, industry roles, or applied AI projects.</li>
             </ul>
             <p>
-                Equally important, they have <strong>years of experience mentoring students</strong>—supporting them through
-                research design, implementation, and scientific writing, and helping them use these projects in applications
-                to top universities and competitive master’s programs.
+                Equally important, they have <strong>years of experience mentoring students</strong>—helping them through
+                research design, implementation, and scientific writing, and supporting them in using their work for competitive applications.
             </p>
         </div>
     </section>
@@ -201,18 +215,17 @@
         <h2>How Mentoring Works in Practice</h2>
         <div class="box">
             <p>
-                Mentoring is typically organised into 1:1 sessions, adapted to the student’s schedule and timezone.
-                Depending on the track, a student might:
+                Mentoring is typically organised into 1:1 sessions adjusted to the student’s schedule and timezone.
+                Depending on the track, a student may:
             </p>
             <ul>
-                <li>Start with core foundations in Python, ML, and model evaluation.</li>
-                <li>Move into a focused applied project (e.g. medical imaging, NLP, finance, sustainability).</li>
+                <li>Start with foundations in Python, ML, and model evaluation.</li>
+                <li>Move into a focused applied project (medical imaging, NLP, finance, sustainability, etc.).</li>
                 <li>Run experiments and refine models together with their mentor.</li>
-                <li>Structure the project into a formal written paper or presentation.</li>
+                <li>Structure and write a formal research paper or scientific presentation.</li>
             </ul>
             <p>
-                Throughout, the mentor’s role is to challenge the student, provide feedback, and make sure the work is
-                technically sound while still being understandable and achievable at the high-school level.
+                Throughout, the mentor ensures the work is technically strong yet realistic at the high-school level.
             </p>
         </div>
     </section>
