@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Programs | Paper Mentor AI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
@@ -20,15 +18,12 @@
             --card-bg: #E8EEF8;
             --text-main: #1B1F2A;
         }
-
         body {
             margin: 0;
             background: var(--bg-light);
             font-family: 'Inter', sans-serif;
             color: var(--text-main);
         }
-
-        /* NAVIGATION */
         nav {
             background: var(--navy-deep);
             padding: 0.9em 1.5em;
@@ -36,7 +31,6 @@
             justify-content: center;
             gap: 1.8em;
         }
-
         nav a {
             color: #fff;
             text-decoration: none;
@@ -44,7 +38,6 @@
             position: relative;
             font-size: 0.98em;
         }
-
         nav a::after {
             content: "";
             position: absolute;
@@ -55,26 +48,20 @@
             background: var(--gold);
             transition: width 0.25s ease;
         }
-
-        nav a:hover::after,
-        nav a.active::after {
+        nav a:hover::after, nav a.active::after {
             width: 100%;
         }
-
-        /* HERO */
         .hero {
             background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 60%, #050814 100%);
             color: white;
             text-align: center;
             padding: 3.2em 1.8em 2.9em;
         }
-
         .hero h1 {
             font-family: 'Merriweather', serif;
             margin: 0 0 0.45em;
             font-size: 2.3em;
         }
-
         .hero p {
             max-width: 720px;
             margin: 0 auto;
@@ -82,36 +69,30 @@
             color: #dbe2ff;
             line-height: 1.7;
         }
-
-        /* IMAGE */
         .programs-hero-image {
             width: 100%;
-            max-width: 850px;
-            margin: 2em auto 0;
+            max-width: 950px;
+            margin: 2.5em auto 0;
             display: block;
-            border-radius: 16px;
-            box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+            border-radius: 18px;
+            box-shadow: 0 18px 44px rgba(0,0,0,0.25);
         }
-
         main {
             max-width: 960px;
             margin: 0 auto;
             padding: 3em 1.5em 4em;
         }
-
         h2 {
             font-family: 'Merriweather', serif;
             font-size: 1.55em;
             margin-bottom: 0.4em;
             color: var(--navy-deep);
         }
-
         .section-subtitle {
             font-size: 0.95em;
             color: #4f5668;
             margin-bottom: 1em;
         }
-
         .card {
             background: var(--card-bg);
             border-radius: 16px;
@@ -120,7 +101,6 @@
             box-shadow: 0 12px 26px rgba(11,31,58,0.08);
             margin-bottom: 1.8em;
         }
-
         .program-title {
             font-weight: 600;
             font-size: 1.1em;
@@ -130,11 +110,7 @@
             align-items: center;
             gap: 0.5em;
         }
-
-        .program-title i {
-            color: var(--gold);
-        }
-
+        .program-title i { color: var(--gold); }
         .badge {
             display: inline-block;
             background: var(--navy-deep);
@@ -144,7 +120,6 @@
             border-radius: 999px;
             margin-left: 0.4em;
         }
-
         .btn-primary {
             background: var(--gold);
             color: var(--navy-deep);
@@ -159,11 +134,7 @@
             margin-top: 0.8em;
             cursor: pointer;
         }
-
-        .btn-primary:hover {
-            background: var(--gold-soft);
-        }
-
+        .btn-primary:hover { background: var(--gold-soft); }
         .btn-secondary {
             background: var(--navy-soft);
             color: white;
@@ -174,11 +145,7 @@
             display: inline-block;
             text-decoration: none;
         }
-
-        .btn-secondary:hover {
-            background: #0A1730;
-        }
-
+        .btn-secondary:hover { background: #0A1730; }
         footer {
             background: #020511;
             color: #b3b9d4;
@@ -186,11 +153,7 @@
             padding: 1.8em 1.2em;
             font-size: 0.9em;
         }
-
-        footer a {
-            color: var(--gold);
-            text-decoration: none;
-        }
+        footer a { color: var(--gold); text-decoration: none; }
     </style>
 </head>
 
@@ -208,111 +171,85 @@
 
 <section class="hero">
     <h1>Mentoring Programs</h1>
-    <p>
-        From beginner-friendly introductions to full research papers, Paper Mentor AI offers
-        flexible, high-impact mentoring tailored to each student’s background and goals.
-    </p>
+    <p>From beginner-friendly introductions to advanced research publishing, we guide students through impactful, personalized AI research journeys.</p>
 </section>
 
-<img src="assets/images/ChatGPT%20Image%20Nov%2018,%202025,%2002_56_39%20AM.png" alt="Programs Illustration" class="programs-hero-image">
+<img src="assets/images/ChatGPT%20Image%20Nov%2018,%202025,%2002_56_39%20AM.png" class="programs-hero-image" alt="Programs Illustration">
 
 <main>
-
-<!-- STRUCTURE -->
-<section>
-    <h2>Program Structure</h2>
-    <div class="card">
-        <p>
-            Each program follows a structured, progressive mentoring plan designed to help students
-            develop real research skills while completing a meaningful AI project or full research paper.
-        </p>
-        <ul>
-            <li>Introductory AI foundations and dataset exploration</li>
-            <li>Model building, training, evaluation, and applications</li>
-            <li>Paper drafting, editing, and submission guidance, real time applications</li>
-        </ul>
-    </div>
-</section>
-
-<!-- SESSION PLAN -->
-<section>
-    <h2>Session Plan</h2>
-
-    <div class="card">
-        <div class="program-title"><i class="fas fa-list"></i>Session Breakdown (8-Session Program)</div>
-        <ul>
-            <li><strong>Sessions 1–2:</strong> Python basics, ML foundations, dataset overview</li>
-            <li><strong>Sessions 3–5:</strong> Model development, evaluation, hyperparameter tuning</li>
-            <li><strong>Sessions 6–7:</strong> Application of models, insights, error analysis</li>
-            <li><strong>Final Session (8):</strong> Writing, editing, preparing the final paper/report — <strong>with paper publication included</strong></li>
-        </ul>
-    </div>
-</section>
-
-<!-- 1:1 PROGRAMS -->
-<section>
-    <h2>1:1 Research Mentoring Tracks</h2>
-    <p class="section-subtitle">Personalized and flexible mentoring for students who want meaningful research experience.</p>
-
-    <div class="card">
-        <div class="program-title">
-            <i class="fas fa-star"></i>
-            Standard Research Track (≈ 8 hours)
-            <span class="badge">Mini Project</span>
+    <section>
+        <h2>Program Structure</h2>
+        <div class="card">
+            <p>Each program follows a structured mentoring roadmap designed to build real AI research skills through hands-on projects and academic writing.</p>
+            <ul>
+                <li>Foundational AI + dataset exploration</li>
+                <li>Model development, evaluation, and refinement</li>
+                <li>Paper writing, editing, and publication support</li>
+            </ul>
         </div>
-        <ul>
-            <li>Python + ML fundamentals</li>
-            <li>Mini research project with real dataset</li>
-            <li>Model training + basic evaluation</li>
-            <li>Short research report</li>
-        </ul>
-    </div>
+    </section>
 
-    <div class="card">
-        <div class="program-title">
-            <i class="fas fa-rocket"></i>
-            Advanced Research Track (≈ 12–16 hours)
-            <span class="badge">Research Paper</span>
+    <section>
+        <h2>Session Plan (8-Session Standard Track)</h2>
+        <div class="card">
+            <div class="program-title"><i class="fas fa-list"></i>Session Breakdown</div>
+            <ul>
+                <li><strong>Sessions 1–2:</strong> Python basics, ML foundations, dataset exploration</li>
+                <li><strong>Sessions 3–5:</strong> Model building, evaluation, hyperparameter tuning</li>
+                <li><strong>Sessions 6–7:</strong> Applying the model, insights, error analysis</li>
+                <li><strong>Session 8:</strong> Final paper/report writing, editing, publication (included)</li>
+            </ul>
         </div>
-        <ul>
-            <li>Full end-to-end research pipeline</li>
-            <li>Advanced model tuning + dataset augmentation and real-time application integration</li>
-            <li>Real-world dataset analysis + real-time model applications</li>
-            <li>Competitive-level research paper creation</li>
-            <li>Revision, proofreading, and submission support</li>
-        </ul>
+    </section>
 
-        <a href="apply.html" class="btn-primary"><i class="fas fa-paper-plane"></i> Apply to 1:1 Research</a>
-    </div>
-</section>
+    <section>
+        <h2>1:1 Research Mentoring Tracks</h2>
+        <p class="section-subtitle">Choose between mini-project or full research pathways.</p>
 
-<!-- PRICING -->
-<section>
-    <h2>Pricing & Tuition</h2>
-    <p class="section-subtitle">Transparent pricing and flexible refund policy.</p>
+        <div class="card">
+            <div class="program-title"><i class="fas fa-star"></i>Standard Research Track (≈ 8 hours)<span class="badge">Mini Project</span></div>
+            <ul>
+                <li>Python + ML fundamentals</li>
+                <li>Mini research project with real dataset</li>
+                <li>Model training + basic evaluation</li>
+                <li>Short research report (publication optional)</li>
+            </ul>
+        </div>
 
-    <a class="btn-secondary" id="openModal"><i class="fas fa-file-invoice-dollar"></i> View Pricing Details & Refund Policy</a>
-</section>
+        <div class="card">
+            <div class="program-title"><i class="fas fa-rocket"></i>Advanced Research Track (≈ 12–16 hours)<span class="badge">Research Paper</span></div>
+            <ul>
+                <li>Full end-to-end research pipeline</li>
+                <li>Advanced model tuning + dataset augmentation</li>
+                <li>Real-world application integration + deployment concepts</li>
+                <li>Competitive-level research paper (conference/journal-ready)</li>
+                <li>Next-step pathways: extended experiments, second paper planning, optional multi-model study</li>
+            </ul>
+            <a href="apply.html" class="btn-primary"><i class="fas fa-paper-plane"></i> Apply to 1:1 Research</a>
+        </div>
+    </section>
 
+    <section>
+        <h2>Pricing & Tuition</h2>
+        <p class="section-subtitle">Clear pricing and flexible refunds.</p>
+        <a class="btn-secondary" id="openModal"><i class="fas fa-file-invoice-dollar"></i> View Pricing Details & Refund Policy</a>
+    </section>
 </main>
 
-<!-- MODAL -->
 <div class="modal" id="pricingModal" style="display:none;">
     <div class="modal-content">
         <span class="close-btn" id="closeModal">&times;</span>
         <h3>Pricing, Refunds & Discounts</h3>
-
         <p><strong>Hourly Rate:</strong> $100 per hour</p>
         <p><strong>Package Discount:</strong> 10% off for 10+ hours</p>
 
         <h4>Refund Policy</h4>
         <ul>
             <li><strong>100% refund after Session 1</strong> if you choose not to continue.</li>
-            <li><strong>Pro-rated refund anytime</strong> for all unused hours.</li>
+            <li><strong>Pro-rated refund</strong> for all unused hours anytime.</li>
             <li>No cancellation fees.</li>
         </ul>
 
-        <br>
         <a href="terms.html" class="btn-primary" style="margin-right:10px;">Full Terms & Conditions</a>
         <a id="downloadPDF" class="btn-secondary" href="#"><i class="fas fa-file-pdf"></i> Download PDF</a>
     </div>
