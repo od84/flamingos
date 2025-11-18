@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- FIXED META TAG -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ | Paper Mentor AI</title>
 
@@ -28,6 +29,7 @@
             color: #1B1F2A;
         }
 
+        /* --- NAVIGATION (MATCHED TO HOME PAGE) --- */
         nav {
             background: var(--navy-deep);
             padding: 0.9em 1.5em;
@@ -63,6 +65,7 @@
             width: 100%;
         }
 
+        /* --- HERO SECTION --- */
         .hero-faq {
             background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 55%, #050815 100%);
             padding: 3.5em 1.5em 3em;
@@ -74,18 +77,6 @@
             font-family: 'Merriweather', serif;
             font-size: 2.3em;
             margin: 0 0 0.6em;
-        }
-
-        .faq-image-wrapper {
-            text-align: center;
-            margin: 2.5em auto;
-        }
-
-        .faq-image-wrapper img {
-            width: 100%;
-            max-width: 750px;
-            border-radius: 16px;
-            box-shadow: 0 12px 28px rgba(0,0,0,0.12);
         }
 
         .faq-container {
@@ -136,6 +127,14 @@
             text-align: center;
             padding: 2em 1em;
             font-size: 0.9em;
+        }
+
+        /* --- MOBILE FIX (COPIED FROM HOME PAGE) --- */
+        @media (max-width: 720px) {
+            nav {
+                flex-wrap: wrap;
+                gap: 1em;
+            }
         }
     </style>
 </head>
