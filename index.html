@@ -257,7 +257,7 @@
 
         .founder-card {
             display: grid;
-            grid-template-columns: 150px minmax(0, 1fr);
+            grid-template-columns: 210px minmax(0, 1fr);
             gap: 2em;
             align-items: center;
             background: var(--card-white);
@@ -267,22 +267,12 @@
             border: 1px solid rgba(11,31,58,0.08);
         }
 
-        .founder-avatar {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(
-                135deg,
-                var(--navy-soft),
-                var(--navy-deep)
-            );
-            color: var(--gold-soft);
-            font-family: 'Merriweather', serif;
-            font-size: 2.3em;
-            font-weight: 700;
+        .founder-photo {
+            width: 190px;
+            height: 235px;
+            border-radius: 18px;
+            object-fit: cover;
+            object-position: center 35%;
             border: 4px solid #eef1f8;
             box-shadow: 0 10px 25px rgba(11,31,58,0.18);
         }
@@ -541,8 +531,10 @@
                 text-align: center;
             }
 
-            .founder-avatar {
+            .founder-photo {
                 margin: 0 auto;
+                width: 220px;
+                height: 270px;
             }
 
             .founder-meta {
@@ -633,9 +625,11 @@
 
     <div class="founder-card">
 
-        <div class="founder-avatar">
-            OD
-        </div>
+        <img
+            src="assets/images/photo.jpg"
+            alt="Odysseas Drosis"
+            class="founder-photo"
+        >
 
         <div>
 
@@ -705,8 +699,6 @@
     <div class="publication-grid">
 
 
-        <!-- STANFORD -->
-
         <article class="publication-card">
 
             <div class="publication-journal">
@@ -734,8 +726,6 @@
 
         </article>
 
-
-        <!-- BRAIN TUMOR -->
 
         <article class="publication-card">
 
@@ -765,8 +755,6 @@
         </article>
 
 
-        <!-- STOCK -->
-
         <article class="publication-card">
 
             <div class="publication-journal">
@@ -794,8 +782,6 @@
 
         </article>
 
-
-        <!-- NBA -->
 
         <article class="publication-card">
 
@@ -827,13 +813,11 @@
 
 
     <p class="publication-note">
-
         These examples reflect students previously and personally mentored by
         the founder.
 
         Publication outcomes vary by project, student, journal, and independent
         editorial review and are not guaranteed.
-
     </p>
 
 
@@ -861,13 +845,11 @@
     </h2>
 
     <p class="section-subtitle">
-
         Our mentors are selected for strong backgrounds in AI,
         machine learning, research, and technical communication.
 
         Mentor backgrounds may include leading universities
         and industry research environments.
-
     </p>
 
 
@@ -896,11 +878,9 @@
 
 
     <p class="mentor-note">
-
         University names and logos indicate educational or research backgrounds
         of individual mentors and do not imply sponsorship, endorsement, or
         affiliation with Paper Mentor AI.
-
     </p>
 
 </section>
@@ -915,12 +895,10 @@
     </h2>
 
     <p class="section-subtitle">
-
         The goal is not simply to complete a coding project.
 
         Students learn how to think, build, evaluate,
         and communicate like researchers.
-
     </p>
 
 
@@ -976,10 +954,8 @@
     </h2>
 
     <p class="section-subtitle">
-
         Projects are designed around the student's interests while maintaining
         a realistic scope and a clear research question.
-
     </p>
 
 
@@ -1060,10 +1036,8 @@
     </h2>
 
     <p class="section-subtitle">
-
         Students move from a broad idea to a focused research question,
         implementation, experimentation, analysis, and academic writing.
-
     </p>
 
 
@@ -1149,13 +1123,11 @@
     </h2>
 
     <p>
-
         Tell us about your interests, experience, and goals.
 
         We will use your application to determine whether Paper Mentor AI
         is a good fit and what kind of research project could be realistic
         for you.
-
     </p>
 
 
