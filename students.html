@@ -6,7 +6,7 @@
     <title>Students & Outcomes | Paper Mentor AI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
     <style>
@@ -14,9 +14,20 @@
             --navy-deep: #0B1F3A;
             --navy-soft: #12284A;
             --gold: #CBA45B;
+            --gold-soft: #DCC394;
             --bg-light: #F4F6FB;
             --card-bg: #E8EEF8;
+            --card-white: #FFFFFF;
             --text-main: #1B1F2A;
+            --text-muted: #5B6475;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -27,6 +38,7 @@
         }
 
         /* NAVIGATION */
+
         nav {
             background: var(--navy-deep);
             padding: 0.9em 1.5em;
@@ -36,6 +48,7 @@
             position: sticky;
             top: 0;
             z-index: 20;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
         }
 
         nav a {
@@ -62,42 +75,145 @@
             width: 100%;
         }
 
+        /* HEADER */
+
         header {
-            background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 60%, #050814 100%);
+            background: radial-gradient(
+                circle at top left,
+                #1F3A68,
+                #0B1F3A 60%,
+                #050814 100%
+            );
             color: white;
             text-align: center;
-            padding: 3.2em 1.8em 2.9em;
+            padding: 3.5em 1.8em 3.2em;
         }
 
         header h1 {
             font-family: 'Merriweather', serif;
             margin: 0 0 0.45em;
-            font-size: 2.25em;
+            font-size: 2.4em;
         }
 
         header p {
-            max-width: 720px;
+            max-width: 780px;
             margin: 0 auto;
-            font-size: 1.05em;
+            font-size: 1.06em;
             color: #dbe3ff;
-            line-height: 1.65;
+            line-height: 1.72;
         }
 
         main {
-            max-width: 960px;
+            max-width: 1080px;
             margin: 0 auto;
-            padding: 3em 1.5em 3.5em;
+            padding: 3em 1.5em 3.8em;
         }
 
         h2 {
             font-family: 'Merriweather', serif;
-            font-size: 1.55em;
-            margin-bottom: 0.4em;
+            font-size: 1.65em;
+            margin-bottom: 0.45em;
             color: var(--navy-deep);
             display: flex;
             align-items: center;
             gap: 0.5em;
         }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            line-height: 1.7;
+            max-width: 850px;
+            margin: 0 0 1.5em;
+        }
+
+        /* INTRO IMAGE */
+
+        .image-wrapper {
+            text-align: center;
+            margin-bottom: 3em;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            max-width: 780px;
+            border-radius: 18px;
+            box-shadow: 0 14px 32px rgba(0,0,0,0.13);
+        }
+
+        /* PUBLICATION GRID */
+
+        .publication-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.2em;
+            margin-bottom: 1.4em;
+        }
+
+        .publication-card {
+            background: var(--card-white);
+            border-radius: 18px;
+            padding: 1.6em;
+            border-top: 4px solid var(--gold);
+            box-shadow: 0 12px 28px rgba(11,31,58,0.08);
+            display: flex;
+            flex-direction: column;
+            min-height: 275px;
+        }
+
+        .publication-journal {
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 700;
+            color: #856826;
+            margin-bottom: 0.8em;
+        }
+
+        .publication-title {
+            font-family: 'Merriweather', serif;
+            color: var(--navy-deep);
+            line-height: 1.45;
+            font-size: 1.02em;
+            margin: 0 0 0.8em;
+        }
+
+        .publication-author {
+            color: var(--text-muted);
+            font-size: 0.9em;
+            line-height: 1.6;
+            margin-bottom: 1em;
+        }
+
+        .publication-description {
+            color: #4f5668;
+            font-size: 0.9em;
+            line-height: 1.65;
+            margin-bottom: 1.2em;
+        }
+
+        .publication-link {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4em;
+            color: var(--navy-soft);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9em;
+        }
+
+        .publication-link:hover {
+            text-decoration: underline;
+        }
+
+        .publication-note {
+            font-size: 0.9em;
+            color: #656c7b;
+            line-height: 1.65;
+            margin: 1em 0 3em;
+        }
+
+        /* GENERAL CARDS */
 
         .card {
             background: var(--card-bg);
@@ -105,20 +221,72 @@
             padding: 1.8em 1.9em;
             border-left: 5px solid var(--gold);
             box-shadow: 0 12px 26px rgba(11,31,58,0.08);
-            margin-bottom: 1.9em;
+            margin-bottom: 2.4em;
+        }
+
+        .card ul {
+            padding-left: 1.2em;
+            margin-bottom: 0;
+        }
+
+        .card li {
+            margin-bottom: 0.7em;
+            line-height: 1.6;
+        }
+
+        .project-list {
+            list-style: none;
+            padding-left: 0 !important;
         }
 
         .project-list li {
-            margin-bottom: 0.6em;
+            margin-bottom: 0.7em;
+            display: flex;
+            align-items: flex-start;
         }
 
         .project-list i {
-            margin-right: 0.45em;
+            margin-right: 0.55em;
             color: var(--gold);
+            margin-top: 0.15em;
         }
 
+        /* STATS */
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1em;
+            margin-bottom: 2.8em;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5em;
+            text-align: center;
+            box-shadow: 0 10px 24px rgba(11,31,58,0.07);
+        }
+
+        .stat-card strong {
+            display: block;
+            color: var(--navy-deep);
+            font-family: 'Merriweather', serif;
+            font-size: 1.5em;
+            margin-bottom: 0.25em;
+        }
+
+        .stat-card span {
+            font-size: 0.9em;
+            color: var(--text-muted);
+        }
+
+        /* CTA */
+
         .btn-primary {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45em;
             padding: 0.9em 1.6em;
             border-radius: 999px;
             text-decoration: none;
@@ -129,19 +297,30 @@
         }
 
         .btn-primary:hover {
-            background: #e0c488;
+            background: var(--gold-soft);
         }
 
-        .image-wrapper {
+        .final-cta {
+            background: var(--navy-deep);
+            color: white;
+            border-radius: 22px;
+            padding: 2.6em 2em;
             text-align: center;
-            margin-bottom: 2em;
+            margin-top: 3em;
+            box-shadow: 0 18px 42px rgba(11,31,58,0.17);
         }
 
-        .image-wrapper img {
-            width: 100%;
+        .final-cta h2 {
+            justify-content: center;
+            color: white;
+            margin-top: 0;
+        }
+
+        .final-cta p {
             max-width: 720px;
-            border-radius: 16px;
-            box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+            margin: 0 auto;
+            color: #d7def3;
+            line-height: 1.7;
         }
 
         footer {
@@ -152,7 +331,16 @@
             font-size: 0.9em;
         }
 
-        /* ----------- MOBILE FIX (same as all other pages) ----------- */
+        @media (max-width: 850px) {
+            .publication-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 720px) {
             nav {
                 flex-wrap: wrap;
@@ -160,7 +348,7 @@
             }
 
             header h1 {
-                font-size: 1.9em;
+                font-size: 1.95em;
             }
 
             .image-wrapper img {
@@ -184,85 +372,405 @@
 </nav>
 
 <header>
-    <h1>Student Outcomes</h1>
+    <h1>Student Research & Outcomes</h1>
+
     <p>
-        Students at Paper Mentor AI develop rigorous AI research projects, real-world applications,
-        and publication-ready papers — supported by structured mentoring and university-level guidance.
+        Students mentored by Paper Mentor AI's founder have developed research
+        spanning healthcare AI, financial forecasting, sports analytics,
+        computer vision, NLP, and other applied machine-learning fields.
+        Selected projects have progressed to publication in established
+        student and academic research journals.
     </p>
 </header>
 
 <main>
 
     <div class="image-wrapper">
-        <img src="assets/images/global.jpg" alt="Global student outcomes">
+        <img
+            src="assets/images/global.jpg"
+            alt="Students conducting global AI research projects"
+        >
     </div>
 
+
+    <!-- PUBLICATIONS -->
+
     <section>
-        <h2><i class="fas fa-trophy"></i> Verified Student Achievements</h2>
+
+        <h2>
+            <i class="fas fa-book-open"></i>
+            Selected Published Research
+        </h2>
+
+        <p class="section-subtitle">
+            The examples below are publicly available papers produced by students
+            personally mentored by founder Odysseas Drosis. Click any publication
+            to view the original journal page.
+        </p>
+
+
+        <div class="publication-grid">
+
+            <!-- STANFORD -->
+
+            <article class="publication-card">
+
+                <div class="publication-journal">
+                    Stanford Intersect · 2025
+                </div>
+
+                <h3 class="publication-title">
+                    Artificial Intelligence in Healthcare:
+                    Early Pancreatic Cancer Detection Using Urinary Biomarkers
+                </h3>
+
+                <div class="publication-author">
+                    Pavlos Martinis &amp; Odysseas Drosis
+                </div>
+
+                <p class="publication-description">
+                    Machine-learning models were used to analyse urinary and blood
+                    biomarkers for early pancreatic cancer detection.
+                </p>
+
+                <a
+                    class="publication-link"
+                    href="https://ojs.stanford.edu/ojs/index.php/intersect/article/view/3785"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Read publication
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </article>
+
+
+            <!-- BRAIN TUMOR -->
+
+            <article class="publication-card">
+
+                <div class="publication-journal">
+                    Journal of Emerging Investigators · 2025
+                </div>
+
+                <h3 class="publication-title">
+                    The Utilization of Artificial Intelligence in Enabling
+                    the Early Detection of Brain Tumors
+                </h3>
+
+                <div class="publication-author">
+                    Shanzeh Haider &amp; Odysseas Drosis
+                </div>
+
+                <p class="publication-description">
+                    A study comparing machine-learning approaches for brain-tumor
+                    detection using medical imaging data.
+                </p>
+
+                <a
+                    class="publication-link"
+                    href="https://emerginginvestigators.org/articles/23-098"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Read publication
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </article>
+
+
+            <!-- STOCK -->
+
+            <article class="publication-card">
+
+                <div class="publication-journal">
+                    Journal of Emerging Investigators · 2024
+                </div>
+
+                <h3 class="publication-title">
+                    Exploring the Effects of Diverse Historical Stock Price Data
+                    on the Accuracy of Stock Price Prediction Models
+                </h3>
+
+                <div class="publication-author">
+                    Malaika Girma &amp; Odysseas Drosis
+                </div>
+
+                <p class="publication-description">
+                    Research examining how different historical market features
+                    affect the accuracy of machine-learning stock prediction models.
+                </p>
+
+                <a
+                    class="publication-link"
+                    href="https://emerginginvestigators.org/articles/23-144"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Read publication
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </article>
+
+
+            <!-- NBA -->
+
+            <article class="publication-card">
+
+                <div class="publication-journal">
+                    National High School Journal of Science · 2025
+                </div>
+
+                <h3 class="publication-title">
+                    Leveraging Machine Learning for Predicting NBA Player Performance
+                </h3>
+
+                <div class="publication-author">
+                    Anurag Chakrabarti · Mentored by Odysseas Drosis
+                </div>
+
+                <p class="publication-description">
+                    Machine-learning models were developed to predict NBA player
+                    scoring performance using historical game statistics.
+                </p>
+
+                <a
+                    class="publication-link"
+                    href="https://nhsjs.com/2025/leveraging-machine-learning-for-predicting-nba-player-performance/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Read publication
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+
+        <p class="publication-note">
+            These publications reflect students previously and personally mentored
+            by the founder. Publication depends on the quality and scope of the
+            project as well as independent editorial review, and is never guaranteed.
+        </p>
+
+    </section>
+
+
+    <!-- OUTCOMES -->
+
+    <section>
+
+        <h2>
+            <i class="fas fa-trophy"></i>
+            What Students Accomplish
+        </h2>
+
         <div class="card">
+
             <p>
-                Through personalised mentoring, students consistently achieve results that stand out:
+                Research mentorship is designed to help students move beyond
+                coursework and build a complete technical project from idea to
+                written research.
             </p>
+
             <ul>
-                <li>Completion of structured AI research projects with real datasets.</li>
-                <li>Submission of papers to <strong>student research journals</strong>.</li>
-                <li>Participation in <strong>STEM competitions and research showcases</strong>.</li>
-                <li>Research used for <strong>selective school and summer program applications</strong>.</li>
-                <li>Technical skills at early university-level machine learning.</li>
+                <li>
+                    Design focused research questions using real-world datasets.
+                </li>
+
+                <li>
+                    Build and evaluate machine-learning and deep-learning models.
+                </li>
+
+                <li>
+                    Learn how to compare baselines, metrics, and experimental results.
+                </li>
+
+                <li>
+                    Develop research-quality figures, analysis, and technical writing.
+                </li>
+
+                <li>
+                    Produce a complete research paper or technical report.
+                </li>
+
+                <li>
+                    Identify appropriate journals, competitions, and research showcases.
+                </li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESEARCH AREAS -->
+
+    <section>
+
+        <h2>
+            <i class="fas fa-flask"></i>
+            Example Research Areas
+        </h2>
+
+        <div class="card">
+
+            <ul class="project-list">
+
+                <li>
+                    <i class="fas fa-robot"></i>
+                    Transformer-based NLP for cyberbullying and misinformation detection.
+                </li>
+
+                <li>
+                    <i class="fas fa-chart-line"></i>
+                    Financial forecasting with neural networks and market data.
+                </li>
+
+                <li>
+                    <i class="fas fa-brain"></i>
+                    MRI tumour classification using CNNs and explainable AI.
+                </li>
+
+                <li>
+                    <i class="fas fa-heart-pulse"></i>
+                    Machine learning for medical diagnosis and biomarker analysis.
+                </li>
+
+                <li>
+                    <i class="fas fa-basketball"></i>
+                    Sports analytics and player-performance prediction.
+                </li>
+
+                <li>
+                    <i class="fas fa-cloud-sun"></i>
+                    Climate and environmental forecasting.
+                </li>
+
+                <li>
+                    <i class="fas fa-earth-europe"></i>
+                    Satellite imagery and land-use classification.
+                </li>
+
+                <li>
+                    <i class="fas fa-comments"></i>
+                    Emotion and sentiment recognition from text and speech.
+                </li>
+
+                <li>
+                    <i class="fas fa-shield-alt"></i>
+                    Deepfake, fraud, and anomaly detection.
+                </li>
+
+                <li>
+                    <i class="fas fa-film"></i>
+                    Recommendation systems and personalization.
+                </li>
+
             </ul>
 
             <p style="margin-top:1.1em;">
-                <strong>Due to GDPR, detailed success stories are shared upon request.</strong>
+                Every project is scoped to the student's interests, technical level,
+                and available research time.
             </p>
 
-            <a href="contact.html" class="btn-primary">Request Student Success Examples</a>
         </div>
+
     </section>
 
-    <section>
-        <h2><i class="fas fa-flask"></i> Example Research Areas</h2>
-        <div class="card">
-            <ul class="project-list">
-                <li><i class="fas fa-robot"></i>Cyberbullying detection using transformer NLP.</li>
-                <li><i class="fas fa-chart-line"></i>Financial forecasting with LSTMs + sentiment.</li>
-                <li><i class="fas fa-brain"></i>MRI tumour classification via CNNs + XAI.</li>
-                <li><i class="fas fa-dna"></i>Medical time-series modelling.</li>
-                <li><i class="fas fa-cloud-sun"></i>Environmental anomaly detection.</li>
-                <li><i class="fas fa-earth-europe"></i>Satellite imagery land-use classification.</li>
-                <li><i class="fas fa-bolt"></i>Energy demand forecasting.</li>
-                <li><i class="fas fa-comments"></i>Emotion recognition from speech/text.</li>
-                <li><i class="fas fa-shield-alt"></i>Deepfake & forgery detection.</li>
-                <li><i class="fas fa-film"></i>Recommendation systems (sports, media, analytics).</li>
-            </ul>
 
-            <p style="margin-top: 1.1em;">
-                Projects are ambitious yet achievable, emphasising scientific clarity and reproducibility.
+    <!-- WHY PAPERS -->
+
+    <section>
+
+        <h2>
+            <i class="fas fa-file-lines"></i>
+            Why Write a Research Paper?
+        </h2>
+
+        <div class="card">
+
+            <p>
+                Writing a research paper forces students to go beyond simply
+                producing working code.
             </p>
-        </div>
-    </section>
 
-    <section>
-        <h2><i class="fas fa-book"></i> Why Research Papers Matter</h2>
-        <div class="card">
-            <p>Many students choose to pursue a paper because:</p>
             <ul>
-                <li>It demonstrates independent thinking.</li>
-                <li>It builds real scientific writing experience.</li>
-                <li>It strengthens personal statements and interviews.</li>
-                <li>It differentiates from coursework-only profiles.</li>
+
+                <li>
+                    It develops scientific reasoning and independent thinking.
+                </li>
+
+                <li>
+                    It teaches students to explain methodology and results clearly.
+                </li>
+
+                <li>
+                    It provides experience with technical and academic writing.
+                </li>
+
+                <li>
+                    It gives students a concrete record of a substantial project.
+                </li>
+
+                <li>
+                    For suitable projects, it creates the possibility of journal
+                    or competition submission.
+                </li>
+
             </ul>
 
             <p>
-                From topic selection to modelling, evaluation, and writing,
-                mentors guide students through every stage of the research process.
+                Mentors support students throughout the process — from defining the
+                problem and reviewing prior work to implementation, experimentation,
+                analysis, writing, and revision.
             </p>
+
         </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+
+    <section class="final-cta">
+
+        <h2>
+            Start Your Own Research Project
+        </h2>
+
+        <p>
+            Whether your interests are healthcare, finance, sports, climate,
+            language models, computer vision, or another area of AI, we can help
+            you turn an idea into a structured research project.
+        </p>
+
+        <a href="apply.html" class="btn-primary">
+            <i class="fas fa-paper-plane"></i>
+            Apply for Mentorship
+        </a>
+
     </section>
 
 </main>
 
+
 <footer>
-    © 2025 Paper Mentor AI — All Rights Reserved.
+    © PaperMentorAI — All Rights Reserved.<br>
+    <span style="color:#d4d7e6;">
+        Contact us:
+        <a
+            href="mailto:admissions@papermentorai.com"
+            style="color:#CBA45B;"
+        >
+            admissions@papermentorai.com
+        </a>
+    </span>
 </footer>
 
 </body>
