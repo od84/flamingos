@@ -3,14 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Programs | Paper Mentor AI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <title>Programs | Paper Mentor AI</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
 
     <style>
+
         :root {
             --navy-deep: #0B1F3A;
             --navy-soft: #12284A;
@@ -18,7 +26,17 @@
             --gold-soft: #DCC394;
             --bg-light: #F4F6FB;
             --card-bg: #E8EEF8;
+            --card-white: #FFFFFF;
             --text-main: #1B1F2A;
+            --text-muted: #5B6475;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -27,6 +45,8 @@
             font-family: 'Inter', sans-serif;
             color: var(--text-main);
         }
+
+        /* NAVIGATION */
 
         nav {
             background: var(--navy-deep);
@@ -37,6 +57,7 @@
             position: sticky;
             top: 0;
             z-index: 20;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
         }
 
         nav a {
@@ -64,101 +85,329 @@
         }
 
         /* HERO */
+
         .hero {
-            background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 60%, #050814 100%);
+            background: radial-gradient(
+                circle at top left,
+                #1F3A68,
+                #0B1F3A 60%,
+                #050814 100%
+            );
+
             color: white;
             text-align: center;
-            padding: 3.2em 1.8em 2.9em;
+            padding: 3.8em 1.8em 3.3em;
         }
 
         .hero h1 {
             font-family: 'Merriweather', serif;
             margin: 0 0 0.45em;
-            font-size: 2.3em;
+            font-size: 2.45em;
         }
 
         .hero p {
-            max-width: 720px;
+            max-width: 760px;
             margin: 0 auto;
-            font-size: 1.05em;
+            font-size: 1.06em;
             color: #dbe2ff;
-            line-height: 1.7;
+            line-height: 1.72;
+        }
+
+        .hero-note {
+            margin-top: 1.3em;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5em;
+
+            padding: 0.7em 1.1em;
+
+            border-radius: 999px;
+
+            background: rgba(203,164,91,0.13);
+            border: 1px solid rgba(203,164,91,0.4);
+
+            color: #f4ddb0;
+            font-size: 0.9em;
+            font-weight: 600;
         }
 
         .programs-hero-image {
-            width: 100%;
-            max-width: 850px;
-            margin: 2em auto 0;
+            width: calc(100% - 3em);
+            max-width: 860px;
+            margin: 2.2em auto 0;
             display: block;
-            border-radius: 16px;
-            box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+            border-radius: 18px;
+            box-shadow: 0 16px 40px rgba(0,0,0,0.18);
         }
 
         main {
-            max-width: 960px;
+            max-width: 1060px;
             margin: 0 auto;
-            padding: 3em 1.5em 4em;
+            padding: 3.2em 1.5em 4em;
         }
 
         h2 {
             font-family: 'Merriweather', serif;
-            font-size: 1.55em;
-            margin-bottom: 0.4em;
+            font-size: 1.7em;
+            margin-bottom: 0.45em;
             color: var(--navy-deep);
         }
 
         .section-subtitle {
-            font-size: 0.95em;
-            color: #4f5668;
+            font-size: 0.98em;
+            color: var(--text-muted);
+            margin-bottom: 1.5em;
+            line-height: 1.7;
+            max-width: 820px;
+        }
+
+        /* TRACKS */
+
+        .tracks-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.4em;
+            margin-bottom: 3.2em;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2em;
+
+            box-shadow:
+                0 14px 34px rgba(11,31,58,0.09);
+
+            border:
+                1px solid rgba(11,31,58,0.08);
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .program-card.featured {
+            border-top: 5px solid var(--gold);
+        }
+
+        .program-icon {
+            width: 48px;
+            height: 48px;
+
+            border-radius: 14px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #EEF2F9;
+
+            color: var(--gold);
+
+            font-size: 1.25em;
+
             margin-bottom: 1em;
         }
 
-        .card {
+        .program-title {
+            font-family: 'Merriweather', serif;
+            color: var(--navy-deep);
+            font-size: 1.25em;
+            margin: 0 0 0.35em;
+        }
+
+        .program-duration {
+            color: #856826;
+            font-weight: 700;
+            font-size: 0.9em;
+            margin-bottom: 1em;
+        }
+
+        .program-copy {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 1em;
+        }
+
+        .program-card ul {
+            padding-left: 1.2em;
+            margin: 0 0 1em;
+        }
+
+        .program-card li {
+            margin-bottom: 0.65em;
+            line-height: 1.6;
+        }
+
+        .best-for {
+            background: #F5F7FB;
+            border-radius: 12px;
+            padding: 1em 1.1em;
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #555d6d;
+            margin-top: auto;
+        }
+
+        .best-for strong {
+            color: var(--navy-deep);
+        }
+
+        /* TIMELINE */
+
+        .timeline-card {
             background: var(--card-bg);
-            border-radius: 16px;
-            padding: 1.7em 1.9em;
+            border-radius: 18px;
+            padding: 2em;
             border-left: 5px solid var(--gold);
             box-shadow: 0 12px 26px rgba(11,31,58,0.08);
-            margin-bottom: 1.8em;
+            margin-bottom: 3em;
         }
 
-        .program-title {
-            font-weight: 600;
-            font-size: 1.1em;
-            margin-bottom: 0.6em;
-            color: var(--navy-soft);
+        .timeline {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .timeline li {
+            display: grid;
+            grid-template-columns: 46px minmax(0,1fr);
+            gap: 0.9em;
+            margin-bottom: 1.25em;
+        }
+
+        .timeline li:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-number {
+            width: 40px;
+            height: 40px;
+
+            border-radius: 50%;
+
+            background: var(--navy-deep);
+            color: white;
+
             display: flex;
             align-items: center;
-            gap: 0.5em;
+            justify-content: center;
+
+            font-weight: 700;
         }
 
-        .program-title i {
-            color: var(--gold);
-        }
-
-        .badge {
-            display: inline-block;
-            background: var(--navy-deep);
-            color: #fff;
-            font-size: 0.75em;
-            padding: 0.25em 0.7em;
-            border-radius: 999px;
-            margin-left: 0.4em;
-        }
-
-        .btn-primary {
-            background: var(--gold);
+        .timeline h3 {
+            margin: 0 0 0.25em;
             color: var(--navy-deep);
+            font-size: 1em;
+        }
+
+        .timeline p {
+            margin: 0;
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 0.94em;
+        }
+
+        /* PRICING */
+
+        .pricing-card {
+            background: white;
+
+            border-radius: 20px;
+
+            padding: 2.2em;
+
+            box-shadow:
+                0 14px 34px rgba(11,31,58,0.09);
+
+            margin-bottom: 3em;
+        }
+
+        .price-main {
+            font-family: 'Merriweather', serif;
+            font-size: 2em;
+            color: var(--navy-deep);
+            margin-bottom: 0.2em;
+        }
+
+        .price-subtitle {
+            color: var(--text-muted);
+            margin-bottom: 1.4em;
+        }
+
+        .pricing-list {
+            padding-left: 1.2em;
+        }
+
+        .pricing-list li {
+            margin-bottom: 0.65em;
+            line-height: 1.6;
+        }
+
+        .pricing-note {
+            margin-top: 1.3em;
+            padding: 1em 1.1em;
+            border-radius: 12px;
+            background: #F5F7FB;
+            color: #5b6270;
+            line-height: 1.65;
+            font-size: 0.9em;
+        }
+
+        /* OUTCOMES */
+
+        .outcome-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            gap: 1em;
+            margin-bottom: 3em;
+        }
+
+        .outcome-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5em;
+            box-shadow: 0 10px 24px rgba(11,31,58,0.07);
+        }
+
+        .outcome-card i {
+            color: var(--gold);
+            font-size: 1.35em;
+            margin-bottom: 0.7em;
+        }
+
+        .outcome-card h3 {
+            color: var(--navy-deep);
+            margin: 0 0 0.45em;
+            font-size: 1em;
+        }
+
+        .outcome-card p {
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.6;
+            font-size: 0.9em;
+        }
+
+        /* BUTTONS */
+
+        .btn-primary,
+        .btn-secondary {
             border-radius: 999px;
-            padding: 0.8em 1.6em;
+            padding: 0.9em 1.6em;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95em;
             display: inline-flex;
             align-items: center;
-            gap: 0.4em;
-            margin-top: 0.8em;
-            cursor: pointer;
+            gap: 0.45em;
+            transition: 0.22s ease;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy-deep);
         }
 
         .btn-primary:hover {
@@ -166,18 +415,49 @@
         }
 
         .btn-secondary {
-            background: var(--navy-soft);
-            color: white;
-            padding: 0.8em 1.6em;
-            border-radius: 999px;
-            cursor: pointer;
-            margin-top: 1em;
-            display: inline-block;
-            text-decoration: none;
+            border: 1px solid var(--navy-soft);
+            color: var(--navy-soft);
         }
 
         .btn-secondary:hover {
-            background: #0A1730;
+            background: rgba(18,40,74,0.06);
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8em;
+            margin-top: 1.5em;
+        }
+
+        /* FINAL CTA */
+
+        .final-cta {
+            background: var(--navy-deep);
+            color: white;
+
+            border-radius: 22px;
+
+            padding: 2.8em 2em;
+
+            text-align: center;
+
+            box-shadow:
+                0 18px 45px rgba(11,31,58,0.18);
+
+            margin-top: 3.5em;
+        }
+
+        .final-cta h2 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .final-cta p {
+            color: #d7def3;
+            max-width: 720px;
+            margin: 0 auto 1.4em;
+            line-height: 1.7;
         }
 
         footer {
@@ -193,59 +473,38 @@
             text-decoration: none;
         }
 
-        /* MODAL */
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.65);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
+        @media (max-width: 850px) {
+
+            .tracks-grid,
+            .outcome-grid {
+                grid-template-columns: 1fr;
+            }
+
         }
 
-        .modal-content {
-            background: white;
-            padding: 2em 2.2em;
-            border-radius: 16px;
-            width: 90%;
-            max-width: 520px;
-            position: relative;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-            animation: fadeIn 0.25s ease;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 12px;
-            right: 18px;
-            font-size: 1.6em;
-            cursor: pointer;
-            color: #444;
-        }
-
-        .close-btn:hover { color: black; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.92); }
-            to   { opacity: 1; transform: scale(1); }
-        }
-
-        /* --- MOBILE FIX (same as Homepage) --- */
         @media (max-width: 720px) {
+
             nav {
                 flex-wrap: wrap;
                 gap: 1em;
             }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .timeline li {
+                grid-template-columns: 40px minmax(0,1fr);
+            }
+
         }
 
     </style>
 </head>
 
+
 <body>
+
 
 <nav>
     <a href="index.html">Home</a>
@@ -258,128 +517,600 @@
     <a href="terms.html">Terms</a>
 </nav>
 
+
+
+<!-- HERO -->
+
 <section class="hero">
-    <h1>Mentoring Programs</h1>
+
+    <h1>
+        AI Research Mentoring Programs
+    </h1>
+
     <p>
-        From beginner-friendly introductions to full research papers, Paper Mentor AI offers
-        flexible, high-impact mentoring tailored to each student’s background and goals.
+        Personalized 1:1 programs designed around each student's
+        experience, interests, and research goals — from a first
+        machine-learning project to a complete research paper.
     </p>
+
+    <div class="hero-note">
+
+        <i class="fas fa-user-graduate"></i>
+
+        Research mentorship led by experienced AI practitioners
+
+    </div>
+
 </section>
 
-<img src="assets/images/ChatGPT%20Image%20Nov%2018,%202025,%2002_56_39%20AM.png" alt="Programs Illustration" class="programs-hero-image">
+
+<img
+    src="assets/images/ChatGPT%20Image%20Nov%2018,%202025,%2002_56_39%20AM.png"
+    alt="AI research mentoring"
+    class="programs-hero-image"
+>
+
+
 
 <main>
 
-<!-- 1:1 PROGRAMS -->
+
+<!-- TRACKS -->
+
 <section>
-    <h2>1:1 Research Mentoring Tracks</h2>
-    <p class="section-subtitle">Personalized and flexible mentoring for students who want meaningful research experience.</p>
 
-    <!-- STANDARD TRACK -->
-    <div class="card">
-        <div class="program-title">
-            <i class="fas fa-star"></i>
-            Standard Research Track (≈ 8 hours)
-            <span class="badge">Mini Project</span>
+    <h2>
+        Choose the Right Research Track
+    </h2>
+
+    <p class="section-subtitle">
+        Students do not need to arrive with a finished research idea.
+        The appropriate track depends on technical experience, available
+        time, and the depth of research the student wants to pursue.
+    </p>
+
+
+    <div class="tracks-grid">
+
+
+        <!-- FOUNDATIONS -->
+
+        <div class="program-card">
+
+            <div class="program-icon">
+                <i class="fas fa-seedling"></i>
+            </div>
+
+            <h3 class="program-title">
+                Research Foundations Track
+            </h3>
+
+            <div class="program-duration">
+                Approximately 8 sessions
+            </div>
+
+            <p class="program-copy">
+                A structured introduction to applied AI research for students
+                who want to learn the research process while completing a
+                focused machine-learning project.
+            </p>
+
+            <ul>
+
+                <li>
+                    Python and machine-learning foundations where needed.
+                </li>
+
+                <li>
+                    Selection of a focused research question.
+                </li>
+
+                <li>
+                    Work with a real-world dataset.
+                </li>
+
+                <li>
+                    Build and evaluate one or more ML models.
+                </li>
+
+                <li>
+                    Interpret results and identify limitations.
+                </li>
+
+                <li>
+                    Produce a short technical report or research-style write-up.
+                </li>
+
+            </ul>
+
+            <div class="best-for">
+
+                <strong>Best for:</strong>
+                students who are new to AI research, want to build
+                technical confidence, or would like to test whether
+                a longer research project is right for them.
+
+            </div>
+
         </div>
 
-        <ul>
-            <li>Python + ML fundamentals</li>
-            <li>Mini research project with real dataset</li>
-            <li>Model training + basic evaluation</li>
-            <li>Short research report</li>
-        </ul>
 
-        <h3 style="margin-top:1em;">Session Breakdown (8-Session Plan)</h3>
-        <ul>
-            <li><strong>Sessions 1–2:</strong> Python basics, ML foundations, dataset overview</li>
-            <li><strong>Sessions 3–5:</strong> Model development, evaluation, hyperparameter tuning</li>
-            <li><strong>Sessions 6–7:</strong> Error analysis, insights, improvements</li>
-            <li><strong>Session 8:</strong> Final paper/report writing + editing + submission</li>
-        </ul>
-    </div>
 
-    <!-- ADVANCED TRACK -->
-    <div class="card">
-        <div class="program-title">
-            <i class="fas fa-rocket"></i>
-            Advanced Research Track (12–16 sessions)
-            <span class="badge">Research Paper</span>
+        <!-- FULL RESEARCH -->
+
+        <div class="program-card featured">
+
+            <div class="program-icon">
+                <i class="fas fa-flask"></i>
+            </div>
+
+            <h3 class="program-title">
+                Full Research Paper Track
+            </h3>
+
+            <div class="program-duration">
+                Typically 12–16+ sessions
+            </div>
+
+            <p class="program-copy">
+                A deeper research program designed for students who want to
+                complete an end-to-end AI research project and develop a
+                polished research paper.
+            </p>
+
+            <ul>
+
+                <li>
+                    Literature review and research-question development.
+                </li>
+
+                <li>
+                    Dataset selection, cleaning, and exploratory analysis.
+                </li>
+
+                <li>
+                    Baseline models and advanced model development.
+                </li>
+
+                <li>
+                    Model comparison and systematic experimentation.
+                </li>
+
+                <li>
+                    Error analysis and interpretation of results.
+                </li>
+
+                <li>
+                    Research paper drafting and revision.
+                </li>
+
+                <li>
+                    Guidance on identifying suitable publication,
+                    competition, or research outlets.
+                </li>
+
+                <li>
+                    Submission preparation for suitable projects.
+                </li>
+
+            </ul>
+
+            <div class="best-for">
+
+                <strong>Best for:</strong>
+                motivated students who want a substantial AI research
+                experience and are prepared to work independently
+                between mentoring sessions.
+
+            </div>
+
         </div>
 
-        <ul>
-            <li>Full end-to-end research pipeline</li>
-            <li>Dataset augmentation + advanced model tuning</li>
-            <li>Real-world application development</li>
-            <li>Research paper writing + publication preparation</li>
-            <li>Optional second paper (for motivated students)</li>
-        </ul>
-
-        <h3 style="margin-top:1em;">Advanced Track Session Breakdown (12–16 Sessions)</h3>
-        <ul>
-            <li><strong>Sessions 1–2:</strong> Literature review, problem definition, dataset exploration</li>
-            <li><strong>Sessions 3–5:</strong> Advanced model development + dataset augmentation</li>
-            <li><strong>Sessions 6–7:</strong> Real-world system integration + application build</li>
-            <li><strong>Sessions 8–10:</strong> Research paper drafting (methods, results, discussion)</li>
-            <li><strong>Sessions 11–12:</strong> Final paper editing + formatting + submission preparation</li>
-            <li><strong>Sessions 13–14 (optional):</strong> Reviewer response handling + revision</li>
-            <li><strong>Sessions 15–16 (optional):</strong> Second research paper development</li>
-        </ul>
-
-        <a href="apply.html" class="btn-primary"><i class="fas fa-paper-plane"></i> Apply to 1:1 Research</a>
     </div>
+
+
+    <div class="cta-row">
+
+        <a href="apply.html" class="btn-primary">
+
+            <i class="fas fa-paper-plane"></i>
+
+            Apply for Mentorship
+
+        </a>
+
+        <a href="students.html" class="btn-secondary">
+
+            <i class="fas fa-book-open"></i>
+
+            See Published Student Research
+
+        </a>
+
+    </div>
+
 </section>
+
+
+
+<!-- RESEARCH PROCESS -->
+
+<section style="margin-top:3.8em;">
+
+    <h2>
+        How a Full Research Project Develops
+    </h2>
+
+    <p class="section-subtitle">
+        The exact timeline varies by student and project, but a complete
+        research project typically moves through the following stages.
+    </p>
+
+
+    <div class="timeline-card">
+
+        <ul class="timeline">
+
+            <li>
+
+                <div class="timeline-number">
+                    1
+                </div>
+
+                <div>
+
+                    <h3>
+                        Research Question & Literature
+                    </h3>
+
+                    <p>
+                        Identify an area of interest, review relevant prior
+                        research, and narrow the project into a focused,
+                        testable question.
+                    </p>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <div class="timeline-number">
+                    2
+                </div>
+
+                <div>
+
+                    <h3>
+                        Data & Methodology
+                    </h3>
+
+                    <p>
+                        Select an appropriate dataset, define evaluation
+                        metrics, and design a clear experimental methodology.
+                    </p>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <div class="timeline-number">
+                    3
+                </div>
+
+                <div>
+
+                    <h3>
+                        Model Development
+                    </h3>
+
+                    <p>
+                        Build baseline models and progressively test more
+                        advanced machine-learning approaches.
+                    </p>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <div class="timeline-number">
+                    4
+                </div>
+
+                <div>
+
+                    <h3>
+                        Experimentation & Evaluation
+                    </h3>
+
+                    <p>
+                        Run experiments, compare models, investigate errors,
+                        and analyze whether the evidence supports the research
+                        hypothesis.
+                    </p>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <div class="timeline-number">
+                    5
+                </div>
+
+                <div>
+
+                    <h3>
+                        Research Writing
+                    </h3>
+
+                    <p>
+                        Develop the introduction, methodology, results,
+                        discussion, figures, references, and conclusions
+                        into a coherent research paper.
+                    </p>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <div class="timeline-number">
+                    6
+                </div>
+
+                <div>
+
+                    <h3>
+                        Revision & Next Steps
+                    </h3>
+
+                    <p>
+                        Revise the paper and, where appropriate,
+                        identify journals, competitions, or other
+                        suitable venues for submission.
+                    </p>
+
+                </div>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+<!-- OUTCOMES -->
+
+<section>
+
+    <h2>
+        What Students Build
+    </h2>
+
+    <p class="section-subtitle">
+        The focus is on developing genuine research skills rather than
+        simply producing an impressive-looking final document.
+    </p>
+
+
+    <div class="outcome-grid">
+
+        <div class="outcome-card">
+
+            <i class="fas fa-code"></i>
+
+            <h3>
+                Technical Project
+            </h3>
+
+            <p>
+                Working code, data analysis, trained models,
+                experiments, and reproducible results.
+            </p>
+
+        </div>
+
+
+        <div class="outcome-card">
+
+            <i class="fas fa-file-lines"></i>
+
+            <h3>
+                Research Writing
+            </h3>
+
+            <p>
+                A structured technical report or research paper
+                explaining the problem, methodology, results,
+                and limitations.
+            </p>
+
+        </div>
+
+
+        <div class="outcome-card">
+
+            <i class="fas fa-brain"></i>
+
+            <h3>
+                Research Skills
+            </h3>
+
+            <p>
+                Experience reading literature, designing experiments,
+                evaluating models, and defending technical decisions.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 
 <!-- PRICING -->
-<section>
-    <h2>Pricing & Tuition</h2>
-    <p class="section-subtitle">Transparent pricing and flexible refund policy.</p>
 
-    <a class="btn-secondary" id="openModal"><i class="fas fa-file-invoice-dollar"></i> View Pricing Details & Refund Policy</a>
+<section>
+
+    <h2>
+        Pricing
+    </h2>
+
+    <p class="section-subtitle">
+        Simple hourly pricing allows the program to adapt to the
+        actual needs and pace of each project.
+    </p>
+
+
+    <div class="pricing-card">
+
+        <div class="price-main">
+            $100 / hour
+        </div>
+
+        <div class="price-subtitle">
+            Private 1:1 research mentorship
+        </div>
+
+
+        <ul class="pricing-list">
+
+            <li>
+                <strong>10% discount</strong> for packages of
+                10 or more mentoring hours.
+            </li>
+
+            <li>
+                Students can begin with a smaller number of sessions
+                before committing to a longer research track.
+            </li>
+
+            <li>
+                Unused prepaid mentoring hours are eligible for
+                pro-rated refunds in accordance with our Terms.
+            </li>
+
+            <li>
+                No cancellation fee for unused hours.
+            </li>
+
+        </ul>
+
+
+        <div class="pricing-note">
+
+            <strong>Important:</strong>
+
+            Journal submission fees, publication charges, competition
+            entry fees, software subscriptions, cloud-computing costs,
+            or other third-party expenses are not included in mentoring
+            tuition unless specifically stated.
+
+            Publication or competition outcomes are never guaranteed.
+
+        </div>
+
+
+        <div class="cta-row">
+
+            <a
+                href="apply.html"
+                class="btn-primary"
+            >
+
+                <i class="fas fa-paper-plane"></i>
+
+                Apply Now
+
+            </a>
+
+
+            <a
+                href="terms.html"
+                class="btn-secondary"
+            >
+
+                View Terms & Refund Policy
+
+            </a>
+
+        </div>
+
+    </div>
+
 </section>
+
+
+
+<!-- FINAL CTA -->
+
+<section class="final-cta">
+
+    <h2>
+        Not Sure Which Track Is Right?
+    </h2>
+
+    <p>
+        Apply with the student's current experience, interests, and goals.
+        We can recommend an appropriate starting point and research scope
+        after reviewing the application.
+    </p>
+
+    <a
+        href="apply.html"
+        class="btn-primary"
+    >
+
+        <i class="fas fa-paper-plane"></i>
+
+        Apply for Mentorship
+
+    </a>
+
+</section>
+
 
 </main>
 
-<!-- MODAL -->
-<div class="modal" id="pricingModal">
-    <div class="modal-content">
-        <span class="close-btn" id="closeModal">&times;</span>
-        <h3>Pricing, Refunds & Discounts</h3>
 
-        <p><strong>Hourly Rate:</strong> $100 per hour</p>
-        <p><strong>Package Discount:</strong> 10% off for 10+ hours</p>
-
-        <h4>Refund Policy</h4>
-        <ul>
-            <li><strong>100% refund after Session 1</strong> if you choose not to continue.</li>
-            <li><strong>Pro-rated refund anytime</strong> for all unused hours.</li>
-            <li>No cancellation fees.</li>
-        </ul>
-
-        <br>
-        <a href="terms.html" class="btn-primary" style="margin-right:10px;">Full Terms & Conditions</a>
-        <a id="downloadPDF" class="btn-secondary" href="#"><i class="fas fa-file-pdf"></i> Download PDF</a>
-    </div>
-</div>
-
-<script>
-    const modal = document.getElementById("pricingModal");
-    document.getElementById("openModal").onclick = () => modal.style.display = "flex";
-    document.getElementById("closeModal").onclick = () => modal.style.display = "none";
-    window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
-
-    document.getElementById("downloadPDF").onclick = () => {
-        const link = document.createElement("a");
-        link.href = "assets/PaperMentorAI_Terms_Premium.pdf";
-        link.download = "PaperMentorAI_Terms_Premium.pdf";
-        link.click();
-    };
-</script>
 
 <footer>
-    © Paper Mentor AI — All Rights Reserved.<br>
-    <a href="terms.html">Terms & Conditions</a>
+
+    © PaperMentorAI — All Rights Reserved.
+
+    <br>
+
+    Contact us:
+
+    <a href="mailto:admissions@papermentorai.com">
+        admissions@papermentorai.com
+    </a>
+
+    &nbsp;·&nbsp;
+
+    <a href="terms.html">
+        Terms & Conditions
+    </a>
+
 </footer>
 
+
 </body>
+
 </html>
