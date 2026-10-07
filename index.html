@@ -4,13 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Paper Mentor AI | AI Research Mentoring for Ambitious Students</title>
 
-    <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
 
     <style>
+
         :root {
             --navy-deep: #0B1F3A;
             --navy-soft: #12284A;
@@ -33,7 +41,7 @@
 
         body {
             margin: 0;
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', system-ui, sans-serif;
             background: var(--bg-light);
             color: var(--text-main);
         }
@@ -53,7 +61,7 @@
         }
 
         nav a {
-            color: #ffffff;
+            color: white;
             text-decoration: none;
             font-weight: 500;
             font-size: 0.98em;
@@ -79,67 +87,92 @@
         /* HERO */
 
         .hero {
-            padding: 5em 1.5em 4.5em;
+            padding: 4.5em 1.5em;
             text-align: center;
-            background: radial-gradient(
-                circle at top left,
-                #1F3A68,
-                #0B1F3A 55%,
-                #050815 100%
-            );
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #1F3A68,
+                    #0B1F3A 55%,
+                    #050815 100%
+                );
+
             color: white;
         }
 
         .hero-inner {
             max-width: 980px;
-            margin: 0 auto;
-            background: linear-gradient(
-                135deg,
-                rgba(255,255,255,0.07),
-                rgba(255,255,255,0.02)
-            );
+            margin: auto;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,255,255,0.07),
+                    rgba(255,255,255,0.02)
+                );
+
             border-radius: 24px;
-            padding: 3.2em 3.2em 3em;
-            box-shadow: 0 24px 80px rgba(0,0,0,0.45);
-            backdrop-filter: blur(20px);
+            padding: 3.2em;
+
+            box-shadow:
+                0 24px 80px rgba(0,0,0,0.45);
         }
 
         .hero-logo {
-            width: 560px;
+            width: 520px;
             max-width: 100%;
             border-radius: 22px;
-            margin-bottom: 2.4em;
+            margin-bottom: 2em;
         }
 
         .hero-tagline {
             text-transform: uppercase;
             letter-spacing: 0.18em;
             font-size: 0.76em;
-            margin-bottom: 1.2em;
             color: #d0d6f0;
+            margin-bottom: 1.2em;
         }
 
         .hero-title {
             font-family: 'Merriweather', serif;
-            font-weight: 700;
-            font-size: 2.65em;
+            font-size: 2.7em;
             line-height: 1.2;
-            margin: 0 0 0.45em;
+            margin: 0 0 0.5em;
         }
 
         .hero-subtitle {
-            font-size: 1.07em;
-            max-width: 760px;
-            margin: 0 auto 1.25em;
+            font-size: 1.08em;
+            max-width: 780px;
+            margin: 0 auto 1em;
             line-height: 1.75;
             color: #e7ecff;
         }
 
+        .founder-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55em;
+
+            margin: 1em auto 1.2em;
+
+            padding: 0.75em 1.15em;
+
+            border-radius: 999px;
+
+            background: rgba(203,164,91,0.14);
+            border: 1px solid rgba(203,164,91,0.45);
+
+            color: #f5dfb4;
+            font-size: 0.92em;
+            font-weight: 600;
+        }
+
         .hero-subnote {
             font-size: 0.92em;
-            max-width: 700px;
+            max-width: 720px;
             margin: 0.3em auto 2.2em;
-            line-height: 1.6;
+            line-height: 1.65;
             color: #d6ddff;
         }
 
@@ -159,8 +192,6 @@
             padding: 0.9em 1.8em;
             font-size: 0.98em;
             font-weight: 600;
-            border: 1px solid transparent;
-            cursor: pointer;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
@@ -172,56 +203,50 @@
             background: var(--gold);
             color: var(--navy-deep);
             box-shadow: 0 12px 30px rgba(0,0,0,0.28);
-            border-color: var(--gold);
         }
 
         .btn-primary:hover {
             background: var(--gold-soft);
             transform: translateY(-1px);
-            box-shadow: 0 16px 40px rgba(0,0,0,0.38);
         }
 
         .btn-ghost {
-            background: transparent;
-            color: #f4f7ff;
-            border-color: rgba(255,255,255,0.4);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.4);
         }
 
         .btn-ghost:hover {
             background: rgba(255,255,255,0.08);
-            border-color: rgba(255,255,255,0.8);
         }
 
         .btn-ghost-dark {
-            background: transparent;
             color: var(--navy-soft);
-            border-color: var(--navy-soft);
+            border: 1px solid var(--navy-soft);
         }
 
         .btn-ghost-dark:hover {
             background: rgba(18,40,74,0.06);
-            border-color: var(--navy-deep);
         }
 
         /* GENERAL */
 
         main {
             max-width: 1100px;
-            margin: 0 auto;
-            padding: 3.2em 1.5em 3.8em;
+            margin: auto;
+            padding: 3.2em 1.5em 4em;
         }
 
-        h2.section-title {
+        .section-title {
             font-family: 'Merriweather', serif;
             font-size: 1.8em;
-            margin-bottom: 0.55em;
             color: var(--navy-deep);
+            margin-bottom: 0.55em;
         }
 
         .section-subtitle {
             font-size: 0.98em;
             color: #4f5668;
-            margin-bottom: 1.35em;
+            margin-bottom: 1.4em;
             line-height: 1.7;
             max-width: 850px;
         }
@@ -231,7 +256,9 @@
             border-radius: 16px;
             padding: 1.8em 1.9em;
             border-left: 5px solid var(--gold);
-            box-shadow: 0 12px 26px rgba(11,31,58,0.08);
+
+            box-shadow:
+                0 12px 26px rgba(11,31,58,0.08);
         }
 
         .card ul {
@@ -240,7 +267,7 @@
         }
 
         .card li {
-            margin-bottom: 0.6em;
+            margin-bottom: 0.7em;
             line-height: 1.6;
         }
 
@@ -252,42 +279,53 @@
         /* FOUNDER */
 
         .founder-section {
-            margin-top: 0.4em;
+            margin-top: 0;
         }
 
         .founder-card {
             display: grid;
-            grid-template-columns: 210px minmax(0, 1fr);
-            gap: 2em;
+            grid-template-columns: 240px minmax(0,1fr);
+            gap: 2.2em;
             align-items: center;
-            background: var(--card-white);
-            border-radius: 20px;
-            padding: 2em;
-            box-shadow: 0 14px 34px rgba(11,31,58,0.09);
-            border: 1px solid rgba(11,31,58,0.08);
+
+            background: white;
+            border-radius: 22px;
+            padding: 2.2em;
+
+            box-shadow:
+                0 16px 38px rgba(11,31,58,0.10);
+
+            border:
+                1px solid rgba(11,31,58,0.08);
         }
 
         .founder-photo {
-            width: 190px;
-            height: 235px;
+            width: 220px;
+            height: 280px;
+
             border-radius: 18px;
+
             object-fit: cover;
-            object-position: center 35%;
+            object-position: 64% 55%;
+
             border: 4px solid #eef1f8;
-            box-shadow: 0 10px 25px rgba(11,31,58,0.18);
+
+            box-shadow:
+                0 10px 25px rgba(11,31,58,0.18);
         }
 
         .founder-name {
             font-family: 'Merriweather', serif;
             color: var(--navy-deep);
-            font-size: 1.45em;
+            font-size: 1.6em;
             margin: 0 0 0.3em;
         }
 
         .founder-role {
-            margin: 0 0 0.8em;
             color: #6d5830;
-            font-weight: 600;
+            font-weight: 700;
+            margin: 0 0 0.85em;
+            line-height: 1.55;
         }
 
         .founder-copy {
@@ -300,7 +338,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 0.6em;
-            margin-top: 1em;
+            margin-top: 1.1em;
         }
 
         .pill {
@@ -312,27 +350,40 @@
             font-weight: 600;
         }
 
+        .affiliation-note {
+            font-size: 0.78em;
+            color: #747b88;
+            line-height: 1.5;
+            margin-top: 1.2em;
+        }
+
         /* PUBLICATIONS */
 
         .publications-section {
-            margin-top: 3.5em;
+            margin-top: 3.7em;
         }
 
         .publication-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(2, minmax(0,1fr));
             gap: 1.1em;
         }
 
         .publication-card {
-            background: var(--card-white);
+            background: white;
+
             border-radius: 18px;
             padding: 1.5em;
+
             border-top: 4px solid var(--gold);
-            box-shadow: 0 12px 28px rgba(11,31,58,0.08);
+
+            box-shadow:
+                0 12px 28px rgba(11,31,58,0.08);
+
             display: flex;
             flex-direction: column;
-            min-height: 250px;
+
+            min-height: 245px;
         }
 
         .publication-journal {
@@ -378,48 +429,21 @@
             font-size: 0.9em;
         }
 
-        /* MENTORS */
+        /* WHY */
 
-        .mentors-section {
-            margin-top: 3.5em;
+        .why-section {
+            margin-top: 3.7em;
         }
 
-        .mentor-logos-row {
-            margin-top: 1.1em;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 1.8em;
-        }
+        /* TOPICS */
 
-        .mentor-logo-wrap {
-            background: #f8f9ff;
-            border-radius: 14px;
-            padding: 0.9em 1.2em;
-            box-shadow: 0 8px 18px rgba(11,31,58,0.05);
+        .topics-section {
+            margin-top: 3.7em;
         }
-
-        .mentor-logo-wrap img {
-            max-height: 50px;
-            width: auto;
-        }
-
-        .mentor-note {
-            margin-top: 0.8em;
-            font-size: 0.88em;
-            color: #606477;
-            line-height: 1.6;
-        }
-
-        /* PROJECTS */
 
         .projects-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 0.55em;
-            padding-left: 0;
             list-style: none;
+            padding: 0 !important;
             margin: 0;
         }
 
@@ -429,8 +453,8 @@
         }
 
         .projects-grid i {
-            margin-right: 0.5em;
             color: var(--gold);
+            margin-right: 0.55em;
             margin-top: 0.1em;
         }
 
@@ -441,36 +465,23 @@
             gap: 0.8em;
         }
 
-        .layout-two-col {
-            display: grid;
-            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-            gap: 1.8em;
-            align-items: center;
-        }
-
-        .students-images {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1em;
-        }
-
-        .students-images img {
-            width: 100%;
-            border-radius: 16px;
-            box-shadow: 0 16px 32px rgba(11,31,58,0.12);
-            object-fit: cover;
-        }
-
         /* FINAL CTA */
 
         .final-cta {
-            margin-top: 3.5em;
+            margin-top: 3.8em;
+
             border-radius: 22px;
-            padding: 2.6em 2em;
+
+            padding: 2.8em 2em;
+
             text-align: center;
+
             background: var(--navy-deep);
+
             color: white;
-            box-shadow: 0 18px 45px rgba(11,31,58,0.18);
+
+            box-shadow:
+                0 18px 45px rgba(11,31,58,0.18);
         }
 
         .final-cta h2 {
@@ -495,32 +506,23 @@
         }
 
         @media (max-width: 900px) {
+
+            .publication-grid {
+                grid-template-columns: 1fr;
+            }
+
             .hero-inner {
-                padding: 2.3em 1.7em 2.4em;
+                padding: 2.3em 1.7em;
             }
 
             .hero-title {
                 font-size: 2.2em;
             }
 
-            .hero-logo {
-                width: 380px;
-            }
-
-            .layout-two-col {
-                grid-template-columns: 1fr;
-            }
-
-            .publication-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .mentor-logos-row {
-                justify-content: center;
-            }
         }
 
         @media (max-width: 720px) {
+
             nav {
                 flex-wrap: wrap;
                 gap: 1em;
@@ -532,21 +534,28 @@
             }
 
             .founder-photo {
-                margin: 0 auto;
-                width: 220px;
-                height: 270px;
+                margin: auto;
             }
 
             .founder-meta {
                 justify-content: center;
             }
+
+            .founder-highlight {
+                border-radius: 18px;
+            }
+
         }
+
     </style>
 </head>
 
+
 <body>
 
+
 <nav>
+
     <a href="index.html" class="active">Home</a>
     <a href="about.html">About</a>
     <a href="programs.html">Programs</a>
@@ -555,17 +564,20 @@
     <a href="faq.html">FAQ</a>
     <a href="contact.html">Contact</a>
     <a href="terms.html">Terms</a>
+
 </nav>
+
 
 
 <!-- HERO -->
 
 <section class="hero">
+
     <div class="hero-inner">
 
         <img
             src="assets/images/paper_mentor_ai.png"
-            alt="Paper Mentor AI Logo"
+            alt="Paper Mentor AI"
             class="hero-logo"
         >
 
@@ -578,33 +590,58 @@
         </h1>
 
         <p class="hero-subtitle">
-            Paper Mentor AI pairs motivated high-school students with experienced
-            AI researchers and graduate mentors to design technically rigorous
-            projects, build machine-learning models, run meaningful experiments,
-            and develop polished research papers.
+            Personalized AI research mentorship for ambitious high-school
+            students who want to build technically rigorous projects,
+            conduct meaningful experiments, and develop a polished
+            research paper.
         </p>
 
+        <div class="founder-highlight">
+
+            <i class="fas fa-user-graduate"></i>
+
+            Founded by Odysseas Drosis —
+            Machine Learning Engineer at Meta &
+            Cornell University alumnus
+
+        </div>
+
         <p class="hero-subnote">
-            Students receive personalized 1:1 guidance from project ideation
-            through implementation, analysis, writing, and identifying appropriate
-            publication or competition opportunities.
+            From selecting a research question through machine-learning
+            implementation, experimentation, analysis, writing, and
+            identifying appropriate publication opportunities.
         </p>
 
         <div class="hero-actions">
 
-            <a href="apply.html" class="btn-primary">
+            <a
+                href="apply.html"
+                class="btn-primary"
+            >
+
                 <i class="fas fa-paper-plane"></i>
+
                 Apply for Mentorship
+
             </a>
 
-            <a href="programs.html" class="btn-ghost">
-                <i class="fas fa-diagram-project"></i>
-                Explore Programs
+            <a
+                href="students.html"
+                class="btn-ghost"
+            >
+
+                <i class="fas fa-book-open"></i>
+
+                View Student Research
+
             </a>
 
         </div>
+
     </div>
+
 </section>
+
 
 
 <main>
@@ -612,16 +649,20 @@
 
 <!-- FOUNDER -->
 
-<section class="founder-section" id="founder">
+<section
+    class="founder-section"
+    id="founder"
+>
 
     <h2 class="section-title">
         Meet the Founder
     </h2>
 
     <p class="section-subtitle">
-        Paper Mentor AI was created to give ambitious students access to serious,
-        technically grounded research mentorship.
+        Paper Mentor AI was created to give ambitious students access
+        to technically grounded, personalized research mentorship.
     </p>
+
 
     <div class="founder-card">
 
@@ -631,6 +672,7 @@
             class="founder-photo"
         >
 
+
         <div>
 
             <h3 class="founder-name">
@@ -638,23 +680,43 @@
             </h3>
 
             <p class="founder-role">
-                Founder & Lead Mentor · AI/ML Engineer · Cornell University
+                Founder & Lead Mentor · Machine Learning Engineer at Meta ·
+                Cornell University
             </p>
 
             <p class="founder-copy">
-                Odysseas is an AI/ML engineer and experienced research mentor who
-                has guided students through machine-learning research in healthcare,
-                finance, sports analytics, computer vision, NLP, and other applied
-                AI domains.
 
-                His students have developed full research projects and published
-                work in peer-reviewed and student research journals.
+                Odysseas is a machine-learning engineer and experienced
+                research mentor who has guided students through AI research
+                across healthcare, finance, sports analytics, computer vision,
+                natural language processing, and other applied machine-learning
+                domains.
 
-                Paper Mentor AI brings that same research-first approach into a
-                dedicated 1:1 mentorship experience.
+                <br><br>
+
+                Students he has personally mentored have completed full
+                research projects and published work in research journals
+                and student research publications.
+
+                <br><br>
+
+                Paper Mentor AI brings this research-first approach into a
+                dedicated 1:1 mentorship experience, helping students move
+                from an initial idea to a technically rigorous and clearly
+                communicated research project.
+
             </p>
 
+
             <div class="founder-meta">
+
+                <span class="pill">
+                    Meta
+                </span>
+
+                <span class="pill">
+                    Cornell University
+                </span>
 
                 <span class="pill">
                     Machine Learning
@@ -668,11 +730,18 @@
                     Research Mentorship
                 </span>
 
-                <span class="pill">
-                    Cornell University
-                </span>
-
             </div>
+
+
+            <p class="affiliation-note">
+
+                Meta, Cornell University, Stanford University, and other
+                institutions referenced on this website do not sponsor,
+                endorse, or operate Paper Mentor AI. Institutional names
+                are included only to describe individual professional,
+                educational, or publication backgrounds.
+
+            </p>
 
         </div>
 
@@ -681,18 +750,24 @@
 </section>
 
 
+
 <!-- PUBLICATIONS -->
 
-<section class="publications-section" id="publications">
+<section
+    class="publications-section"
+    id="publications"
+>
 
     <h2 class="section-title">
         Published Student Research
     </h2>
 
     <p class="section-subtitle">
-        Students personally mentored by founder Odysseas Drosis have produced
-        published research across healthcare AI, financial forecasting, and sports
-        analytics. Below are selected public examples.
+
+        Students personally mentored by founder Odysseas Drosis have
+        produced published research across healthcare AI, financial
+        forecasting, sports analytics, and other machine-learning areas.
+
     </p>
 
 
@@ -711,7 +786,7 @@
             </h3>
 
             <div class="publication-author">
-                Pavlos Martinis & Odysseas Drosis
+                Pavlos Martinis &amp; Odysseas Drosis
             </div>
 
             <a
@@ -720,11 +795,14 @@
                 target="_blank"
                 rel="noopener noreferrer"
             >
+
                 Read publication
                 <i class="fas fa-arrow-up-right-from-square"></i>
+
             </a>
 
         </article>
+
 
 
         <article class="publication-card">
@@ -739,7 +817,7 @@
             </h3>
 
             <div class="publication-author">
-                Shanzeh Haider & Odysseas Drosis
+                Shanzeh Haider &amp; Odysseas Drosis
             </div>
 
             <a
@@ -748,11 +826,14 @@
                 target="_blank"
                 rel="noopener noreferrer"
             >
+
                 Read publication
                 <i class="fas fa-arrow-up-right-from-square"></i>
+
             </a>
 
         </article>
+
 
 
         <article class="publication-card">
@@ -767,7 +848,7 @@
             </h3>
 
             <div class="publication-author">
-                Malaika Girma & Odysseas Drosis
+                Malaika Girma &amp; Odysseas Drosis
             </div>
 
             <a
@@ -776,11 +857,14 @@
                 target="_blank"
                 rel="noopener noreferrer"
             >
+
                 Read publication
                 <i class="fas fa-arrow-up-right-from-square"></i>
+
             </a>
 
         </article>
+
 
 
         <article class="publication-card">
@@ -803,31 +887,38 @@
                 target="_blank"
                 rel="noopener noreferrer"
             >
+
                 Read publication
                 <i class="fas fa-arrow-up-right-from-square"></i>
+
             </a>
 
         </article>
+
 
     </div>
 
 
     <p class="publication-note">
-        These examples reflect students previously and personally mentored by
-        the founder.
 
-        Publication outcomes vary by project, student, journal, and independent
-        editorial review and are not guaranteed.
+        These examples reflect students previously and personally mentored
+        by the founder. Publication outcomes depend on the individual
+        project, student work, journal requirements, and independent
+        editorial decisions and are not guaranteed.
+
     </p>
 
 
     <div class="cta-row">
 
-        <a href="students.html" class="btn-ghost-dark">
+        <a
+            href="students.html"
+            class="btn-ghost-dark"
+        >
 
             <i class="fas fa-book-open"></i>
 
-            View More Student Work
+            View More Published Research
 
         </a>
 
@@ -836,69 +927,21 @@
 </section>
 
 
-<!-- MENTORS -->
-
-<section class="mentors-section" id="mentors">
-
-    <h2 class="section-title">
-        Research-Focused Mentorship
-    </h2>
-
-    <p class="section-subtitle">
-        Our mentors are selected for strong backgrounds in AI,
-        machine learning, research, and technical communication.
-
-        Mentor backgrounds may include leading universities
-        and industry research environments.
-    </p>
-
-
-    <div class="mentor-logos-row">
-
-        <div class="mentor-logo-wrap">
-
-            <img
-                src="assets/images/Cornell_University_Logo.png"
-                alt="Cornell University Logo"
-            >
-
-        </div>
-
-
-        <div class="mentor-logo-wrap">
-
-            <img
-                src="assets/images/stanford-logo-660x330.png"
-                alt="Stanford University Logo"
-            >
-
-        </div>
-
-    </div>
-
-
-    <p class="mentor-note">
-        University names and logos indicate educational or research backgrounds
-        of individual mentors and do not imply sponsorship, endorsement, or
-        affiliation with Paper Mentor AI.
-    </p>
-
-</section>
-
 
 <!-- WHY US -->
 
-<section id="why-us" style="margin-top: 3.5em;">
+<section class="why-section">
 
     <h2 class="section-title">
         Why Students Work with Paper Mentor AI
     </h2>
 
     <p class="section-subtitle">
-        The goal is not simply to complete a coding project.
 
-        Students learn how to think, build, evaluate,
+        The goal is not simply to finish a coding project.
+        Students learn how to think, experiment, evaluate,
         and communicate like researchers.
+
     </p>
 
 
@@ -913,29 +956,30 @@
 
             <li>
                 <i class="fas fa-check-circle"></i>
-                Project topics tailored to each student's interests and experience.
+                Research topics tailored to the student's interests
+                and technical experience.
             </li>
 
             <li>
                 <i class="fas fa-check-circle"></i>
-                Hands-on implementation of real machine-learning models and experiments.
+                Hands-on implementation of real machine-learning models.
             </li>
 
             <li>
                 <i class="fas fa-check-circle"></i>
-                Guidance on reading literature, designing methodology,
-                and evaluating results.
+                Guidance on literature review, methodology, experimentation,
+                and evaluation.
             </li>
 
             <li>
                 <i class="fas fa-check-circle"></i>
-                Structured support for writing a polished research paper.
+                Structured support for research writing and revision.
             </li>
 
             <li>
                 <i class="fas fa-check-circle"></i>
                 Guidance on identifying appropriate journals,
-                conferences, or competitions.
+                competitions, and research opportunities.
             </li>
 
         </ul>
@@ -945,17 +989,20 @@
 </section>
 
 
-<!-- EXAMPLE TOPICS -->
 
-<section id="samples" style="margin-top: 3.5em;">
+<!-- TOPICS -->
+
+<section class="topics-section">
 
     <h2 class="section-title">
-        Examples of Student Research Topics
+        Example Research Areas
     </h2>
 
     <p class="section-subtitle">
-        Projects are designed around the student's interests while maintaining
-        a realistic scope and a clear research question.
+
+        Students can explore a wide range of applied AI topics while
+        keeping the research question focused and achievable.
+
     </p>
 
 
@@ -964,38 +1011,43 @@
         <ul class="projects-grid">
 
             <li>
-                <i class="fas fa-robot"></i>
-                Cyberbullying detection with transformer-based NLP.
-            </li>
-
-            <li>
                 <i class="fas fa-brain"></i>
-                MRI brain tumor detection with CNNs.
+                AI for medical diagnosis and healthcare.
             </li>
 
             <li>
                 <i class="fas fa-chart-line"></i>
-                Stock prediction using LSTMs and news sentiment.
+                Financial forecasting and quantitative modelling.
             </li>
 
             <li>
                 <i class="fas fa-basketball"></i>
-                Sports performance prediction using machine learning.
+                Sports analytics and player-performance prediction.
+            </li>
+
+            <li>
+                <i class="fas fa-comments"></i>
+                Natural language processing and sentiment analysis.
+            </li>
+
+            <li>
+                <i class="fas fa-eye"></i>
+                Computer vision and image classification.
             </li>
 
             <li>
                 <i class="fas fa-cloud-sun"></i>
-                Climate and environmental forecasting.
+                Climate and environmental modelling.
             </li>
 
             <li>
                 <i class="fas fa-shield-alt"></i>
-                Fake news and misinformation detection using NLP.
+                Fraud, misinformation, and anomaly detection.
             </li>
 
             <li>
-                <i class="fas fa-seedling"></i>
-                Air pollution prediction with machine learning.
+                <i class="fas fa-robot"></i>
+                Recommendation systems and personalization.
             </li>
 
         </ul>
@@ -1003,7 +1055,10 @@
 
         <div class="cta-row">
 
-            <a href="students.html" class="btn-ghost-dark">
+            <a
+                href="students.html"
+                class="btn-ghost-dark"
+            >
 
                 <i class="fas fa-graduation-cap"></i>
 
@@ -1012,7 +1067,10 @@
             </a>
 
 
-            <a href="apply.html" class="btn-primary">
+            <a
+                href="apply.html"
+                class="btn-primary"
+            >
 
                 <i class="fas fa-paper-plane"></i>
 
@@ -1027,94 +1085,8 @@
 </section>
 
 
-<!-- EXPERIENCE -->
 
-<section id="experience" style="margin-top: 3.5em;">
-
-    <h2 class="section-title">
-        What Working with Paper Mentor AI Looks Like
-    </h2>
-
-    <p class="section-subtitle">
-        Students move from a broad idea to a focused research question,
-        implementation, experimentation, analysis, and academic writing.
-    </p>
-
-
-    <div class="layout-two-col">
-
-        <div>
-
-            <div class="card">
-
-                <p>
-                    <strong>Students learn how to:</strong>
-                </p>
-
-                <ul>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Read and understand relevant AI research.
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Define a realistic research question and methodology.
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Build ML models in Python.
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Design and evaluate experiments.
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Interpret results critically.
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Write and revise a polished research paper.
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-
-        <div class="students-images">
-
-            <img
-                src="assets/images/ChatGPT%20Image%20Nov%2018,%202025,%2001_26_32%20AM.png"
-                alt="AI research mentorship illustration"
-            >
-
-            <img
-                src="assets/images/ChatGPT%20Image%20Nov%2018,%202025,%2001_30_42%20AM.png"
-                alt="Student machine learning research illustration"
-            >
-
-            <img
-                src="assets/images/ChatGPT%20Image%20Nov%2018,%202025,%2002_53_26%20AM.png"
-                alt="Research paper development illustration"
-            >
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- FINAL CTA -->
+<!-- CTA -->
 
 <section class="final-cta">
 
@@ -1123,15 +1095,17 @@
     </h2>
 
     <p>
-        Tell us about your interests, experience, and goals.
 
-        We will use your application to determine whether Paper Mentor AI
-        is a good fit and what kind of research project could be realistic
-        for you.
+        Tell us about your interests, experience, and goals.
+        We will review your application and determine what type
+        of research project could be a strong fit.
+
     </p>
 
-
-    <a href="apply.html" class="btn-primary">
+    <a
+        href="apply.html"
+        class="btn-primary"
+    >
 
         <i class="fas fa-paper-plane"></i>
 
@@ -1145,26 +1119,25 @@
 </main>
 
 
+
 <footer>
 
     © PaperMentorAI — All Rights Reserved.
 
     <br>
 
-    <span style="color:#d4d7e6;">
+    Contact us:
 
-        Contact us:
-
-        <a
-            href="mailto:admissions@papermentorai.com"
-            style="color:#CBA45B;"
-        >
-            admissions@papermentorai.com
-        </a>
-
-    </span>
+    <a
+        href="mailto:admissions@papermentorai.com"
+        style="color:#CBA45B;"
+    >
+        admissions@papermentorai.com
+    </a>
 
 </footer>
 
+
 </body>
+
 </html>
