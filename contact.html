@@ -4,13 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Contact | Paper Mentor AI</title>
 
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
 
     <style>
+
         :root {
             --navy-deep: #0B1F3A;
             --navy-soft: #12284A;
@@ -19,9 +28,16 @@
             --bg-light: #F4F6FB;
             --card-bg: #E8EEF8;
             --text-main: #1B1F2A;
+            --text-muted: #5B6475;
         }
 
-        * { box-sizing: border-box; }
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             margin: 0;
@@ -30,149 +46,514 @@
             color: var(--text-main);
         }
 
-        /* NAVIGATION (UPDATED WITH MOBILE FIX) */
+        /* NAVIGATION */
+
         nav {
             background: var(--navy-deep);
             padding: 0.9em 1.5em;
+
             display: flex;
             justify-content: center;
             gap: 1.8em;
+
             position: sticky;
             top: 0;
+
             z-index: 20;
+
+            box-shadow:
+                0 4px 14px rgba(0,0,0,0.12);
         }
+
         nav a {
             color: #ffffff;
+
             text-decoration: none;
+
             font-weight: 500;
+
             font-size: 0.98em;
+
             position: relative;
         }
+
         nav a::after {
             content: "";
+
             position: absolute;
+
             left: 0;
             bottom: -0.35em;
+
             width: 0;
             height: 2px;
+
             background: var(--gold);
+
             transition: width 0.25s ease;
         }
+
         nav a:hover::after,
         nav a.active::after {
             width: 100%;
         }
 
-        @media (max-width: 720px) {
-            nav {
-                flex-wrap: wrap;
-                gap: 1em;
-            }
-        }
+        /* HERO */
 
         .hero-contact {
-            background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 55%, #050815 100%);
-            padding: 3.5em 1.5em 3em;
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #1F3A68,
+                    #0B1F3A 55%,
+                    #050815 100%
+                );
+
+            padding: 3.8em 1.5em 3.2em;
+
             text-align: center;
+
             color: white;
         }
+
         .hero-contact h1 {
             font-family: 'Merriweather', serif;
+
             font-size: 2.4em;
-            margin: 0 0 0.4em;
-        }
-        .hero-contact p {
-            font-size: 1.03em;
-            color: #dde4ff;
-            max-width: 620px;
-            margin: 0 auto;
-            line-height: 1.6;
+
+            margin: 0 0 0.45em;
         }
 
+        .hero-contact p {
+            font-size: 1.04em;
+
+            color: #dde4ff;
+
+            max-width: 700px;
+
+            margin: 0 auto;
+
+            line-height: 1.7;
+        }
+
+        /* PAGE */
+
         .contact-section {
-            max-width: 880px;
+            max-width: 920px;
+
             margin: 3.2em auto 4.5em;
+
             padding: 0 1.5em;
         }
+
         .contact-section h2 {
             font-family: 'Merriweather', serif;
+
             color: var(--navy-deep);
-            font-size: 1.45em;
-            margin-bottom: 0.7em;
+
+            font-size: 1.5em;
+
+            margin-bottom: 0.5em;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+
+            line-height: 1.7;
+
+            margin-bottom: 1.4em;
+
+            max-width: 760px;
+        }
+
+        /* CONTACT GRID */
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.6fr)
+                minmax(260px, 0.8fr);
+
+            gap: 1.5em;
+
+            align-items: start;
         }
 
         .contact-card {
-            background: var(--card-bg);
+            background: white;
+
             padding: 2em;
-            border-radius: 16px;
-            border-left: 6px solid var(--gold);
-            box-shadow: 0 14px 30px rgba(11,31,58,0.10);
-            margin-bottom: 2.2em;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 14px 30px rgba(11,31,58,0.09);
+
+            border:
+                1px solid rgba(11,31,58,0.08);
         }
+
+        .contact-card.primary-card {
+            border-top: 5px solid var(--gold);
+        }
+
+        /* FORM */
 
         form label {
             display: block;
-            margin-top: 0.9em;
+
+            margin-top: 1em;
+
             font-weight: 600;
+
+            color: var(--navy-deep);
         }
-        form input, form textarea {
+
+        .optional {
+            color: #858b98;
+
+            font-weight: 400;
+
+            font-size: 0.84em;
+        }
+
+        form input,
+        form select,
+        form textarea {
             width: 100%;
+
             padding: 0.9em;
+
             margin-top: 0.4em;
+
             border-radius: 10px;
-            border: 1px solid #ccc;
+
+            border: 1px solid #ccd1da;
+
             font-size: 1em;
+
             font-family: inherit;
+
             background: #F9FBFF;
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
         }
+
+        form input:focus,
+        form select:focus,
+        form textarea:focus {
+            outline: none;
+
+            border-color: var(--navy-soft);
+
+            box-shadow:
+                0 0 0 3px rgba(18,40,74,0.08);
+        }
+
         textarea {
             resize: vertical;
-            height: 150px;
+
+            min-height: 150px;
+        }
+
+        /* BUTTONS */
+
+        .submit-btn,
+        .btn-primary,
+        .btn-secondary {
+            border-radius: 999px;
+
+            padding: 0.9em 1.6em;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            font-size: 0.97em;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 0.45em;
+
+            transition: all 0.2s ease;
         }
 
         .submit-btn {
-            margin-top: 1.4em;
-            padding: 0.9em 1.9em;
+            margin-top: 1.5em;
+
             border: none;
-            border-radius: 30px;
+
             background: var(--gold);
+
             color: var(--navy-deep);
-            font-size: 1.05em;
-            font-weight: 600;
+
             cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 10px 26px rgba(0,0,0,0.18);
-        }
-        .submit-btn:hover {
-            background: var(--gold-soft);
-            transform: translateY(-1px);
-            box-shadow: 0 14px 32px rgba(0,0,0,0.25);
+
+            box-shadow:
+                0 10px 26px rgba(0,0,0,0.16);
         }
 
-        .success-message {
-            padding: 1.2em;
-            background: #d4f8e8;
-            color: #0b6b3a;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: 1.4em;
-            display: none;
+        .submit-btn:hover {
+            background: var(--gold-soft);
+
+            transform: translateY(-1px);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.65;
+
+            cursor: wait;
+
+            transform: none;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+
+            color: var(--navy-deep);
+
+            margin-top: 1em;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-soft);
+        }
+
+        .btn-secondary {
+            color: var(--navy-soft);
+
+            border: 1px solid var(--navy-soft);
+
+            margin-top: 0.8em;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(18,40,74,0.06);
+        }
+
+        /* INFO CARD */
+
+        .info-item {
+            margin-bottom: 1.4em;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-icon {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background: #EEF2F9;
+
+            color: var(--gold);
+
+            margin-bottom: 0.7em;
+        }
+
+        .info-item h3 {
+            color: var(--navy-deep);
+
             font-size: 1em;
+
+            margin: 0 0 0.35em;
+        }
+
+        .info-item p {
+            color: var(--text-muted);
+
+            line-height: 1.65;
+
+            margin: 0;
+
+            font-size: 0.92em;
+        }
+
+        .info-item a {
+            color: var(--navy-soft);
+
+            font-weight: 600;
+
+            text-decoration: none;
+        }
+
+        .info-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* ERROR */
+
+        .error-message {
+            padding: 1.1em;
+
+            background: #ffe1e1;
+
+            color: #942a2a;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            margin-top: 1.4em;
+
+            display: none;
+        }
+
+        /* TOAST */
+
+        .toast-message {
+            position: fixed;
+
+            left: 50%;
+            bottom: 30px;
+
+            transform:
+                translateX(-50%)
+                translateY(20px);
+
+            background: var(--navy-deep);
+
+            color: white;
+
+            padding: 1em 1.4em;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 12px 32px rgba(0,0,0,0.22);
+
+            font-size: 0.95em;
+
+            font-weight: 600;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            pointer-events: none;
+
+            transition:
+                all 0.25s ease;
+
+            z-index: 1000;
+
+            max-width:
+                calc(100% - 32px);
+
+            text-align: center;
+        }
+
+        .toast-message.show {
+            opacity: 1;
+
+            visibility: visible;
+
+            transform:
+                translateX(-50%)
+                translateY(0);
+        }
+
+        .toast-message i {
+            color: var(--gold);
+
+            margin-right: 0.45em;
+        }
+
+        /* CTA */
+
+        .final-cta {
+            margin-top: 3em;
+
+            background: var(--navy-deep);
+
+            color: white;
+
+            border-radius: 20px;
+
+            padding: 2.3em 1.8em;
+
+            text-align: center;
+
+            box-shadow:
+                0 16px 40px rgba(11,31,58,0.16);
+        }
+
+        .final-cta h2 {
+            color: white;
+
+            margin-top: 0;
+        }
+
+        .final-cta p {
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            color: #d7def3;
+
+            line-height: 1.7;
         }
 
         footer {
             background: #020511;
+
             color: #b3b9d4;
+
             text-align: center;
+
             padding: 2em 1em;
+
             font-size: 0.9em;
         }
+
+        footer a {
+            color: var(--gold);
+
+            text-decoration: none;
+        }
+
+        @media (max-width: 820px) {
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 720px) {
+
+            nav {
+                flex-wrap: wrap;
+
+                gap: 1em;
+            }
+
+            .hero-contact h1 {
+                font-size: 2em;
+            }
+
+        }
+
     </style>
 </head>
 
 <body>
 
+
 <nav>
+
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="programs.html">Programs</a>
@@ -181,72 +562,393 @@
     <a href="faq.html">FAQ</a>
     <a href="contact.html" class="active">Contact</a>
     <a href="terms.html">Terms</a>
+
 </nav>
 
+
+<!-- HERO -->
+
 <section class="hero-contact">
-    <h1>Contact Us</h1>
-    <p>Reach out for questions, consultations, or program details — we’re here to help.</p>
+
+    <h1>
+        Contact Paper Mentor AI
+    </h1>
+
+    <p>
+        Have a question about research mentorship, project ideas,
+        program fit, or the application process?
+        Send us a message and we'll be happy to help.
+    </p>
+
 </section>
+
 
 <section class="contact-section">
 
-    <h2><i class="fas fa-envelope"></i> Send Us a Message</h2>
+    <h2>
+        Get in Touch
+    </h2>
 
-    <div class="contact-card">
-        <form id="contactForm" action="https://formspree.io/f/xananvqn" method="POST">
-            <label>Your Name</label>
-            <input type="text" name="name" required>
+    <p class="section-subtitle">
+        If you're not yet ready to apply, you can send us a short message
+        about the student's background, interests, or goals.
+    </p>
 
-            <label>Your Email</label>
-            <input type="email" name="email" required>
 
-            <label>Your Message</label>
-            <textarea name="message" required></textarea>
+    <div class="contact-grid">
 
-            <button class="submit-btn" type="submit">
-                <i class="fas fa-paper-plane"></i> Send Message
-            </button>
-        </form>
 
-        <div id="success" class="success-message">
-            ✔ Your message has been sent! We will get back to you soon.
+        <!-- FORM -->
+
+        <div class="contact-card primary-card">
+
+            <form
+                id="contactForm"
+                action="https://formspree.io/f/xananvqn"
+                method="POST"
+            >
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Paper Mentor AI Contact Message"
+                >
+
+
+                <label>
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Full name"
+                    required
+                >
+
+
+                <label>
+                    Your Email
+                </label>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="parent@example.com"
+                    required
+                >
+
+
+                <label>
+                    Student Grade
+                    <span class="optional">
+                        (optional)
+                    </span>
+                </label>
+
+                <select
+                    name="student_grade"
+                >
+
+                    <option value="">
+                        Select grade...
+                    </option>
+
+                    <option>Grade 8</option>
+                    <option>Grade 9</option>
+                    <option>Grade 10</option>
+                    <option>Grade 11</option>
+                    <option>Grade 12</option>
+                    <option>Other</option>
+
+                </select>
+
+
+                <label>
+                    Your Message
+                </label>
+
+                <textarea
+                    name="message"
+                    placeholder="Tell us what you're looking for, the student's interests, or any questions you have."
+                    required
+                ></textarea>
+
+
+                <button
+                    class="submit-btn"
+                    id="submitButton"
+                    type="submit"
+                >
+
+                    <i class="fas fa-paper-plane"></i>
+
+                    Send Message
+
+                </button>
+
+            </form>
+
+
+            <div
+                id="error"
+                class="error-message"
+            >
+                We couldn't send your message.
+                Please try again or email
+                <strong>admissions@papermentorai.com</strong>.
+            </div>
+
         </div>
+
+
+        <!-- INFORMATION -->
+
+        <div class="contact-card">
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+
+                <h3>
+                    Email
+                </h3>
+
+                <p>
+                    You can contact us directly at
+                    <br><br>
+
+                    <a href="mailto:admissions@papermentorai.com">
+                        admissions@papermentorai.com
+                    </a>
+                </p>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+                    <i class="fas fa-circle-question"></i>
+                </div>
+
+                <h3>
+                    Not Sure Which Program?
+                </h3>
+
+                <p>
+                    Tell us the student's grade, experience,
+                    interests, and goals and we can help suggest
+                    an appropriate starting point.
+                </p>
+
+                <a
+                    href="programs.html"
+                    class="btn-secondary"
+                >
+                    View Programs
+                </a>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+
+                <h3>
+                    See Student Research
+                </h3>
+
+                <p>
+                    View examples of published research produced
+                    by students personally mentored by the founder.
+                </p>
+
+                <a
+                    href="students.html"
+                    class="btn-secondary"
+                >
+                    Student Research
+                </a>
+
+            </div>
+
+
+        </div>
+
     </div>
 
-    <h2><i class="fas fa-info-circle"></i> Or contact us directly</h2>
 
-    <div class="contact-card">
+    <!-- CTA -->
+
+    <section class="final-cta">
+
+        <h2>
+            Ready to Apply?
+        </h2>
+
         <p>
-            <i class="fas fa-envelope"></i>
-            Email:
-            <a href="mailto:admissions@papermentorai.com">admissions@papermentorai.com</a>
+            If the student is ready to begin exploring an AI research
+            project, complete our short mentorship application.
         </p>
-    </div>
+
+        <a
+            href="apply.html"
+            class="btn-primary"
+        >
+
+            <i class="fas fa-paper-plane"></i>
+
+            Apply for Mentorship
+
+        </a>
+
+    </section>
 
 </section>
 
+
+<!-- SUCCESS TOAST -->
+
+<div
+    id="toast"
+    class="toast-message"
+>
+
+    <i class="fas fa-circle-check"></i>
+
+    Message sent successfully. We'll be in touch soon.
+
+</div>
+
+
 <footer>
-    © 2025 Paper Mentor AI — All Rights Reserved.
+
+    © PaperMentorAI — All Rights Reserved.
+
+    <br>
+
+    <a href="mailto:admissions@papermentorai.com">
+        admissions@papermentorai.com
+    </a>
+
 </footer>
 
+
 <script>
-    const form = document.getElementById("contactForm");
-    const successMessage = document.getElementById("success");
 
-    form.addEventListener("submit", async function(event) {
-        event.preventDefault();
-        const response = await fetch(form.action, {
-            method: "POST",
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
-        });
+    const form =
+        document.getElementById("contactForm");
 
-        if (response.ok) {
-            form.reset();
-            successMessage.style.display = "block";
+    const submitButton =
+        document.getElementById("submitButton");
+
+    const toast =
+        document.getElementById("toast");
+
+    const errorMessage =
+        document.getElementById("error");
+
+
+    function showToast() {
+
+        toast.classList.add("show");
+
+        setTimeout(function() {
+
+            toast.classList.remove("show");
+
+        }, 4000);
+
+    }
+
+
+    form.addEventListener(
+        "submit",
+
+        async function(event) {
+
+            event.preventDefault();
+
+            errorMessage.style.display =
+                "none";
+
+            submitButton.disabled =
+                true;
+
+            submitButton.innerHTML =
+                '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        form.action,
+                        {
+
+                            method: "POST",
+
+                            body:
+                                new FormData(form),
+
+                            headers: {
+                                "Accept":
+                                    "application/json"
+                            }
+
+                        }
+                    );
+
+
+                if (response.ok) {
+
+                    form.reset();
+
+                    showToast();
+
+                    submitButton.disabled =
+                        false;
+
+                    submitButton.innerHTML =
+                        '<i class="fas fa-paper-plane"></i> Send Message';
+
+                }
+
+                else {
+
+                    throw new Error(
+                        "Submission failed"
+                    );
+
+                }
+
+            }
+
+            catch (error) {
+
+                errorMessage.style.display =
+                    "block";
+
+                submitButton.disabled =
+                    false;
+
+                submitButton.innerHTML =
+                    '<i class="fas fa-paper-plane"></i> Send Message';
+
+            }
+
         }
-    });
+    );
+
 </script>
+
 
 </body>
 </html>
