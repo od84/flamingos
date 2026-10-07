@@ -3,33 +3,50 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- FIXED META TAG -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>FAQ | Paper Mentor AI</title>
 
-    <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
 
     <style>
+
         :root {
             --navy-deep: #0B1F3A;
             --navy-soft: #12284A;
             --gold: #CBA45B;
+            --gold-soft: #DCC394;
             --bg-light: #F4F6FB;
             --card-bg: #E8EEF8;
+            --text-main: #1B1F2A;
+            --text-muted: #5B6475;
         }
 
-        * { box-sizing: border-box; }
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
             background: var(--bg-light);
-            color: #1B1F2A;
+            color: var(--text-main);
         }
 
-        /* --- NAVIGATION (MATCHED TO HOME PAGE) --- */
+        /* NAVIGATION */
+
         nav {
             background: var(--navy-deep);
             padding: 0.9em 1.5em;
@@ -39,6 +56,7 @@
             position: sticky;
             top: 0;
             z-index: 20;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
         }
 
         nav a {
@@ -65,29 +83,47 @@
             width: 100%;
         }
 
-        /* --- HERO SECTION --- */
+        /* HERO */
+
         .hero-faq {
-            background: radial-gradient(circle at top left, #1F3A68, #0B1F3A 55%, #050815 100%);
-            padding: 3.5em 1.5em 3em;
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #1F3A68,
+                    #0B1F3A 55%,
+                    #050815 100%
+                );
+
+            padding: 3.7em 1.5em 3.1em;
             color: white;
             text-align: center;
         }
 
         .hero-faq h1 {
             font-family: 'Merriweather', serif;
-            font-size: 2.3em;
-            margin: 0 0 0.6em;
+            font-size: 2.4em;
+            margin: 0 0 0.5em;
         }
 
+        .hero-faq p {
+            max-width: 720px;
+            margin: 0 auto;
+            color: #dce3ff;
+            line-height: 1.7;
+            font-size: 1.04em;
+        }
+
+        /* FAQ */
+
         .faq-container {
-            max-width: 900px;
+            max-width: 920px;
             margin: 3em auto 4em;
             padding: 0 1.5em;
         }
 
         h2.section-title {
             font-family: 'Merriweather', serif;
-            font-size: 1.5em;
+            font-size: 1.55em;
             color: var(--navy-deep);
             margin-top: 3em;
             margin-bottom: 1em;
@@ -96,11 +132,12 @@
         .faq-item {
             background: var(--card-bg);
             border-left: 6px solid var(--gold);
-            padding: 1.2em 1.4em;
+            padding: 1.25em 1.4em;
             border-radius: 14px;
             margin-bottom: 1em;
             cursor: pointer;
             transition: 0.25s ease;
+            box-shadow: 0 8px 20px rgba(11,31,58,0.05);
         }
 
         .faq-item:hover {
@@ -112,13 +149,90 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1em;
+            color: var(--navy-deep);
+        }
+
+        .faq-question i {
+            color: var(--gold);
+            flex-shrink: 0;
         }
 
         .faq-answer {
             display: none;
-            padding-top: 0.8em;
-            line-height: 1.6;
+            padding-top: 0.9em;
+            line-height: 1.7;
             color: #303642;
+        }
+
+        .faq-answer p {
+            margin: 0;
+        }
+
+        .faq-answer ul {
+            margin: 0.5em 0 0;
+            padding-left: 1.2em;
+        }
+
+        .faq-answer li {
+            margin-bottom: 0.55em;
+        }
+
+        .faq-link {
+            color: var(--navy-soft);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .faq-link:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA */
+
+        .final-cta {
+            margin-top: 3.5em;
+            background: var(--navy-deep);
+            color: white;
+            border-radius: 20px;
+            padding: 2.5em 2em;
+            text-align: center;
+            box-shadow: 0 16px 40px rgba(11,31,58,0.16);
+        }
+
+        .final-cta h2 {
+            font-family: 'Merriweather', serif;
+            margin: 0 0 0.5em;
+            font-size: 1.65em;
+        }
+
+        .final-cta p {
+            max-width: 660px;
+            margin: 0 auto 1.3em;
+            line-height: 1.7;
+            color: #d7def3;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45em;
+
+            padding: 0.9em 1.6em;
+
+            border-radius: 999px;
+
+            background: var(--gold);
+
+            color: var(--navy-deep);
+
+            text-decoration: none;
+
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-soft);
         }
 
         footer {
@@ -129,17 +243,29 @@
             font-size: 0.9em;
         }
 
-        /* --- MOBILE FIX (COPIED FROM HOME PAGE) --- */
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
         @media (max-width: 720px) {
+
             nav {
                 flex-wrap: wrap;
                 gap: 1em;
             }
+
+            .hero-faq h1 {
+                font-size: 2em;
+            }
+
         }
+
     </style>
 </head>
 
 <body>
+
 
 <nav>
     <a href="index.html">Home</a>
@@ -152,86 +278,500 @@
     <a href="terms.html">Terms</a>
 </nav>
 
+
 <section class="hero-faq">
-    <h1>Frequently Asked Questions</h1>
-    <p>Find answers about applications, pricing, prerequisites, and refund policies.</p>
+
+    <h1>
+        Frequently Asked Questions
+    </h1>
+
+    <p>
+        Find answers about applications, prerequisites, program structure,
+        pricing, refunds, publication, and student research.
+    </p>
+
 </section>
+
 
 <div class="faq-container">
 
-    <h2 class="section-title">Applications & Prerequisites</h2>
 
-    <div class="faq-item"><div class="faq-question">When are applications due?<i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">Applications are reviewed on a rolling basis. Early application is recommended.</div>
-    </div>
+    <!-- APPLICATIONS -->
 
-    <div class="faq-item"><div class="faq-question">When will I hear back?<i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">Most applicants receive an update within 1–2 days.</div>
-    </div>
+    <h2 class="section-title">
+        Applications & Eligibility
+    </h2>
 
-    <div class="faq-item"><div class="faq-question">Do I need coding experience?<i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">No — many students start with zero experience.</div>
-    </div>
-
-    <div class="faq-item"><div class="faq-question">Are there math requirements?<i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">All math & AI concepts are taught from the ground up.</div>
-    </div>
-
-    <div class="faq-item"><div class="faq-question">Do you accept international students?<i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">Yes — students from 25+ countries participate online.</div>
-    </div>
-
-    <h2 class="section-title">Pricing & Tuition</h2>
 
     <div class="faq-item">
-        <div class="faq-question">How much does the program cost?<i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">
-            The standard rate is <strong>$100/hour</strong>.<br>
-            Students enrolling for 10+ hours receive a <strong>10% discount</strong>.
+
+        <div class="faq-question">
+            When are applications due?
+            <i class="fas fa-chevron-down"></i>
         </div>
+
+        <div class="faq-answer">
+            Applications are reviewed on a rolling basis.
+            Students can apply throughout the year, subject to mentor availability.
+        </div>
+
     </div>
 
+
     <div class="faq-item">
-        <div class="faq-question">Do you offer refunds?<i class="fas fa-chevron-down"></i></div>
+
+        <div class="faq-question">
+            When will I hear back?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
         <div class="faq-answer">
+            Most applicants receive an initial response within 1–2 business days.
+        </div>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            What grade levels do you work with?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+            Paper Mentor AI primarily works with ambitious high-school students.
+            Project scope and technical depth are adapted to each student's age,
+            background, and experience.
+        </div>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            Do I need coding experience?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+            No. Beginner-friendly projects are available, and the technical level
+            can be adapted to the student. More advanced projects may require or
+            gradually build stronger Python and machine-learning skills.
+        </div>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            Are there math prerequisites?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+            Advanced mathematics is not required for every project.
+            The necessary concepts are introduced at a level appropriate
+            for the student's project and existing background.
+        </div>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            Do you accept students outside the United States?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+            Yes. Mentoring is conducted online, so students can participate
+            from the United States or internationally, subject to scheduling
+            and mentor availability.
+        </div>
+
+    </div>
+
+
+
+    <!-- PROGRAM -->
+
+    <h2 class="section-title">
+        Research & Mentoring
+    </h2>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            Does the student need to have a research idea before applying?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+            No. Many students begin with a broad area of interest.
+            The mentor can help narrow that interest into a realistic,
+            focused research question.
+        </div>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            How long does a research project take?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+            It depends on the student's experience, project complexity,
+            and how much independent work is completed between sessions.
+            A foundations project may take around 8 sessions, while a
+            full research-paper project typically takes 12–16 or more sessions.
+        </div>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            Will I work directly with the founder?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+            Mentor assignment depends on project area, availability,
+            and student fit. Some students may work directly with founder
+            Odysseas Drosis, while others may be matched with another
+            suitable mentor.
+        </div>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            Is publication guaranteed?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+            No. Publication is never guaranteed. Mentors can help students
+            develop strong research, improve their paper, identify appropriate
+            venues, and prepare a submission, but acceptance decisions are made
+            independently by journals, conferences, or competitions.
+        </div>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            Do you help students choose a journal or competition?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+            Yes. For projects that are sufficiently developed, mentors can help
+            identify potentially suitable journals, competitions, or research
+            showcases and explain the submission requirements.
+        </div>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            Can I see examples of previous student research?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+            Yes. You can view selected publicly available student research on our
+            <a href="students.html" class="faq-link">Student Research page</a>.
+        </div>
+
+    </div>
+
+
+
+    <!-- PRICING -->
+
+    <h2 class="section-title">
+        Pricing & Refunds
+    </h2>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            How much does the program cost?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+
+            The standard mentoring rate is
+            <strong>$100 per hour</strong>.
+
+            Students purchasing 10 or more mentoring hours receive a
+            <strong>10% package discount</strong>.
+
+        </div>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            What is the cancellation and refund policy?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+
             <ul>
-                <li>100% refund after Session 1</li>
-                <li>Pro-rated refund any time</li>
-                <li>No penalties</li>
+
+                <li>
+                    <strong>Free cancellation after the first meeting:</strong>
+                    if you decide not to continue after Session 1,
+                    the remaining unused prepaid sessions are fully refunded.
+                </li>
+
+                <li>
+                    <strong>Refund of unused sessions at any time:</strong>
+                    if you stop the program later, any remaining unused prepaid
+                    mentoring hours are refunded on a pro-rated basis.
+                </li>
+
+                <li>
+                    <strong>No cancellation penalty</strong> is charged for unused sessions.
+                </li>
+
             </ul>
+
+            Please review the
+            <a href="terms.html" class="faq-link">Terms & Conditions</a>
+            for the complete policy.
+
         </div>
+
     </div>
 
-    <h2 class="section-title">After the Program</h2>
 
-    <div class="faq-item"><div class="faq-question">Do students receive a certificate?<i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">Yes — all students completing a project receive a certificate.</div>
+    <div class="faq-item">
+
+        <div class="faq-question">
+            Are publication or competition fees included?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+            No. Any journal fees, competition entry fees, software subscriptions,
+            cloud-computing charges, or other third-party expenses are separate
+            unless explicitly stated otherwise.
+        </div>
+
     </div>
 
-    <div class="faq-item"><div class="faq-question">Do students keep the materials?<i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">Yes — all code, slides, and datasets remain available.</div>
+
+
+    <!-- OWNERSHIP / AFFILIATION -->
+
+    <h2 class="section-title">
+        Student Work & Affiliations
+    </h2>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            Who owns the student's research paper and code?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+            The student's original research work, code, analysis, and paper remain
+            the student's work. Paper Mentor AI may retain ownership of its own
+            teaching materials, templates, curriculum, and internal resources.
+            Third-party datasets and software remain subject to their respective licenses.
+        </div>
+
     </div>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            Is Paper Mentor AI affiliated with Meta, Cornell, Stanford, or the journals shown on the website?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+            No. Institutional names are used only to describe the professional,
+            educational, mentoring, or publication backgrounds of individuals
+            and student work. These organizations do not sponsor, endorse,
+            or operate Paper Mentor AI.
+        </div>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            Is Paper Mentor AI an admissions consulting service?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+            No. Paper Mentor AI focuses on research mentorship, technical learning,
+            project development, and scientific writing. We do not guarantee
+            university admission or other admissions outcomes.
+        </div>
+
+    </div>
+
+
+
+    <!-- AFTER -->
+
+    <h2 class="section-title">
+        After the Program
+    </h2>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            Do students receive a certificate?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+            Students who complete an agreed research project or mentoring track
+            may receive a completion certificate.
+        </div>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <div class="faq-question">
+            Do students keep their code and project files?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="faq-answer">
+            Yes. Students retain access to their own research work and project files,
+            subject to any third-party licenses or platform restrictions.
+        </div>
+
+    </div>
+
+
+
+    <!-- CTA -->
+
+    <section class="final-cta">
+
+        <h2>
+            Still Have a Question?
+        </h2>
+
+        <p>
+            Send us a message or complete the short application if you're ready
+            to discuss a potential AI research project.
+        </p>
+
+        <a
+            href="contact.html"
+            class="btn-primary"
+        >
+            <i class="fas fa-envelope"></i>
+            Contact Us
+        </a>
+
+        &nbsp;
+
+        <a
+            href="apply.html"
+            class="btn-primary"
+        >
+            <i class="fas fa-paper-plane"></i>
+            Apply for Mentorship
+        </a>
+
+    </section>
+
 
 </div>
 
+
 <footer>
-    © 2025 Paper Mentor AI — All Rights Reserved.
+
+    © PaperMentorAI — All Rights Reserved.
+
     <br>
-    <a href="terms.html" style="color:#CBA45B;">Terms & Conditions</a>
+
+    <a href="terms.html">
+        Terms & Conditions
+    </a>
+
+    &nbsp;·&nbsp;
+
+    <a href="mailto:admissions@papermentorai.com">
+        admissions@papermentorai.com
+    </a>
+
 </footer>
 
+
 <script>
+
     document.querySelectorAll(".faq-item").forEach(item => {
+
         item.addEventListener("click", () => {
-            const ans = item.querySelector(".faq-answer");
-            const icon = item.querySelector(".faq-question i");
-            const open = ans.style.display === "block";
-            ans.style.display = open ? "none" : "block";
-            icon.classList.toggle("fa-chevron-down");
-            icon.classList.toggle("fa-chevron-up");
+
+            const answer =
+                item.querySelector(".faq-answer");
+
+            const icon =
+                item.querySelector(".faq-question i");
+
+            const isOpen =
+                answer.style.display === "block";
+
+
+            answer.style.display =
+                isOpen ? "none" : "block";
+
+
+            icon.classList.toggle(
+                "fa-chevron-down"
+            );
+
+            icon.classList.toggle(
+                "fa-chevron-up"
+            );
+
         });
+
     });
+
 </script>
 
+
 </body>
+
 </html>
