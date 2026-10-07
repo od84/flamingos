@@ -107,21 +107,15 @@
 
         .page-header h1 {
             font-family: 'Merriweather', serif;
-
             font-size: 2.4em;
-
             margin: 0 0 0.4em;
         }
 
         .page-header p {
             font-size: 1.05em;
-
             color: #dce3ff;
-
             max-width: 720px;
-
             margin: 0 auto;
-
             line-height: 1.65;
         }
 
@@ -192,7 +186,6 @@
         input,
         select,
         textarea {
-
             width: 100%;
 
             padding: 0.9em;
@@ -217,7 +210,6 @@
         input:focus,
         select:focus,
         textarea:focus {
-
             outline: none;
 
             border-color: var(--navy-soft);
@@ -235,7 +227,6 @@
         /* BUTTON */
 
         .submit-btn {
-
             background: var(--gold);
 
             color: var(--navy-deep);
@@ -264,7 +255,6 @@
         }
 
         .submit-btn:hover {
-
             background: var(--gold-soft);
 
             transform: translateY(-1px);
@@ -281,31 +271,9 @@
             transform: none;
         }
 
-        /* MESSAGES */
-
-        .success-message {
-
-            padding: 1.2em;
-
-            background: #d4f8e8;
-
-            color: #0b6b3a;
-
-            border-radius: 10px;
-
-            text-align: center;
-
-            margin-top: 1.5em;
-
-            display: none;
-
-            font-size: 1.05em;
-
-            line-height: 1.5;
-        }
+        /* ERROR MESSAGE */
 
         .error-message {
-
             padding: 1.2em;
 
             background: #ffe0e0;
@@ -324,7 +292,6 @@
         }
 
         .privacy-note {
-
             font-size: 0.82em;
 
             color: #747b89;
@@ -336,10 +303,64 @@
             text-align: center;
         }
 
+        /* SUCCESS TOAST */
+
+        .toast-message {
+            position: fixed;
+
+            left: 50%;
+            bottom: 30px;
+
+            transform:
+                translateX(-50%)
+                translateY(20px);
+
+            background: var(--navy-deep);
+
+            color: white;
+
+            padding: 1em 1.4em;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 12px 32px rgba(0,0,0,0.22);
+
+            font-size: 0.95em;
+
+            font-weight: 600;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+            transition:
+                all 0.25s ease;
+
+            z-index: 1000;
+
+            max-width: calc(100% - 32px);
+
+            text-align: center;
+        }
+
+        .toast-message.show {
+            opacity: 1;
+
+            transform:
+                translateX(-50%)
+                translateY(0);
+        }
+
+        .toast-message i {
+            color: var(--gold);
+
+            margin-right: 0.45em;
+        }
+
         /* FOOTER */
 
         footer {
-
             background: #020511;
 
             color: #b3b9d4;
@@ -361,14 +382,12 @@
             }
 
             .form-wrapper {
-
                 margin: 1.5em 1em 3em;
 
                 padding: 1.7em;
             }
 
             .page-header h1 {
-
                 font-size: 2em;
             }
 
@@ -547,7 +566,7 @@
         <input
             type="text"
             name="location"
-            placeholder="Example: London, United Kingdom"
+            placeholder="Example: Athens, Greece"
             required
         >
 
@@ -588,7 +607,7 @@
         <input
             type="tel"
             name="student_phone"
-            placeholder="+1 650..."
+            placeholder="+30 690 000 0000"
         >
 
 
@@ -636,7 +655,7 @@
         <input
             type="tel"
             name="guardian_phone"
-            placeholder="+1 650..."
+            placeholder="+44 7700 900123"
         >
 
 
@@ -762,11 +781,7 @@
             </option>
 
             <option>
-                Fall 2026
-            </option>
-
-            <option>
-                Winter 2026–2027
+                Winter 2026
             </option>
 
             <option>
@@ -775,6 +790,10 @@
 
             <option>
                 Summer 2027
+            </option>
+
+            <option>
+                Fall 2027
             </option>
 
             <option>
@@ -797,7 +816,8 @@
         ></textarea>
 
 
-        <!-- REFERRAL -->
+
+        <!-- FINAL DETAILS -->
 
         <div class="form-section-title">
 
@@ -856,24 +876,6 @@
     </form>
 
 
-    <!-- SUCCESS -->
-
-    <div
-        id="success"
-        class="success-message"
-    >
-
-        <i class="fas fa-circle-check"></i>
-
-        Your application has been submitted successfully.
-
-        <br>
-
-        We will contact you shortly.
-
-    </div>
-
-
     <!-- ERROR -->
 
     <div
@@ -891,6 +893,20 @@
 
     </div>
 
+
+</div>
+
+
+<!-- SUCCESS TOAST -->
+
+<div
+    id="toast"
+    class="toast-message"
+>
+
+    <i class="fas fa-circle-check"></i>
+
+    Application submitted successfully.
 
 </div>
 
@@ -924,14 +940,27 @@
     const form =
         document.getElementById("applyForm");
 
-    const successMessage =
-        document.getElementById("success");
-
     const errorMessage =
         document.getElementById("error");
 
     const submitButton =
         document.getElementById("submitButton");
+
+    const toast =
+        document.getElementById("toast");
+
+
+    function showToast() {
+
+        toast.classList.add("show");
+
+        setTimeout(() => {
+
+            toast.classList.remove("show");
+
+        }, 3500);
+
+    }
 
 
     form.addEventListener(
@@ -941,14 +970,14 @@
 
             event.preventDefault();
 
-            successMessage.style.display =
-                "none";
 
             errorMessage.style.display =
                 "none";
 
+
             submitButton.disabled =
                 true;
+
 
             submitButton.innerHTML =
                 '<i class="fas fa-spinner fa-spin"></i> Submitting...';
@@ -977,19 +1006,13 @@
 
                     form.reset();
 
-                    form.style.display =
-                        "none";
+                    showToast();
 
-                    successMessage.style.display =
-                        "block";
+                    submitButton.disabled =
+                        false;
 
-                    window.scrollTo({
-                        top:
-                            successMessage.offsetTop - 120,
-
-                        behavior:
-                            "smooth"
-                    });
+                    submitButton.innerHTML =
+                        '<i class="fas fa-paper-plane"></i> Submit Application';
 
                 }
 
@@ -1023,5 +1046,4 @@
 
 
 </body>
-
 </html>
